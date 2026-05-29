@@ -128,6 +128,49 @@ section{position:relative;padding:130px 0}
 .rv.in{opacity:1;transform:translateY(0)}
 .rv-d1{transition-delay:.1s}.rv-d2{transition-delay:.2s}.rv-d3{transition-delay:.3s}
 
+/* REVIEWS — editorial testimonials */
+.reviews{background:var(--sand);color:var(--dark-teal);padding:130px 0}
+.reviews .sec-title{color:var(--dark-teal)}
+.reviews .sec-title em{color:var(--teal)}
+.reviews .eyebrow-s{color:var(--teal)}
+.reviews .lead{color:#5a6b69}
+.reviews .ghost{color:transparent;-webkit-text-stroke:1px rgba(4,101,103,.22)}
+.rv-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px 60px;margin-top:30px}
+.rv-card{position:relative;padding:50px 44px 44px;background:#fff;display:flex;flex-direction:column;transition:transform .5s cubic-bezier(.4,0,.2,1),box-shadow .5s}
+.rv-card:hover{transform:translateY(-4px);box-shadow:0 18px 50px rgba(0,39,43,.08)}
+.rv-card .quote{position:absolute;top:18px;left:34px;font-family:'Cormorant Garamond',serif;font-size:90px;line-height:1;color:var(--teal);opacity:.18;font-style:italic;font-weight:500}
+.rv-text{font-family:'Cormorant Garamond',serif;font-size:clamp(20px,1.6vw,24px);font-weight:400;font-style:italic;line-height:1.45;color:var(--dark-teal);margin-bottom:28px;flex:1}
+.rv-stars{font-size:14px;color:var(--teal);letter-spacing:3px;margin-bottom:16px}
+.rv-meta{display:flex;flex-direction:column;gap:3px;padding-top:16px;border-top:1px solid rgba(4,101,103,.12)}
+.rv-name{font-family:'Jost',sans-serif;font-size:14px;font-weight:500;color:var(--dark-teal);letter-spacing:.5px}
+.rv-loc{font-family:'Jost',sans-serif;font-size:12px;font-weight:300;color:#6b7c7a;letter-spacing:1px}
+.rv-cta{text-align:center;margin-top:60px}
+.btn-link{display:inline-block;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);font-weight:400;padding:14px 0;border-bottom:1px solid var(--teal);transition:all .3s}
+.btn-link:hover{color:var(--dark-teal);border-color:var(--dark-teal);letter-spacing:3px}
+@media(max-width:900px){
+  .reviews{padding:90px 0}
+  .rv-grid{grid-template-columns:1fr;gap:24px}
+  .rv-card{padding:46px 32px 36px}
+  .rv-card .quote{font-size:74px;top:14px;left:22px}
+}
+
+/* PROOF — animated counters */
+.proof{padding:110px 0 90px;text-align:center}
+.proof-head{margin-bottom:64px}
+.proof-head .eyebrow-s{margin-bottom:18px}
+.proof-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;max-width:1100px;margin:0 auto}
+.proof-stat{display:flex;flex-direction:column;align-items:center;gap:10px}
+.proof-stat .count{font-size:clamp(48px,5.5vw,84px);font-weight:300;color:#fff;letter-spacing:-1.5px;line-height:1;font-variant-numeric:tabular-nums}
+.proof-stat .lbl{font-size:13px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.78);font-weight:300;margin-top:6px}
+.proof-stat .meta{font-size:11px;letter-spacing:1px;color:var(--mint);font-weight:300;opacity:.8}
+@media(max-width:900px){
+  .proof-grid{grid-template-columns:1fr 1fr;gap:50px 30px}
+}
+@media(max-width:480px){
+  .proof{padding:70px 0 60px}
+  .proof-grid{grid-template-columns:1fr 1fr;gap:40px 20px}
+}
+
 /* WHY / DIFFERENTIATOR */
 .why{}
 .why .grid2{display:grid;grid-template-columns:1fr 1fr;gap:0;align-items:stretch}
@@ -324,14 +367,97 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       <a href="#fleet" class="btn btn-ghost">Explore the fleet</a>
     </div>
   </div>
-  <div class="hero-stats">
-    <div class="st"><b>4</b><span>Destinations live</span></div>
-    <div class="st"><b>24/7</b><span>On-demand</span></div>
-    <div class="st"><b>Federal</b><span>Plates &amp; licensing</span></div>
-    <div class="st"><b>5.0</b><span>App rating</span></div>
-  </div>
-  <div class="hero-scroll"><span>Scroll</span><span class="ln2"></span></div>
+
 </header>
+
+<section class="proof" id="proof">
+  <div class="wrap">
+    <div class="proof-head rv">
+      <span class="eyebrow-s">Trusted by travelers worldwide</span>
+      <h2 class="sec-title">Built on <em>real journeys</em></h2>
+    </div>
+    <div class="proof-grid rv">
+      <div class="proof-stat">
+        <b class="count serif" data-target="45459" data-suffix="">0</b>
+        <span class="lbl">Passengers transported</span>
+        <span class="meta">Since 2020</span>
+      </div>
+      <div class="proof-stat">
+        <b class="count serif" data-target="13793" data-suffix="">0</b>
+        <span class="lbl">Services completed</span>
+        <span class="meta">2020 &ndash; 2025</span>
+      </div>
+      <div class="proof-stat">
+        <b class="count serif" data-target="4.9" data-decimals="1" data-suffix="">0</b>
+        <span class="lbl">Tripadvisor rating</span>
+        <span class="meta">217 reviews</span>
+      </div>
+      <div class="proof-stat">
+        <b class="count serif" data-target="5" data-suffix="+">0</b>
+        <span class="lbl">Years of service</span>
+        <span class="meta">Travelers&rsquo; Choice 2024 &amp; 2025</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div class="lt">
+        <span class="eyebrow-s">In their own words</span>
+        <h2 class="sec-title">What travelers <em>say</em></h2>
+        <p class="lead">5.0 on Tripadvisor &middot; 216 reviews &middot; Travelers&rsquo; Choice 2025.</p>
+      </div>
+    </div>
+
+    <div class="rv-grid">
+      <article class="rv-card rv">
+        <span class="quote">&ldquo;</span>
+        <p class="rv-text">They met us right at the airport in Mexico, helped us navigate through arrivals smoothly, and made the entire process feel effortless. After a long travel day, it was such a relief to have everything handled professionally.</p>
+        <div class="rv-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="rv-meta">
+          <p class="rv-name">Madeline S.</p>
+          <p class="rv-loc">Tripadvisor &middot; Feb 2026</p>
+        </div>
+      </article>
+
+      <article class="rv-card rv rv-d1">
+        <span class="quote">&ldquo;</span>
+        <p class="rv-text">Loved the simplicity of booking, their ability to adjust when we missed our first flight, the modern Mercedes van, and our driver C&eacute;sar who was on time, fun, safe, and friendly.</p>
+        <div class="rv-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="rv-meta">
+          <p class="rv-name">jeatherly</p>
+          <p class="rv-loc">Shanghai &middot; CUN &rarr; Tulum</p>
+        </div>
+      </article>
+
+      <article class="rv-card rv rv-d2">
+        <span class="quote">&ldquo;</span>
+        <p class="rv-text">Both drivers were very safe, very professional, and very good. Booking through WhatsApp was very smooth and the communication was excellent. They even sent a link to track our driver so we knew where he was.</p>
+        <div class="rv-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="rv-meta">
+          <p class="rv-name">Paige S.</p>
+          <p class="rv-loc">Tripadvisor &middot; TQO &rarr; Dreams Tulum</p>
+        </div>
+      </article>
+
+      <article class="rv-card rv rv-d3">
+        <span class="quote">&ldquo;</span>
+        <p class="rv-text">We had Luis and C&eacute;sar for all 4 days in a Sprinter van for our group of 10. Always clean, best seats, and they made sure we got back safely every night. Serendipity made our trip better.</p>
+        <div class="rv-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="rv-meta">
+          <p class="rv-name">Kayla N.</p>
+          <p class="rv-loc">Bachelorette trip &middot; Group of 10</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="rv-cta rv">
+      <a href="https://www.tripadvisor.com/Attraction_Review-g150813-d24043854-Reviews-Serendipity_Travel_Experiences-Tulum_Yucatan_Peninsula.html" target="_blank" rel="noopener" class="btn-link">Read all 216 reviews on Tripadvisor &rarr;</a>
+    </div>
+  </div>
+</section>
 
 <section class="why" id="why">
   <div class="wrap">
@@ -563,6 +689,37 @@ window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scr
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 function toggleMenu(){document.querySelector('.links').classList.toggle('open')}
+
+// Animated counters for proof stats
+function formatNumber(n, decimals){
+  if(decimals>0) return n.toFixed(decimals);
+  return Math.floor(n).toLocaleString('en-US');
+}
+function animateCount(el){
+  var target = parseFloat(el.dataset.target);
+  var decimals = parseInt(el.dataset.decimals||'0',10);
+  var suffix = el.dataset.suffix||'';
+  var duration = 2000;
+  var start = performance.now();
+  function tick(now){
+    var t = Math.min(1, (now-start)/duration);
+    var eased = 1 - Math.pow(1-t, 3); // ease-out cubic
+    var val = eased * target;
+    el.textContent = formatNumber(val, decimals) + suffix;
+    if(t<1) requestAnimationFrame(tick);
+    else el.textContent = formatNumber(target, decimals) + suffix;
+  }
+  requestAnimationFrame(tick);
+}
+var countIO = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      animateCount(e.target);
+      countIO.unobserve(e.target);
+    }
+  });
+},{threshold:0.4});
+document.querySelectorAll('.count').forEach(function(el){ countIO.observe(el); });
 </script>
 </body>
 </html>
