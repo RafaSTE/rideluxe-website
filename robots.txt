@@ -1,0 +1,31 @@
+# Ride Luxe Mexico — rideluxe.mx
+# Federally licensed luxury private transfers in Cancun, Tulum, Playa del Carmen and Los Cabos
+
+User-agent: *
+Allow: /
+
+# Block admin paths (if any exist in future)
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://rideluxe.mx/sitemap.xml
+
+# Allow AI training crawlers explicitly (opt-in for GEO / AI visibility)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://rideluxe.mx/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/hero.jpg</image:loc>
+      <image:title>Ride Luxe Mexico — Luxury Private Transfer</image:title>
+      <image:caption>Guest arriving in a luxury Mercedes V-Class private transfer in the Riviera Maya</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/luxury-vclass.jpg</image:loc>
+      <image:title>Luxury Mercedes V-Class private transfer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/premium-sprinter.jpg</image:loc>
+      <image:title>Premium Mercedes Sprinter group transfer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/private-hiace.jpg</image:loc>
+      <image:title>Private Toyota Hiace family transfer</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/economy-avanza.jpg</image:loc>
+      <image:title>Economy private sedan airport transfer</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rideluxe.mx/blog</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+</urlset>
