@@ -365,6 +365,10 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   .af-grid{grid-template-columns:1fr;gap:60px}
   .about-faq{padding:80px 0}
 }
+.wa-float{position:fixed;left:24px;bottom:24px;z-index:90;display:flex;align-items:center;gap:9px;background:#04342C;border:1px solid var(--line-strong);color:#fff;padding:13px 20px;border-radius:40px;font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:all .35s}
+.wa-float:hover{background:var(--mint);color:var(--dark-teal)}
+@media(min-width:961px){nav .links{gap:22px}nav .links a{font-size:10.5px;letter-spacing:1.8px}}
+@media(max-width:760px){.wa-float{left:14px;bottom:78px;padding:11px 16px}}
 </style>
 <script type="application/ld+json">
 {
@@ -508,19 +512,18 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 <body>
 <div class="shell">
 <nav id="nav">
-  <a href="#" class="brand">
+  <a href="/" class="brand">
     <img loading="lazy" src="/images/logo.png" alt="Ride Luxe Mexico logo">
     <span class="bt">RIDE LUXE</span>
   </a>
   <div class="links">
+    <a href="/cancun-airport-transfers">Cancun</a>
+    <a href="/tulum-airport-transfers">Tulum</a>
+    <a href="/playa-del-carmen-transfers">Playa del Carmen</a>
+    <a href="/los-cabos-transfers">Los Cabos</a>
     <a href="#fleet">Fleet</a>
-    <a href="#routes">Routes</a>
     <a href="#ondemand">On-Demand</a>
-    <a href="#app">App</a>
-    <a href="#destinations">Destinations</a>
-    <a href="#why">Why Us</a>
-    <a href="#about">About</a>
-        <a href="/blog">Blog</a>
+    <a href="/blog">Blog</a>
     <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="nav-cta">Book Now</a>
   </div>
   <button class="burger" aria-label="Menu" onclick="toggleMenu()">&#9776;</button>
@@ -729,6 +732,8 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 
     <div class="routes-cta rv">
       <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="btn btn-mint">Book your route</a>
+      <a href="/cancun-airport-to-tulum" class="btn-link">Cancun airport to Tulum, full detail &rarr;</a>
+      <a href="/cancun-airport-to-playa-del-carmen" class="btn-link">Cancun airport to Playa del Carmen &rarr;</a>
       <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="btn-link">Need Los Cabos or another route? Get a quote &rarr;</a>
     </div>
   </div>
@@ -977,19 +982,19 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       <div>
         <h4>Service</h4>
         <ul>
-          <li><a href="#fleet">Airport Transfers</a></li>
+          <li><a href="/cancun-airport-to-tulum">Cancun Airport to Tulum</a></li>
+          <li><a href="/cancun-airport-to-playa-del-carmen">Cancun Airport to Playa del Carmen</a></li>
           <li><a href="#ondemand">On-Demand Rides</a></li>
-          <li><a href="#fleet">Group Transport</a></li>
           <li><a href="#fleet">Our Fleet</a></li>
         </ul>
       </div>
       <div>
         <h4>Destinations</h4>
         <ul>
-          <li><a href="#destinations">Cancun</a></li>
-          <li><a href="#destinations">Tulum</a></li>
-          <li><a href="#destinations">Playa del Carmen</a></li>
-          <li><a href="#destinations">Los Cabos</a></li>
+          <li><a href="/cancun-airport-transfers">Cancun Airport Transfers</a></li>
+          <li><a href="/tulum-airport-transfers">Tulum Airport Transfers</a></li>
+          <li><a href="/playa-del-carmen-transfers">Playa del Carmen Transfers</a></li>
+          <li><a href="/los-cabos-transfers">Los Cabos Transfers</a></li>
         </ul>
       </div>
       <div>
@@ -1009,6 +1014,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 
 <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="book-float"><span>&#10003;</span> Book Now</a>
 
+<a href="https://wa.me/529841814911" class="wa-float">WhatsApp</a>
 </div>
 <script>
 const nav=document.getElementById('nav');
