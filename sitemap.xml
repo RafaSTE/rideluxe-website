@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://rideluxe.mx/</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -30,43 +30,67 @@
   </url>
   <url>
     <loc>https://rideluxe.mx/cancun-airport-to-tulum</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/hero.jpg</image:loc>
+      <image:title>Private transfer from Cancun airport to Tulum</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://rideluxe.mx/cancun-airport-transfers</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/hero.jpg</image:loc>
+      <image:title>Private Mercedes transfer at Cancun International Airport</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://rideluxe.mx/tulum-airport-transfers</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/luxury-vclass.jpg</image:loc>
+      <image:title>Luxury Mercedes V-Class for Tulum airport transfers</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://rideluxe.mx/cancun-airport-to-playa-del-carmen</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/private-hiace.jpg</image:loc>
+      <image:title>Private transfer from Cancun airport to Playa del Carmen</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://rideluxe.mx/playa-del-carmen-transfers</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/private-hiace.jpg</image:loc>
+      <image:title>Private van transfer at a Playa del Carmen resort</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://rideluxe.mx/los-cabos-transfers</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/premium-sprinter.jpg</image:loc>
+      <image:title>Premium private transfer in Los Cabos</image:title>
+    </image:image>
   </url>
   <url>
     <loc>https://rideluxe.mx/blog</loc>
-    <lastmod>2026-08-04</lastmod>
+    <lastmod>2026-09-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
