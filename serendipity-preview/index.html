@@ -1,0 +1,934 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="Private chauffeurs, airport transfers and concierge in Tulum and Cancún. Artist and production logistics since 2022.">
+<style>*,:root{box-sizing:border-box}body{margin:0}[hidden]{display:none!important}img{max-width:100%}</style>
+<title>Serendipity Tulum Homepage</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&family=Gloock&family=Manrope:wght@400;500;600;700&display=swap">
+<style>
+:root{
+  --bg:#FAF7F1; --surface:#FFFFFF; --sand:#F0EAE0; --ink:#1D2320; --muted:#5E6762; --line:#E0D9CD;
+  --accent:#0F7D78; --accent-strong:#0B625E; --accent-ink:#FFFFFF; --gold:#7F5E2E;
+  --night:#101815; --night-ink:#F4EFE6; --night-muted:#B3C0B9;
+  --ticket:#FFFDF9; --ticket-ink:#1D2320; --field:#F6F2EA;
+  --logo-filter:none;
+  --display:"Gloock","Iowan Old Style","Palatino Linotype",Georgia,serif;
+  --script:"Cormorant Garamond","Iowan Old Style",Georgia,serif;
+  --champagne:#E9CF9E;
+  --body:"Manrope","Segoe UI",system-ui,-apple-system,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#0F1512; --surface:#161F1B; --sand:#1B2521; --ink:#EEE9DF; --muted:#A7B3AC; --line:#2A3631;
+    --accent:#3FB3AC; --accent-strong:#5FC8C1; --accent-ink:#062220; --gold:#D4B07A;
+    --ticket:#1D2824; --ticket-ink:#EEE9DF; --field:#1F2A26; --logo-filter:invert(1);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0F1512; --surface:#161F1B; --sand:#1B2521; --ink:#EEE9DF; --muted:#A7B3AC; --line:#2A3631;
+  --accent:#3FB3AC; --accent-strong:#5FC8C1; --accent-ink:#062220; --gold:#D4B07A;
+  --ticket:#1D2824; --ticket-ink:#EEE9DF; --field:#1F2A26; --logo-filter:invert(1);
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.04;text-wrap:balance;margin:0}
+p{margin:0}
+.wrap{max-width:1220px;margin-inline:auto;padding-inline:22px}
+.kicker{font-size:13px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:12px}
+.kicker::before{content:"";width:28px;height:1px;background:currentColor;opacity:.7}
+.num{font-variant-numeric:tabular-nums}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border-radius:999px;padding:14px 26px;font:600 15px/1 var(--body);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .25s ease,background .25s ease,border-color .25s ease}
+.btn:hover{transform:translateY(-2px)}
+.btn-accent{background:var(--accent);color:var(--accent-ink);position:relative;overflow:hidden}
+.btn-accent::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.28) 50%,transparent 70%);transform:translateX(-120%);transition:transform .9s ease}
+.btn-accent:hover::after{transform:translateX(120%)}
+.btn-accent:hover{background:var(--accent-strong)}
+.btn-glass{background:rgba(255,255,255,.12);color:#fff;border-color:rgba(255,255,255,.4);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.btn-glass:hover{background:rgba(255,255,255,.22)}
+.btn-line{border-color:var(--ink);color:var(--ink);background:transparent}
+.dot{width:8px;height:8px;border-radius:50%;background:#4ADE80;display:inline-block}
+.link{color:var(--accent);font-weight:600;text-decoration:none;border-bottom:1px solid currentColor;padding-block:10px 2px;display:inline-block}
+section.pad{padding-block:110px}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
+.sec-head h2{font-size:clamp(36px,4.6vw,58px);margin-top:12px}
+.sec-head p{max-width:30em;color:var(--muted)}
+
+/* HERO */
+.hero{position:relative;color:#fff;overflow:hidden;background:var(--night)}
+.hero-media{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%;animation:unveil 2.4s cubic-bezier(.2,.7,.1,1) both,drift 22s 2.4s ease-in-out infinite alternate}
+.hero .bgv{z-index:0}
+.hero::after{z-index:1}
+@keyframes drift{from{transform:scale(1.04)}to{transform:scale(1.12) translateX(-1.5%)}}
+@media (prefers-reduced-motion:reduce){.hero-media,.cinema > img.poster,.grain,.ribbon .track,.scroll-cue i,.hero h1 .ln > span,.hero .rating,.hero .lede,.hero .promises,.hero .book,.nav .wrap{animation:none!important}}
+.hero::after{content:"";position:absolute;inset:0;background:
+  linear-gradient(90deg,rgba(10,18,15,.82) 0%,rgba(10,18,15,.5) 45%,rgba(10,18,15,.1) 75%),
+  linear-gradient(180deg,rgba(10,18,15,.55) 0%,rgba(10,18,15,0) 25%,rgba(10,18,15,0) 70%,rgba(10,18,15,.5) 100%)}
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;padding-top:env(safe-area-inset-top,0px);color:#fff;transition:background .45s ease,box-shadow .45s ease}
+.nav.solid{background:rgba(12,20,17,.82);backdrop-filter:blur(14px) saturate(1.2);-webkit-backdrop-filter:blur(14px) saturate(1.2);box-shadow:0 1px 0 rgba(233,207,158,.18)}
+.nav.solid .wrap{height:76px}
+.nav.solid .logo img{height:56px}
+.nav .wrap,.nav .logo img{transition:height .45s ease}
+.nav .wrap{display:flex;align-items:center;gap:30px;height:96px}
+.logo{display:block;text-decoration:none;line-height:0}
+.logo img{height:72px;width:auto;filter:invert(1) drop-shadow(0 1px 6px rgba(0,0,0,.35))}
+.nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;font-size:15px;font-weight:500;white-space:nowrap}
+.nav ul a{text-decoration:none;opacity:.85}
+.nav ul a:hover{opacity:1}
+.nav .right{margin-left:auto;display:flex;align-items:center;gap:18px;font-size:14px;white-space:nowrap}
+.nav .lang{display:flex;align-items:center;gap:4px}
+.nav .lang button{font:600 13px/1 var(--body);color:#fff;opacity:.6;background:none;border:0;padding:10px 6px;cursor:pointer;letter-spacing:.06em}
+.nav .lang button[aria-pressed="true"]{opacity:1;text-decoration:underline;text-underline-offset:5px;text-decoration-color:var(--champagne)}
+.nav .lang span{opacity:.5}
+.hero-body{position:relative;z-index:2;padding-top:calc(96px + env(safe-area-inset-top,0px))}
+.hero-body .wrap{display:grid;grid-template-columns:1fr 480px;gap:56px;align-items:center;padding-block:36px 72px}
+.rating{display:inline-flex;align-items:center;gap:10px;font-size:14px;background:rgba(0,0,0,.28);border:1px solid rgba(255,255,255,.22);padding:6px 14px 6px 6px;border-radius:999px;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.rating img{width:30px;height:30px}
+.rating .stars{color:#F2C46D;letter-spacing:2px}
+.hero h1{font-size:clamp(42px,5.4vw,80px);line-height:1.02;margin-top:22px;letter-spacing:-.01em}
+.hero h1 em{font-family:var(--script);font-style:italic;font-weight:500;color:var(--champagne);letter-spacing:0;font-size:1.08em}
+.hero h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
+@media (min-width:1081px){.hero h1 .ln > span{white-space:nowrap}}
+.hero h1 .ln > span{display:inline-block;animation:rise 1.1s cubic-bezier(.2,.7,.1,1) both}
+.hero h1 .ln:nth-child(2) > span{animation-delay:.12s}
+@keyframes rise{from{transform:translateY(105%)}to{transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes unveil{from{transform:scale(1.18);filter:brightness(.35)}to{transform:scale(1.04);filter:none}}
+.hero .rating{animation:fadeUp .9s .1s ease both}
+.hero .lede{animation:fadeUp .9s .45s ease both}
+.hero .promises{animation:fadeUp .9s .6s ease both}
+
+.nav .wrap{animation:fadeUp .8s ease both}
+.gold-rule{display:block;width:64px;height:1px;background:linear-gradient(90deg,var(--champagne),transparent);margin-top:26px}
+.grain{position:absolute;inset:-50%;z-index:1;pointer-events:none;opacity:.09;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:grain 1.2s steps(6) infinite}
+@keyframes grain{0%{transform:translate(0,0)}20%{transform:translate(-3%,2%)}40%{transform:translate(2%,-3%)}60%{transform:translate(-2%,-1%)}80%{transform:translate(3%,3%)}100%{transform:translate(0,0)}}
+.scroll-cue{position:absolute;left:50%;bottom:18px;z-index:2;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.65);text-decoration:none}
+.scroll-cue i{width:1px;height:38px;background:linear-gradient(var(--champagne),transparent);animation:cue 2.2s ease-in-out infinite}
+@keyframes cue{0%{transform:scaleY(0);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}51%{transform-origin:bottom}100%{transform:scaleY(0);transform-origin:bottom}}
+/* RIBBON */
+.ribbon{background:var(--night);color:var(--night-ink);border-top:1px solid rgba(233,207,158,.18);overflow:hidden}
+.ribbon .track{display:flex;width:max-content;animation:marquee 48s linear infinite}
+.ribbon ul{display:flex;list-style:none;margin:0;padding:18px 0;gap:0}
+.ribbon li{display:flex;align-items:center;gap:26px;padding-right:26px;white-space:nowrap;font-family:var(--script);font-style:italic;font-size:20px;color:rgba(244,239,230,.86)}
+.ribbon li::after{content:"✦";font-style:normal;font-size:11px;color:var(--champagne)}
+@keyframes marquee{to{transform:translateX(-50%)}}
+.ribbon:hover .track{animation-play-state:paused}
+.hero .lede{margin-top:20px;font-size:clamp(17px,1.5vw,19.5px);max-width:31em;color:rgba(255,255,255,.88)}
+.promises{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;font-size:14.5px;color:rgba(255,255,255,.9);list-style:none;padding:0}
+.promises li{display:flex;align-items:center;gap:8px}
+.promises li::before{content:"";width:16px;height:16px;border-radius:50%;background:#3FB3AC url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.3 2.3 4.7-4.9' fill='none' stroke='%23062220' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100% no-repeat;flex-shrink:0}
+
+/* VIDEO LAYERS: poster image shows until the video can play */
+.bgv{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.2s ease}
+.bgv.ready{opacity:1}
+.sound{position:absolute;z-index:3;display:inline-flex;align-items:center;gap:8px;font:600 13.5px/1 var(--body);color:#fff;background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:10px 14px;cursor:pointer;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.sound[hidden]{display:none}
+
+/* CINEMA BAND */
+.cinema{position:relative;min-height:min(86vh,820px);color:#fff;background:var(--night);overflow:hidden;display:flex;align-items:flex-end;isolation:isolate}
+.cinema > img.poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-3;animation:drift 26s ease-in-out infinite alternate}
+.cinema .bgv{z-index:-2}
+.cinema::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,14,12,.92) 0%,rgba(8,14,12,.35) 55%,rgba(8,14,12,.55) 100%)}
+.cinema .wrap{width:100%;display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:end;padding-block:120px 72px}
+.cinema h2{font-size:clamp(40px,5.6vw,78px)}
+.cinema .lede{margin-top:18px;font-size:clamp(16.5px,1.5vw,19px);color:rgba(255,255,255,.85);max-width:30em}
+.cinema .specs{display:flex;flex-wrap:wrap;gap:12px 28px;margin-top:26px;list-style:none;padding:0}
+.cinema .specs li{font-size:14px;color:rgba(255,255,255,.75)}
+.cinema .specs b{display:block;font-family:var(--display);font-weight:400;font-size:28px;color:#fff}
+.cinema .inset{border-radius:8px;overflow:hidden;box-shadow:0 30px 60px -25px rgba(0,0,0,.8);border:1px solid rgba(255,255,255,.15)}
+.cinema .inset img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.cinema .inset p{background:rgba(10,18,15,.85);font-size:13.5px;color:rgba(255,255,255,.8);padding:12px 16px}
+.cinema .sound{top:24px;right:22px}
+.video-slot{position:absolute;top:24px;left:22px;z-index:3;font-size:12px;color:rgba(255,255,255,.75);border:1px dashed rgba(255,255,255,.45);border-radius:8px;padding:6px 10px;max-width:230px;line-height:1.4}
+.hero .video-slot{top:auto;bottom:22px;left:auto;right:22px}
+
+/* BOOKING WINDOW (embedded white-label booking) */
+dialog.bk{border:0;padding:0;width:min(980px,calc(100% - 32px));height:min(860px,calc(100% - 48px));max-width:none;max-height:none;border-radius:14px;background:var(--surface);color:var(--ink);box-shadow:0 40px 100px -30px rgba(0,0,0,.7);overflow:hidden}
+dialog.bk[open]{display:flex;flex-direction:column}
+dialog.bk::backdrop{background:rgba(8,14,12,.72);backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.bk-head{display:flex;align-items:center;gap:16px;padding:14px 18px;border-bottom:1px solid var(--line);background:var(--bg)}
+.bk-head img{height:40px;filter:var(--logo-filter)}
+.bk-sum{flex:1;min-width:0;font-size:14px;color:var(--muted);line-height:1.35}
+.bk-sum b{display:block;color:var(--ink);font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bk-close{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;width:40px;height:40px;font-size:20px;cursor:pointer;flex-shrink:0}
+.bk-body{position:relative;flex:1;min-height:0;background:var(--surface)}
+.bk-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.bk-preview{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;text-align:center;padding:32px;background:repeating-linear-gradient(135deg,var(--bg) 0 14px,var(--sand) 14px 28px)}
+.bk-preview .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:28px;max-width:440px;display:grid;gap:12px}
+.bk-preview h3{font-size:26px}
+.bk-preview p{color:var(--muted);font-size:15px}
+.bk-foot{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;padding:12px 18px;border-top:1px solid var(--line);font-size:13px;color:var(--muted);background:var(--bg)}
+.bk-foot a{color:var(--accent);font-weight:600}
+@media (max-width:620px){dialog.bk{width:100%;height:100%;border-radius:0}.bk-head img{display:none}}
+
+/* RESERVE ONLINE (inline embedded booking) */
+.reserve{background:var(--night);color:var(--night-ink)}
+.reserve .grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.reserve h2{font-size:clamp(36px,4.4vw,58px);margin-top:12px}
+.reserve .grid > div > p{color:var(--night-muted);margin-top:16px;max-width:28em}
+.reserve ul{list-style:none;padding:0;margin:30px 0 0;display:grid;gap:18px}
+.reserve li{display:grid;grid-template-columns:40px 1fr;gap:14px;align-items:start;font-size:15.5px}
+.reserve li i{width:40px;height:40px;border-radius:50%;border:1px solid rgba(233,207,158,.4);display:grid;place-items:center;font-style:normal;color:var(--champagne);font-size:16px}
+.reserve li b{display:block;font-weight:600;color:var(--night-ink)}
+.reserve li span{color:var(--night-muted);font-size:14.5px}
+.frame{position:relative;height:780px;border-radius:14px;overflow:hidden;background:var(--surface);box-shadow:0 40px 80px -30px rgba(0,0,0,.7);border:1px solid rgba(233,207,158,.25)}
+.frame-bar{display:flex;align-items:center;gap:10px;height:44px;padding:0 16px;background:var(--sand);border-bottom:1px solid var(--line);font-size:12.5px;color:var(--muted)}
+.frame-bar .dots{display:flex;gap:6px}.frame-bar .dots span{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.frame-bar .url{flex:1;background:var(--surface);border-radius:999px;padding:5px 12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.frame-body{position:absolute;inset:44px 0 0 0}
+.frame-body iframe{width:100%;height:100%;border:0;display:block}
+.frame .bk-preview{position:absolute;inset:0;color:var(--ink)}
+@media (max-width:1080px){.reserve .grid{grid-template-columns:1fr;gap:36px}.frame{height:720px}}
+@media (max-width:620px){.frame{height:640px;border-radius:10px;margin-inline:-6px}}
+
+/* ARTISTS & PRODUCTIONS: professional, no motion */
+.artists{background:#0b1411;color:var(--night-ink);border-top:1px solid rgba(233,207,158,.14)}
+.artists .wrap{padding-block:110px}
+.ap-top{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:start}
+.artists h2{font-size:clamp(34px,3.8vw,52px);line-height:1.1;margin-top:14px;max-width:16em}
+.ap-top .lead{color:var(--night-muted);margin-top:20px;max-width:34em}
+.ap-top .cities{margin-top:22px;font-size:13.5px;color:var(--night-muted)}
+.ap-top .cities b{color:var(--night-ink);font-weight:600}
+.ap-figs{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid rgba(233,207,158,.2)}
+.ap-figs div{padding:22px 0 22px;border-bottom:1px solid rgba(233,207,158,.12);font-size:13.5px;color:var(--night-muted);line-height:1.4}
+.ap-figs div:nth-child(odd){padding-right:20px}
+.ap-figs div:nth-child(even){padding-left:20px;border-left:1px solid rgba(233,207,158,.12)}
+.ap-figs b{display:block;font-family:var(--display);font-weight:400;font-size:clamp(30px,3vw,40px);color:#fff;line-height:1.1;margin-bottom:4px;font-variant-numeric:tabular-nums}
+.ap-h{font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--champagne);margin:84px 0 22px}
+.clients{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(233,207,158,.2);border-left:1px solid rgba(233,207,158,.12)}
+.clients div{padding:22px 20px;border-right:1px solid rgba(233,207,158,.12);border-bottom:1px solid rgba(233,207,158,.12)}
+.clients b{display:block;font-family:var(--display);font-weight:400;font-size:21px;color:#fff}
+.clients span{font-size:13px;color:var(--night-muted)}
+.eng{overflow-x:auto;border-top:1px solid rgba(233,207,158,.2)}
+.eng table{border-collapse:collapse;width:100%;min-width:720px;font-size:15px}
+.eng th{text-align:left;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--night-muted);padding:14px 16px 14px 0;border-bottom:1px solid rgba(233,207,158,.12)}
+.eng td{padding:18px 16px 18px 0;border-bottom:1px solid rgba(233,207,158,.1);vertical-align:top;color:var(--night-muted)}
+.eng td:first-child{white-space:nowrap;color:var(--champagne);font-variant-numeric:tabular-nums;font-size:14px}
+.eng td b{color:#fff;font-weight:600}
+.wall{overflow:hidden;margin-top:6px;display:grid;gap:6px;padding-block:18px;border-top:1px solid rgba(233,207,158,.2);border-bottom:1px solid rgba(233,207,158,.2);mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 7%,#000 93%,transparent)}
+.wall .row{display:flex;width:max-content;animation:marquee 80s linear infinite}
+.wall .row.rev{animation-direction:reverse;animation-duration:95s}
+.wall ul{display:flex;list-style:none;margin:0;padding:0}
+.wall li{font-family:var(--display);font-size:clamp(28px,3.4vw,46px);line-height:1.25;white-space:nowrap;padding-right:30px;color:rgba(244,239,230,.88);display:flex;align-items:center;gap:30px}
+.wall li:nth-child(even){font-family:var(--script);font-style:italic;color:var(--champagne)}
+.wall li::after{content:"";width:5px;height:5px;border-radius:50%;background:rgba(233,207,158,.55)}
+.wall:hover .row{animation-play-state:paused}
+@media (prefers-reduced-motion:reduce){.wall .row{animation:none}.wall{overflow-x:auto}}
+.artists{overflow:hidden}
+.artists .wrap-after{padding-top:0}
+.artists .wrap:has(+ .wall){padding-bottom:0}
+.roster{columns:4;column-gap:32px;font-size:14.5px;line-height:2;color:rgba(244,239,230,.82);border-top:1px solid rgba(233,207,158,.2);padding-top:22px}
+.roster span{display:block;break-inside:avoid}
+.roster-note{margin-top:16px;font-size:12.5px;color:var(--night-muted)}
+.svc2{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;border-top:1px solid rgba(233,207,158,.2)}
+.svc2 div{padding:22px 0;border-bottom:1px solid rgba(233,207,158,.12);display:grid;grid-template-columns:200px 1fr;gap:20px}
+.svc2 b{color:#fff;font-weight:600;font-size:15.5px}
+.svc2 p{color:var(--night-muted);font-size:15px}
+.ap-cta{margin-top:72px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap;padding:32px 36px;border:1px solid rgba(233,207,158,.25);border-radius:10px}
+.ap-cta p{font-family:var(--display);font-size:clamp(22px,2.2vw,28px);color:#fff}
+.ap-cta span{display:block;font-family:var(--body);font-size:14px;color:var(--night-muted);margin-top:4px}
+.ap-cta .btns{display:flex;gap:12px;flex-wrap:wrap;max-width:100%}
+@media (max-width:1080px){.ap-top{grid-template-columns:1fr;gap:40px}.clients{grid-template-columns:1fr 1fr}.roster{columns:3}.svc2{grid-template-columns:1fr}}
+@media (max-width:620px){.artists .wrap{padding-block:76px}.artists .wrap-after{padding-top:0}.artists .wrap:has(+ .wall){padding-bottom:0}.roster{columns:2}.svc2 div{grid-template-columns:1fr;gap:6px}.ap-cta{padding:24px}.ap-h{margin-top:60px}}
+
+.sedan-art{display:grid;place-items:center;background:radial-gradient(ellipse at 50% 60%,#16302b,#0b1512 70%)}
+.sedan-art svg{width:78%;height:auto}
+
+/* BOOKING ENGINE (embedded white label) */
+.engine{display:flex;flex-direction:column;height:640px;background:var(--surface);color:var(--ink);border-radius:16px;overflow:hidden;box-shadow:0 40px 80px -30px rgba(0,0,0,.65);border:1px solid rgba(233,207,158,.3);animation:fadeUp 1s .35s cubic-bezier(.2,.7,.1,1) both;scroll-margin-top:110px}
+.engine-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:16px 20px;border-bottom:1px solid var(--line);background:var(--bg)}
+.engine-head b{display:block;font-family:var(--display);font-weight:400;font-size:22px;line-height:1.1}
+.engine-head span{font-size:13px;color:var(--muted)}
+.engine-head .secure{font-size:12px;font-weight:600;color:var(--accent);border:1px solid var(--line);border-radius:999px;padding:5px 10px;white-space:nowrap}
+.engine-body{position:relative;flex:1;min-height:0}
+.engine-body iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.engine-body .bk-preview{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:repeating-linear-gradient(135deg,var(--bg) 0 14px,var(--sand) 14px 28px)}
+.engine-body .card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:24px;display:grid;gap:10px;max-width:360px}
+.engine-body .card h3{font-size:24px}
+.engine-body .card p{color:var(--muted);font-size:14.5px}
+.engine-foot{padding:11px 20px;font-size:12.5px;color:var(--muted);border-top:1px solid var(--line);background:var(--bg);text-align:center}
+.engine-foot a{color:var(--accent);font-weight:600;display:inline-block;padding-block:8px}
+@media (max-width:1080px){.engine{height:680px;max-width:620px}}
+@media (max-width:620px){.engine{height:640px}}
+
+/* BOOKING WIDGET */
+.book{background:var(--surface);color:var(--ink);border-radius:14px;box-shadow:0 40px 80px -30px rgba(0,0,0,.65);overflow:hidden}
+.tabs{display:grid;grid-template-columns:repeat(3,1fr);background:var(--sand)}
+.tabs button{font:600 14px/1.2 var(--body);color:var(--muted);background:none;border:0;padding:16px 8px;cursor:pointer;border-bottom:2px solid transparent}
+.tabs button[aria-selected="true"]{color:var(--ink);background:var(--surface);border-bottom-color:var(--accent)}
+.book form{padding:22px 24px 24px;display:grid;gap:14px}
+.fld{display:flex;flex-direction:column;gap:6px}
+.fld label{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.fld select,.fld input{font:inherit;font-size:15.5px;color:var(--ink);background:var(--field);border:1px solid var(--line);border-radius:10px;padding:12px 14px;width:100%}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.vehicles{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.veh{display:flex;flex-direction:column;gap:2px;border:1px solid var(--line);border-radius:10px;padding:10px 12px;cursor:pointer;font-size:14px;line-height:1.3}
+.veh input{position:absolute;opacity:0;pointer-events:none}
+.veh b{font-weight:700}
+.veh span.cap{display:block;font-size:12.5px;color:var(--muted)}
+.veh .p{font-family:var(--display);font-size:21px;font-variant-numeric:tabular-nums;margin-top:4px}
+.veh:has(input:checked){border-color:var(--accent);background:color-mix(in srgb,var(--accent) 8%,transparent)}
+.veh:has(input:focus-visible){outline:2px solid var(--accent);outline-offset:2px}
+.veh.off{opacity:.4;cursor:not-allowed}
+.book .total{display:flex;justify-content:space-between;align-items:center;font-size:13.5px;color:var(--muted);border-top:1px dashed var(--line);padding-top:14px}
+.book .total b{font-family:var(--display);font-weight:400;font-size:30px;color:var(--ink)}
+.book .fine{font-size:12.5px;color:var(--muted);text-align:center}
+
+/* TRUST STRIP */
+.trust{background:var(--surface);border-bottom:1px solid var(--line)}
+.trust .wrap{display:grid;grid-template-columns:auto repeat(4,1fr);gap:28px;align-items:center;padding-block:26px}
+.trust img{width:64px}
+.trust div{font-size:14px;color:var(--muted);line-height:1.4}
+.trust b{display:block;font-family:var(--display);font-weight:400;font-size:26px;color:var(--ink);line-height:1.15}
+
+/* SERVICES */
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.svc a{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:440px;border-radius:8px;overflow:hidden;color:#fff;text-decoration:none;padding:26px;isolation:isolate}
+.svc img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.4s cubic-bezier(.2,0,.2,1)}
+.svc a::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,14,12,.88) 0%,rgba(8,14,12,.1) 60%)}
+.svc a:hover img{transform:scale(1.05)}
+.svc .tag{position:absolute;top:18px;left:18px;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:rgba(255,255,255,.92);color:#1D2320;padding:5px 11px;border-radius:999px}
+.svc h3{font-size:30px}
+.svc p{font-size:15px;color:rgba(255,255,255,.85);margin-top:8px}
+.svc .from{margin-top:14px;font-size:14px;font-weight:600;color:#9BE6DC}
+
+/* ROUTES */
+.routes-wrap{background:var(--sand)}
+.routes{overflow-x:auto;background:var(--surface);border-radius:10px;border:1px solid var(--line)}
+.routes table{border-collapse:collapse;width:100%;min-width:760px;font-size:15.5px}
+.routes th,.routes td{text-align:left;padding:16px 22px;border-bottom:1px solid var(--line)}
+.routes thead th{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.routes td.r a{font-weight:600;text-decoration:none;display:inline-block;padding-block:8px}
+.routes td.r a:hover{color:var(--accent)}
+.routes td.r span{display:block;font-size:13.5px;color:var(--muted);font-weight:400}
+.routes td.p{font-variant-numeric:tabular-nums;white-space:nowrap}
+.routes tr:last-child td{border-bottom:0}
+.routes-foot{margin-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:14px;color:var(--muted)}
+
+/* ARRIVAL STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:34px}
+.steps div{border-top:1.5px solid var(--ink);padding-top:18px}
+.steps .n{font-size:13px;font-weight:700;color:var(--gold)}
+.steps h3{font-size:25px;margin:8px 0 10px}
+.steps p{color:var(--muted);font-size:15.5px}
+
+/* FLEET */
+.fleet{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.fleet article.feat{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr}
+.fleet article.feat .ph{aspect-ratio:auto;min-height:100%}
+.fleet article.feat .b{display:flex;flex-direction:column;justify-content:center;padding:34px}
+.fleet article.feat h3{font-size:34px}
+.fleet .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.fleet .chips span{font-size:13px;border:1px solid var(--line);border-radius:999px;padding:5px 11px}
+.fleet article{background:var(--surface);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.fleet .ph{aspect-ratio:4/3;overflow:hidden}
+.fleet .ph img{width:100%;height:100%;object-fit:cover}
+.fleet .b{padding:20px 22px 22px}
+.fleet .lvl{font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.fleet h3{font-size:24px;margin:6px 0 6px}
+.fleet p{font-size:14.5px;color:var(--muted)}
+
+/* CONCIERGE */
+.concierge{background:var(--night);color:var(--night-ink)}
+.concierge .sec-head p{color:var(--night-muted)}
+.cg{display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.cg .photo{position:relative;border-radius:8px;overflow:hidden;aspect-ratio:4/5;max-width:100%}
+.cg .photo img{width:100%;height:100%;object-fit:cover;object-position:40% center}
+.cg-list{list-style:none;margin:0 0 34px;padding:0;display:grid;gap:0;border-top:1px solid rgba(255,255,255,.15)}
+.cg-list li{display:grid;grid-template-columns:1fr auto;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+.cg-list b{font-family:var(--display);font-weight:400;font-size:24px}
+.cg-list span{display:block;color:var(--night-muted);font-size:14.5px}
+.cg-list em{font-style:normal;color:#E3C58F;font-size:14px;font-weight:600;white-space:nowrap;align-self:center}
+.ticket{background:var(--ticket);color:var(--ticket-ink);border-radius:10px;overflow:hidden}
+.ticket-head{padding:18px 22px 14px;border-bottom:1.5px dashed var(--line)}
+.ticket-head .s{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:700}
+.ticket-head .t{font-family:var(--display);font-size:21px;line-height:1.2}
+.legs{list-style:none;margin:0;padding:4px 22px}
+.legs li{display:grid;grid-template-columns:52px 1fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.4}
+.legs li:last-child{border-bottom:0}
+.legs .when{font-size:12.5px;color:var(--muted)}
+.legs .when b{display:block;color:var(--ticket-ink);font-weight:700}
+.legs .what span{display:block;color:var(--muted);font-size:13px}
+.ticket-foot{display:flex;justify-content:space-between;align-items:center;background:var(--sand);padding:14px 22px;font-size:14px;color:var(--muted)}
+.ticket-foot b{font-family:var(--display);font-weight:400;font-size:28px;color:var(--ticket-ink)}
+
+/* OCCASIONS */
+.occ{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.occ a{position:relative;aspect-ratio:3/4;border-radius:8px;overflow:hidden;color:#fff;text-decoration:none;display:flex;align-items:flex-end;padding:16px;isolation:isolate}
+.occ img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transition:transform 1.2s ease}
+.occ a::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(8,14,12,.8),rgba(8,14,12,0) 60%)}
+.occ a:hover img{transform:scale(1.06)}
+.occ h3{font-size:21px}
+
+/* DRIVERS + REVIEWS */
+.drivers .grid{display:grid;grid-template-columns:1fr 1fr;min-height:600px;background:var(--sand)}
+.drivers .img{position:relative;overflow:hidden}
+.drivers .img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.drivers .txt{padding:90px 7vw 90px 64px;display:flex;flex-direction:column;justify-content:center;gap:22px}
+.drivers h2{font-size:clamp(34px,4vw,54px)}
+.drivers p{color:var(--muted);max-width:30em}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.quotes blockquote{margin:12px 0 16px;font-family:var(--display);font-size:22px;line-height:1.3}
+.quotes .who{font-size:14px;color:var(--muted)}
+.quotes .who b{color:var(--ink)}
+.stars{color:var(--gold);letter-spacing:3px}
+.rev-foot{margin-top:44px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;font-size:15px;color:var(--muted);border-top:1px solid var(--line);padding-top:26px}
+.rev-foot span{display:flex;align-items:center;gap:14px}
+.rev-foot img{width:56px}
+
+/* B2B */
+.b2b{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:48px}
+.b2b h2{font-size:clamp(30px,3.4vw,44px);margin-top:10px}
+.b2b p{color:var(--muted);margin-top:14px}
+.b2b ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px 24px;font-size:15.5px}
+.b2b li{padding-left:22px;position:relative}
+.b2b li::before{content:"";position:absolute;left:0;top:.72em;width:12px;height:1.5px;background:var(--gold)}
+
+/* DESTINATIONS + FAQ */
+.dest{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--ink)}
+.dest a{padding:22px 20px 24px 0;border-bottom:1px solid var(--line);text-decoration:none;display:block}
+.dest a:hover h3{color:var(--accent)}
+.dest h3{font-size:24px}
+.dest span{font-size:14px;color:var(--muted)}
+.faq{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px}
+.faq h2{font-size:clamp(34px,4vw,52px);margin-top:12px}
+details{border-bottom:1px solid var(--line);padding:20px 0}
+details:first-child{border-top:1px solid var(--ink)}
+summary{cursor:pointer;font-weight:600;font-size:17px;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:22px;color:var(--accent);line-height:1}
+details[open] summary::after{content:"−"}
+details p{margin-top:12px;color:var(--muted);max-width:40em}
+
+/* FINAL CTA */
+.final{position:relative;color:#fff;isolation:isolate;overflow:hidden;text-align:center}
+.final > img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.final::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(10,18,15,.66)}
+.final .wrap{padding-block:130px;display:flex;flex-direction:column;align-items:center;gap:22px}
+.final h2{font-size:clamp(40px,5.4vw,72px);max-width:12em}
+.final p{color:rgba(255,255,255,.85);max-width:32em}
+.final .ctas{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+
+footer{padding-block:64px 40px;font-size:14.5px;color:var(--muted)}
+footer .top{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr 1fr;gap:28px}
+footer h4{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);margin:0 0 14px;font-weight:700}
+footer ul{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:var(--ink)}
+footer .logo img{height:76px;filter:var(--logo-filter)}
+.legal{margin-top:16px;font-size:13px;line-height:1.55}
+.langs{margin-top:40px;padding-top:22px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px}
+.wa-float{position:fixed;right:18px;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:30;background:#1FAF5A;color:#fff;border-radius:999px;padding:14px 20px;font-weight:600;font-size:15px;text-decoration:none;box-shadow:0 14px 30px -12px rgba(0,0,0,.5);display:flex;gap:9px;align-items:center}
+
+@media (max-width:1080px){
+  .nav ul{display:none}
+  .hero-body .wrap{grid-template-columns:1fr;gap:36px;padding-block:20px 72px}
+  .book{max-width:560px}
+  .trust .wrap{grid-template-columns:auto 1fr 1fr;row-gap:18px}
+  .svc,.fleet{grid-template-columns:repeat(2,1fr)}
+  .cinema .wrap{grid-template-columns:1fr;gap:32px;padding-block:100px 56px}
+  .cinema .inset{max-width:420px}
+  .svc a{min-height:360px}
+  .steps{grid-template-columns:repeat(2,1fr)}
+  .cg{grid-template-columns:1fr;gap:44px}
+  .cg .photo{aspect-ratio:16/10}
+  .occ{grid-template-columns:repeat(3,1fr)}
+  .drivers .grid{grid-template-columns:1fr}
+  .drivers .img{min-height:360px}
+  .drivers .txt{padding:60px 22px}
+  .quotes{grid-template-columns:1fr;gap:28px}
+  .b2b{grid-template-columns:1fr;padding:32px}
+  .dest{grid-template-columns:repeat(2,1fr)}
+  .faq{grid-template-columns:1fr;gap:28px}
+  footer .top{grid-template-columns:1fr 1fr}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .nav .lang button{padding:10px 4px;font-size:12px}
+  .nav .right{gap:8px}
+  .nav .wrap{height:84px}
+  .hero-body{padding-top:calc(84px + env(safe-area-inset-top,0px))}
+  .ribbon li{font-size:17px}
+  .rating .rank{display:none}
+  .scroll-cue{display:none}
+  .logo img{height:60px}
+  .hero::after{background:linear-gradient(0deg,rgba(10,18,15,.85) 0%,rgba(10,18,15,.55) 50%,rgba(10,18,15,.55) 100%)}
+  section.pad{padding-block:72px}
+  .trust .wrap{grid-template-columns:1fr 1fr}
+  .trust img{grid-row:span 2}
+  .svc,.fleet,.steps,.b2b ul{grid-template-columns:1fr}
+  .fleet article.feat{grid-column:span 1;grid-template-columns:1fr}
+  .fleet article.feat .ph{aspect-ratio:4/5}
+  .fleet article.feat .b{padding:22px}
+  .cinema{min-height:0}
+  .cinema .inset{display:none}
+  .video-slot{display:none}
+  .occ{grid-template-columns:repeat(2,1fr)}
+  .dest{grid-template-columns:1fr}
+  .row2{grid-template-columns:1fr 1fr}
+  .book form{padding:18px}
+  .wa-float .txt{display:none}
+}
+</style>
+</head>
+<body>
+
+
+<header class="hero" id="top">
+  <img class="hero-media" src="/serendipity-preview/images/hero.jpg" alt="Guest stepping out of a Serendipity Mercedes van in Tulum">
+  <!-- VIDEO 1: drop videos/hero.mp4 (horizontal) and videos/hero-vertical.mp4 (phones) next to the page -->
+  <video class="bgv" muted loop playsinline preload="none" data-src="videos/hero.mp4" data-src-mobile="videos/hero-vertical.mp4" aria-hidden="true"></video>
+  <a class="scroll-cue" href="#services"><span>Discover</span><i></i></a>
+  <div class="grain" aria-hidden="true"></div>
+  <nav class="nav" aria-label="Main" id="nav">
+    <div class="wrap">
+      <a class="logo" href="#top"><img src="/serendipity-preview/images/serendipity-logo.png" alt="Serendipity Travel Experiences"></a>
+      <ul>
+        <li><a href="#services">Transfers</a></li>
+                <li><a href="#routes">Prices</a></li>
+        <li><a href="#artists">Artists &amp; events</a></li>
+        <li><a href="#concierge">Concierge</a></li>
+        <li><a href="#business">Business</a></li>
+      </ul>
+      <div class="right">
+        <div class="lang" role="group" aria-label="Language"><button type="button" data-lang="en" aria-pressed="true">EN</button><span aria-hidden="true">·</span><button type="button" data-lang="es" aria-pressed="false">ES</button></div>
+        <a class="btn btn-accent js-book" href="#book" style="padding:11px 20px">Book now</a>
+      </div>
+    </div>
+  </nav>
+  <div class="hero-body">
+    <div class="wrap">
+      <div>
+        <span class="rating"><img src="/serendipity-preview/images/tc-2025.png" alt="Travelers' Choice 2025"><b>4.9</b> <span class="stars">★★★★★</span> 232 reviews<span class="rank"> · #8 of 216 in Tulum transportation</span></span>
+        <h1><span class="ln"><span>Private chauffeurs</span></span><span class="ln"><span>in <em>Tulum</em> &amp; <em>Cancún</em></span></span></h1>
+        <span class="gold-rule" aria-hidden="true"></span>
+        <p class="lede">We meet you inside the airport and drive you in a Suburban or Mercedes. Once you've arrived, our concierge team can plan everything else: yachts, cenotes, tables and celebrations.</p>
+        <ul class="promises">
+          <li>Fixed price, per vehicle</li>
+          <li>Flight tracking</li>
+          <li>60 min free waiting</li>
+          <li>Free cancellation up to 24 h</li>
+          <li>Free child seats</li>
+        </ul>
+      </div>
+
+      <div class="engine" id="book" aria-label="Book your ride">
+        <div class="engine-head">
+          <div><b>Book your ride</b><span>Airport transfers · By the hour · Tours</span></div>
+          <span class="secure">🔒 Secure</span>
+        </div>
+        <div class="engine-body" id="engineBody">
+          <div class="bk-preview" id="enginePreview">
+            <div class="card">
+              <p class="kicker">Booking engine</p>
+              <h3>Your booking form loads here</h3>
+              <p>On your website, guests search and book right in this box. This preview blocks other websites, so it can't show the live form.</p>
+              <a class="btn btn-accent" id="engineOpen" href="#" target="_blank" rel="noopener">Open the booking form</a>
+            </div>
+          </div>
+        </div>
+        <div class="engine-foot">Instant confirmation · Flight tracking · Questions? <a href="https://wa.me/529841814911" target="_blank" rel="noopener">WhatsApp us</a></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="ribbon" aria-label="Credentials">
+  <div class="track">
+    <ul><li>Tripadvisor Travelers' Choice 2024 &amp; 2025</li><li>4.9 stars from 232 reviews</li><li>Federally licensed, SICT</li><li>Chevrolet Suburban High Country</li><li>Mercedes-Benz V-Class &amp; Sprinter</li><li>Waiting inside arrivals at CUN &amp; TQO</li><li>In Tulum since 2020</li></ul>
+    <ul aria-hidden="true"><li>Tripadvisor Travelers' Choice 2024 &amp; 2025</li><li>4.9 stars from 232 reviews</li><li>Federally licensed, SICT</li><li>Chevrolet Suburban High Country</li><li>Mercedes-Benz V-Class &amp; Sprinter</li><li>Waiting inside arrivals at CUN &amp; TQO</li><li>In Tulum since 2020</li></ul>
+  </div>
+</div>
+<div class="trust">
+  <div class="wrap">
+    <img src="/serendipity-preview/images/tc-2025.png" alt="Tripadvisor Travelers' Choice 2025">
+    <div><b class="num">45,459</b>passengers since 2020</div>
+    <div><b>Inside arrivals</b>federal SICT permits at CUN and TQO</div>
+    <div><b>Our own fleet</b>Suburban, V-Class and Sprinter</div>
+    <div><b>4.9 · 232 reviews</b>#8 of 216 in Tulum transportation on Tripadvisor</div>
+  </div>
+</div>
+
+<main>
+<section class="pad" id="services">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">Transportation</p><h2>However you need to move</h2></div>
+      <p>Every ride is private and at a fixed price per vehicle, with a licensed chauffeur who works for us.</p>
+    </div>
+    <div class="svc">
+      <a href="#book"><img src="/serendipity-preview/images/arrival-cta.jpg" alt="Couple walking from their van" loading="lazy"><span class="tag">Most booked</span><h3>Airport transfers</h3><p>Cancún and Tulum airports to any hotel, villa or Airbnb. We're waiting inside arrivals with your name.</p><span class="from">From $70 per vehicle</span></a>
+      <a href="#book"><img src="/serendipity-preview/images/chauffeur.jpg" alt="Chauffeur at the wheel" loading="lazy"><h3>Chauffeur by the hour</h3><p>Beach clubs, dinners, shopping. Your driver waits while you enjoy.</p><span class="from">From $65 per hour</span></a>
+      <a href="#book"><img src="/serendipity-preview/images/luxury-vclass.jpg" alt="Friends in a van at sunset" loading="lazy"><span class="tag">New</span><h3>Transfers with a stop</h3><p>Swim in a cenote or see the Tulum ruins on your way to the hotel.</p><span class="from">From $195 per vehicle</span></a>
+      <a href="#business"><img src="/serendipity-preview/images/premium-sprinter.jpg" alt="Sprinter van interior at night" loading="lazy"><h3>Groups and events</h3><p>Weddings, retreats and conferences. Sprinter fleet with one coordinator.</p><span class="from">Custom quote</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="pad routes-wrap" id="routes">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">Routes & prices</p><h2>Fixed prices on popular routes</h2></div>
+      <p>Prices are per vehicle, one way, and include taxes, tolls, waiting time and a licensed chauffeur.</p>
+    </div>
+    <div class="routes">
+      <table>
+        <thead><tr><th>Route</th><th>Drive time</th><th>Sedan<br>1–3</th><th>Van<br>1–10</th><th>Suburban / V-Class<br>1–6</th><th>Sprinter<br>1–14</th></tr></thead>
+        <tbody>
+          <tr><td class="r"><a class="js-book" href="#book">Cancún Airport → Tulum</a><span>Aldea Zama, Region 15, town</span></td><td>1 h 40</td><td class="p">$125</td><td class="p">$145</td><td class="p">$230</td><td class="p">$320</td></tr>
+          <tr><td class="r"><a class="js-book" href="#book">Cancún Airport → Tulum Beach</a><span>Hotel zone, beachfront</span></td><td>1 h 55</td><td class="p">$145</td><td class="p">$160</td><td class="p">$270</td><td class="p">$360</td></tr>
+          <tr><td class="r"><a class="js-book" href="#book">Tulum Airport → Tulum</a><span>Aldea Zama, Region 15, town</span></td><td>30 min</td><td class="p">$70</td><td class="p">$115</td><td class="p">$175</td><td class="p">$265</td></tr>
+          <tr><td class="r"><a class="js-book" href="#book">Tulum Airport → Tulum Beach</a><span>Hotel zone, beachfront</span></td><td>45 min</td><td class="p">$90</td><td class="p">$130</td><td class="p">$190</td><td class="p">$280</td></tr>
+          <tr><td class="r"><a class="js-book" href="#book">Cancún Airport → Playa del Carmen</a><span>5th Avenue, Playacar, Mayakoba</span></td><td>50 min</td><td class="p">$75</td><td class="p">$85</td><td class="p">$145</td><td class="p">$240</td></tr>
+          <tr><td class="r"><a class="js-book" href="#book">Cancún Airport → Hotel Zone</a><span>Beachfront resorts</span></td><td>20 min</td><td class="p">$40</td><td class="p">$55</td><td class="p">$120</td><td class="p">$210</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="routes-foot"><span>Also serving Akumal, Puerto Aventuras, Bacalar, Valladolid, Holbox and Mérida.</span><a class="link js-book" href="#book">Book any address online</a></div>
+  </div>
+</section>
+
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Your arrival</p><h2>From the plane to your villa</h2></div></div>
+    <div class="steps">
+      <div><span class="n">1 · Book</span><h3>Pick your ride</h3><p>Choose a route and vehicle and see the full price. We confirm on WhatsApp within minutes.</p></div>
+      <div><span class="n">2 · We track</span><h3>We follow your flight</h3><p>Delayed? We adjust at no cost. You get 60 free minutes after landing.</p></div>
+      <div><span class="n">3 · Meet</span><h3>Your name inside arrivals</h3><p>Your chauffeur waits inside the terminal with a sign. Taxi drivers aren't allowed in there.</p></div>
+      <div><span class="n">4 · Ride</span><h3>Cold water, Wi-Fi, go</h3><p>Grab a grocery stop on the way if you want. We'll send a live link so family can follow the ride.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="cinema" aria-label="Inside the Suburban">
+  <img class="poster" src="/serendipity-preview/images/suburban-interior.jpg" alt="Leather captain's chairs inside the Chevrolet Suburban">
+  <!-- VIDEO 2: drop videos/ride.mp4 (horizontal) and videos/ride-vertical.mp4 (phones) -->
+  <video class="bgv" muted loop playsinline preload="none" data-src="videos/ride.mp4" data-src-mobile="videos/ride-vertical.mp4" aria-hidden="true"></video>
+  <button class="sound" type="button" hidden>🔈 Sound on</button>
+  <div class="wrap">
+    <div>
+      <p class="kicker" style="color:#E3C58F">The ride is part of the trip</p>
+      <h2 style="margin-top:14px">Leather seats, cold air, and the jungle passing by</h2>
+      <p class="lede">Captain's chairs, room for every suitcase, and a chauffeur who knows when to talk and when to let you rest after the flight.</p>
+      <ul class="specs">
+        <li><b>6</b>guests in leather seats</li>
+        <li><b>6</b>large suitcases</li>
+        <li><b>A/C</b>zones front and rear</li>
+        <li><b>Free</b>water, chargers, Wi-Fi</li>
+      </ul>
+    </div>
+    <figure class="inset" style="margin:0">
+      <img src="/serendipity-preview/images/suburban-third-row.jpg" alt="Third row of the Suburban with leather seats" loading="lazy">
+      <p>Third row fits three adults comfortably.</p>
+    </figure>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker">The fleet</p><h2>Choose your vehicle</h2></div>
+      <p>Every vehicle is ours, federally plated, insured and cleaned before each ride.</p>
+    </div>
+    <div class="fleet">
+      <article class="feat"><div class="ph"><img src="/serendipity-preview/images/suburban-exterior.jpg" alt="Black Chevrolet Suburban High Country with luggage" loading="lazy"></div><div class="b"><span class="lvl">Luxury · Most requested</span><h3>Chevrolet Suburban High Country</h3><p>The classic arrival in Tulum. Up to 6 guests and 6 large suitcases, with leather captain's chairs and tinted windows.</p><div class="chips"><span>Up to 6 guests</span><span>6 suitcases</span><span>Leather</span><span>Rear A/C</span></div></div></article>
+      <article><div class="ph"><img src="/serendipity-preview/images/luxury-vclass.jpg" alt="Inside a Mercedes V-Class" loading="lazy"></div><div class="b"><span class="lvl">Luxury</span><h3>Mercedes V-Class</h3><p>Up to 6 guests with luggage. Leather, quiet, private.</p></div></article>
+      <article><div class="ph"><img src="/serendipity-preview/images/premium-sprinter.jpg" alt="Mercedes Sprinter interior" loading="lazy"></div><div class="b"><span class="lvl">Premium</span><h3>Mercedes Sprinter</h3><p>Up to 14 guests. Lounge seating and ambient lights.</p></div></article>
+      <article><div class="ph"><img src="/serendipity-preview/images/private-hiace.jpg" alt="Toyota Hiace with chauffeur" loading="lazy"></div><div class="b"><span class="lvl">Private</span><h3>Toyota Hiace</h3><p>Up to 10 guests. Great for families and surf boards.</p></div></article>
+      <article><div class="ph sedan-art" aria-hidden="true"><svg viewBox="0 0 400 300" role="presentation"><defs><linearGradient id="sg" x1="0" x2="1"><stop offset="0" stop-color="#E9CF9E"/><stop offset="1" stop-color="#3FB3AC"/></linearGradient></defs><path d="M40 196c0-14 8-22 22-25l46-9c16-18 38-34 64-38 34-5 74-3 102 8 16 6 30 18 44 32l30 6c14 3 22 12 22 26v14c0 6-4 10-10 10h-26" fill="none" stroke="url(#sg)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><path d="M126 210h128M62 210H48c-5 0-8-4-8-8" fill="none" stroke="url(#sg)" stroke-width="2.2" stroke-linecap="round"/><path d="M122 162c14-16 30-26 50-29 22-3 46-2 64 2v27zM246 136c14 3 26 11 38 26h-38z" fill="none" stroke="#E9CF9E" stroke-opacity=".55" stroke-width="1.6" stroke-linejoin="round"/><circle cx="96" cy="210" r="24" fill="none" stroke="url(#sg)" stroke-width="2.2"/><circle cx="96" cy="210" r="9" fill="none" stroke="#E9CF9E" stroke-opacity=".5" stroke-width="1.4"/><circle cx="284" cy="210" r="24" fill="none" stroke="url(#sg)" stroke-width="2.2"/><circle cx="284" cy="210" r="9" fill="none" stroke="#E9CF9E" stroke-opacity=".5" stroke-width="1.4"/><path d="M30 238h340" stroke="#E9CF9E" stroke-opacity=".25" stroke-width="1"/></svg></div><div class="b"><span class="lvl">Economy</span><h3>Private sedan</h3><p>Up to 3 guests. Same chauffeurs, lower price.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="artists" id="artists" aria-label="Artist and production logistics">
+  <div class="wrap">
+    <div class="ap-top">
+      <div>
+        <p class="kicker" style="color:var(--champagne)">Artist &amp; production logistics</p>
+        <h2>Ground transportation for touring artists and event productions</h2>
+        <p class="lead">Since December 2022 we have handled artist, tour team and crew transportation for leading venues and producers. We work from your advance sheet, schedule every movement around set times and keep one operations contact on call for the whole event.</p>
+        <p class="cities">Operating in <b>Tulum, Cancún, Los Cabos, Mexico City and Ibiza</b></p>
+      </div>
+      <div class="ap-figs">
+        <div><b>200+</b>artists transported</div>
+        <div><b>2,200+</b>artist and crew transfers</div>
+        <div><b>4</b>consecutive festival seasons</div>
+        <div><b>8</b>venues and producers served</div>
+      </div>
+    </div>
+
+    <p class="ap-h">Venues and producers</p>
+    <div class="clients">
+      <div><b>Tehmplo</b><span>Venue, Tulum</span></div>
+      <div><b>Lost Nights</b><span>Producer</span></div>
+      <div><b>Mandala Group</b><span>Producer</span></div>
+      <div><b>Mayan Warrior</b><span>Production</span></div>
+      <div><b>Bagatelle</b><span>Beach club, Tulum</span></div>
+      <div><b>Vagalume</b><span>Beach club, Tulum</span></div>
+      <div><b>Bonbonnière</b><span>Club, Tulum</span></div>
+      <div><b>Antromex</b><span>Hospitality group</span></div>
+    </div>
+
+    <p class="ap-h">Selected engagements</p>
+    <div class="eng">
+      <table>
+        <thead><tr><th>Date</th><th>Event</th><th>Venue / producer</th><th>Scope</th></tr></thead>
+        <tbody>
+          <tr><td>Jan 2026</td><td><b>Solomun</b></td><td>Tehmplo · Lost Nights</td><td>Artist and team arrivals, show-night transfers, private jet departure</td></tr>
+          <tr><td>Jan 2026</td><td><b>Marco Carola</b>, with Camelphat and Vintage Culture</td><td>Tehmplo · Lost Nights</td><td>FBO and airport arrivals, timed runs for each set</td></tr>
+          <tr><td>Jan 2025</td><td><b>Michael Bibi</b></td><td>Tehmplo · Mandala Group</td><td>Artist arrivals, standby vehicles for the show</td></tr>
+          <tr><td>Dec 2024</td><td><b>Mayan Warrior</b> New Year's Eve</td><td>Tehmplo · Lost Nights</td><td>Full line-up arrivals and show-night transfers</td></tr>
+          <tr><td>Mar 2024</td><td><b>LOCUS</b> festival</td><td>Tulum</td><td>Around 50 artist vehicles for 60 drum &amp; bass acts</td></tr>
+          <tr><td>2022–2026</td><td><b>Season residencies</b></td><td>Vagalume · Bonbonnière · Bagatelle</td><td>Weekly artist arrivals, hotel–venue runs and departures</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p class="ap-h">Selected artists transported, 2022–2026</p>
+  </div>
+  <div class="wall" aria-label="Artists we have driven">
+    <div class="row"><ul><li>Solomun</li><li>Marco Carola</li><li>Michael Bibi</li><li>Maceo Plex</li><li>Damian Lazarus</li><li>Seth Troxler</li><li>Camelphat</li><li>Vintage Culture</li><li>Booka Shade</li><li>Claptone</li><li>John Digweed</li><li>Hernán Cattáneo</li><li>Kölsch</li><li>Dubfire</li><li>Deep Dish</li><li>Joris Voorn</li><li>Nicole Moudaber</li><li>Lee Burridge</li><li>Adam Port</li><li>Danny Tenaglia</li><li>Fabio &amp; Grooverider</li></ul><ul aria-hidden="true"><li>Solomun</li><li>Marco Carola</li><li>Michael Bibi</li><li>Maceo Plex</li><li>Damian Lazarus</li><li>Seth Troxler</li><li>Camelphat</li><li>Vintage Culture</li><li>Booka Shade</li><li>Claptone</li><li>John Digweed</li><li>Hernán Cattáneo</li><li>Kölsch</li><li>Dubfire</li><li>Deep Dish</li><li>Joris Voorn</li><li>Nicole Moudaber</li><li>Lee Burridge</li><li>Adam Port</li><li>Danny Tenaglia</li><li>Fabio &amp; Grooverider</li></ul></div>
+    <div class="row rev"><ul><li>Sébastien Léger</li><li>Steve Lawler</li><li>Tom &amp; Collins</li><li>Hugel</li><li>Mahmut Orhan</li><li>Mano Le Tough</li><li>Guy J</li><li>Nick Warren</li><li>Catz &#x27;n Dogz</li><li>Solardo</li><li>Lee Foss</li><li>Monkey Safari</li><li>Eli &amp; Fur</li><li>DJ Tennis</li><li>Mousse T</li><li>James Hype</li><li>NERVO</li><li>A-Trak</li><li>Francis Mercier</li><li>HVOB</li><li>Gui Boratto</li><li>Amémé</li><li>DJ Marky</li></ul><ul aria-hidden="true"><li>Sébastien Léger</li><li>Steve Lawler</li><li>Tom &amp; Collins</li><li>Hugel</li><li>Mahmut Orhan</li><li>Mano Le Tough</li><li>Guy J</li><li>Nick Warren</li><li>Catz &#x27;n Dogz</li><li>Solardo</li><li>Lee Foss</li><li>Monkey Safari</li><li>Eli &amp; Fur</li><li>DJ Tennis</li><li>Mousse T</li><li>James Hype</li><li>NERVO</li><li>A-Trak</li><li>Francis Mercier</li><li>HVOB</li><li>Gui Boratto</li><li>Amémé</li><li>DJ Marky</li></ul></div>
+  </div>
+  <div class="wrap wrap-after">
+    <p class="roster-note" style="margin-top:18px">From our transfer records. Names listed for reference only; no endorsement implied.</p>
+
+    <p class="ap-h">Services for productions</p>
+    <div class="svc2">
+      <div><b>Arrivals and departures</b><p>Commercial flights at CUN and TQO, private aviation at the TQO FBO. Flight tracking and meet-and-greet on every arrival.</p></div>
+      <div><b>Show-night scheduling</b><p>Pickups planned back from set times, so each artist arrives on time and the next one is already on the way.</p></div>
+      <div><b>Standby vehicles</b><p>12 and 18 hour dispositions at the venue for artists, management and VIP guests.</p></div>
+      <div><b>Crew and equipment</b><p>Sprinters and vans for production crews and tour teams, from load-in to departure.</p></div>
+      <div><b>Operations and tracking</b><p>A dedicated coordinator, a shared operations sheet and live tracking links for every movement.</p></div>
+      <div><b>Confidentiality</b><p>Tinted vehicles, discreet chauffeurs and riders followed as written.</p></div>
+    </div>
+
+    <div class="ap-cta">
+      <p>Planning an event or tour date?<span>Send us your advance sheet and we'll reply with a transport plan and quote.</span></p>
+      <div class="btns"><a class="btn btn-accent" href="https://wa.me/529841814911?text=Hi%20Serendipity%2C%20we%20need%20artist%20logistics%20for%20an%20event." data-href-es="https://wa.me/529841814911?text=Hola%20Serendipity%2C%20necesitamos%20log%C3%ADstica%20de%20artistas%20para%20un%20evento." target="_blank" rel="noopener">Request a proposal</a><a class="btn btn-glass" href="mailto:hello@serendipitytravelexperiences.com">Email us</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="pad concierge" id="concierge">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="kicker" style="color:#E3C58F">Beyond the ride · Concierge</p><h2>You've landed. Now let us plan the rest.</h2></div>
+      <p>The same team that drives you can book your yacht, your table and your tours. One chat covers the whole trip.</p>
+    </div>
+    <div class="cg">
+      <div class="photo"><img src="/serendipity-preview/images/ondemand-experience.jpg" alt="Friends laughing in the van at night" loading="lazy"></div>
+      <div>
+        <ul class="cg-list">
+          <li><div><b>Private yachts</b><span>Puerto Aventuras, open bar, snorkel, DJ</span></div><em>from $1,650</em></li>
+          <li><div><b>Private tours</b><span>Chichén Itzá, Cobá, cenotes, Bacalar, Sian Ka'an</span></div><em>from $540</em></li>
+          <li><div><b>Driver for your stay</b><span>Same chauffeur every day, 10 hours a day</span></div><em>from $520 / day</em></li>
+          <li><div><b>Tables and reservations</b><span>Beach clubs, dinners, spas, villas</span></div><em>included</em></li>
+          <li><div><b>Trip host</b><span>One planner on WhatsApp, day and night</span></div><em>$150 / day</em></li>
+        </ul>
+        <div class="ticket">
+          <div class="ticket-head"><div class="s">Sample plan · Sprinter · Driver: Luis</div><div class="t">Ana's bachelorette, 10 friends, Thu to Sun</div></div>
+          <ul class="legs">
+            <li><div class="when"><b>Thu</b>14:05</div><div class="what">Tulum airport pickup inside arrivals<span>Cooler of drinks on board</span></div></li>
+            <li><div class="when"><b>Fri</b>10:30</div><div class="what">Private yacht from Puerto Aventuras<span>Snorkel, lunch, open bar</span></div></li>
+            <li><div class="when"><b>Sat</b>08:00</div><div class="what">Cobá and cenotes with a guide<span>Dinner at 20:30</span></div></li>
+          </ul>
+          <div class="ticket-foot"><span>Everything, per person</span><b class="num">$519</b></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Plan by occasion</p><h2>Trips we arrange every week</h2></div></div>
+    <div class="occ">
+      <a href="#concierge"><img src="/serendipity-preview/images/luxury-vclass.jpg" alt="" loading="lazy"><h3>Bachelorettes</h3></a>
+      <a href="#concierge"><img src="/serendipity-preview/images/arrival-cta.jpg" alt="" loading="lazy"><h3>Honeymoons</h3></a>
+      <a href="#concierge"><img src="/serendipity-preview/images/premium-sprinter.jpg" alt="" loading="lazy"><h3>Weddings</h3></a>
+      <a href="#concierge"><img src="/serendipity-preview/images/ondemand-experience.jpg" alt="" loading="lazy"><h3>Birthdays</h3></a>
+      <a href="#concierge"><img src="/serendipity-preview/images/private-hiace.jpg" alt="" loading="lazy"><h3>Family trips</h3></a>
+      <a href="#business"><img src="/serendipity-preview/images/chauffeur.jpg" alt="" loading="lazy"><h3>Retreats</h3></a>
+    </div>
+  </div>
+</section>
+
+<section class="drivers">
+  <div class="grid">
+    <div class="img"><img src="/serendipity-preview/images/private-hiace.jpg" alt="Serendipity chauffeur beside his van" loading="lazy" style="object-position:30% center"></div>
+    <div class="txt">
+      <p class="kicker">Our chauffeurs</p>
+      <h2>Drivers guests ask for by name</h2>
+      <p>Luis, César, Arturo and the team work for us full time, speak English and know Tulum by heart: which beach club has room at 4pm, and the back road when the highway is jammed.</p>
+      <div class="quotes" style="grid-template-columns:1fr">
+        <div><p class="stars">★★★★★</p><blockquote>“We had Luis and César for all 4 days in a Sprinter for our group of 10. Always clean, best seats, and they got us back safely every night.”</blockquote><p class="who"><b>Kayla N.</b> · Bachelorette, 10 friends</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Reviews</p><h2>What travelers say</h2></div><p>Rated 4.9 out of 5 from 232 Tripadvisor reviews, and number 8 of 216 transportation companies in Tulum.</p></div>
+    <div class="quotes">
+      <div><p class="stars">★★★★★</p><blockquote>“They adjusted when we missed our first flight. César was on time, fun and safe.”</blockquote><p class="who"><b>jeatherly</b> · Cancún Airport → Tulum</p></div>
+      <div><p class="stars">★★★★★</p><blockquote>“Booking through WhatsApp was so smooth, and they sent a link so we could track our driver.”</blockquote><p class="who"><b>Paige S.</b> · Tulum Airport → Dreams Tulum</p></div>
+      <div><p class="stars">★★★★★</p><blockquote>“They met us right at the airport and made the whole arrival feel effortless.”</blockquote><p class="who"><b>Madeline S.</b> · February 2026</p></div>
+    </div>
+    <div class="rev-foot"><span><img src="/serendipity-preview/images/tc-2025.png" alt="Travelers' Choice 2025" loading="lazy">4.9 from 232 reviews on Tripadvisor · #8 of 216 transportation companies in Tulum · Travelers' Choice 2024 and 2025</span><a class="link" href="https://www.tripadvisor.com/Attraction_Review-g150813-d24043854-Reviews-Serendipity_Travel_Experiences-Tulum_Yucatan_Peninsula.html" target="_blank" rel="noopener">Read all reviews</a></div>
+  </div>
+</section>
+
+<section class="pad" id="business" style="padding-top:0">
+  <div class="wrap">
+    <div class="b2b">
+      <div>
+        <p class="kicker">For business</p>
+        <h2>Ground transport for your guests</h2>
+        <p>Hotels, villa managers, wedding planners and travel agencies use Serendipity as their fleet in Tulum. You get partner rates, monthly invoicing and one coordinator.</p>
+        <a class="btn btn-accent" href="https://wa.me/529841814911" target="_blank" rel="noopener" style="margin-top:24px">Become a partner</a>
+      </div>
+      <ul>
+        <li>Hotels and resorts</li><li>Villa and Airbnb hosts</li><li>Wedding planners</li><li>Travel agencies and DMCs</li><li>Retreat organizers</li><li>Corporate events</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="pad routes-wrap">
+  <div class="wrap">
+    <div class="sec-head"><div><p class="kicker">Where we drive</p><h2>Destinations</h2></div></div>
+    <div class="dest">
+      <a href="#routes"><h3>Tulum</h3><span>Home base · 30 min from TQO</span></a>
+      <a href="#routes"><h3>Cancún</h3><span>Airport, Hotel Zone, Costa Mujeres</span></a>
+      <a href="#routes"><h3>Playa del Carmen</h3><span>Playacar, Mayakoba, Cozumel ferry</span></a>
+      <a href="#routes"><h3>Akumal & Puerto Aventuras</h3><span>Villas and yacht marina</span></a>
+      <a href="#routes"><h3>Bacalar</h3><span>Lagoon of seven colors</span></a>
+      <a href="#routes"><h3>Valladolid & Chichén Itzá</h3><span>Day trips with a guide</span></a>
+      <a href="#routes"><h3>Holbox</h3><span>Chiquilá ferry transfers</span></a>
+      <a href="#routes"><h3>Mérida</h3><span>City-to-city rides</span></a>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap faq">
+    <div><p class="kicker">Questions</p><h2>Before you book</h2><p style="color:var(--muted);margin-top:16px">Still unsure? Message us on WhatsApp. A real person answers.</p></div>
+    <div>
+      <details open><summary>How much is a private transfer from Cancún airport to Tulum?</summary><p>From $125 per vehicle in a private sedan, $230 in a Mercedes V-Class and $320 in a Sprinter for up to 14 people. The price is fixed and includes tolls and waiting time.</p></details>
+      <details><summary>Should I fly into Tulum or Cancún?</summary><p>Tulum airport (TQO) is 30 minutes from town; Cancún (CUN) is 1 h 40 min but has more flights. We pick up at both, inside arrivals.</p></details>
+      <details><summary>What if my flight is delayed?</summary><p>We track your flight and adjust the pickup at no cost. You also get 60 free minutes after landing.</p></details>
+      <details><summary>Can I book a driver for the whole day?</summary><p>Yes. Book by the hour or for your whole stay. The same chauffeur and vehicle stay with you.</p></details>
+      <details><summary>Do you plan tours and yachts too?</summary><p>Yes. Our concierge team books private yachts, tours, restaurants and beach clubs, with transport included.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="final">
+  <img src="/serendipity-preview/images/arrival-cta.jpg" alt="" loading="lazy">
+  <div class="wrap">
+    <p class="kicker" style="color:#E3C58F">Ready when you land</p>
+    <h2>Your chauffeur is one message away</h2>
+    <p>Send your flight number and hotel. We'll reply with a fixed price in minutes.</p>
+    <div class="ctas"><a class="btn btn-accent js-book" href="#book">Book my transfer</a><a class="btn btn-glass" href="https://wa.me/529841814911" target="_blank" rel="noopener"><span class="dot"></span> +52 984 181 4911</a></div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="top">
+      <div><a class="logo" href="#top"><img src="/serendipity-preview/images/serendipity-logo.png" alt="Serendipity Travel Experiences"></a><p class="legal">Servicios de Logística y Transportación Turística DSA de CV · Federal SICT permits · Aldea Zama, Tulum · Since 2020</p></div>
+      <div><h4>Transfers</h4><ul><li><a href="#routes">Cancún Airport → Tulum</a></li><li><a href="#routes">Tulum Airport → Tulum</a></li><li><a href="#routes">Cancún → Playa del Carmen</a></li><li><a href="#routes">Cancún → Hotel Zone</a></li></ul></div>
+      <div><h4>Services</h4><ul><li><a href="#services">Chauffeur by the hour</a></li><li><a href="#services">Transfers with a stop</a></li><li><a href="#services">Groups and events</a></li><li><a href="#concierge">Concierge</a></li></ul></div>
+      <div><h4>Concierge</h4><ul><li><a href="#concierge">Yachts</a></li><li><a href="#concierge">Private tours</a></li><li><a href="#concierge">Bachelorettes</a></li><li><a href="#concierge">Weddings</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="#business">For business</a></li><li><a href="#top">About us</a></li><li><a href="#top">Guides</a></li><li><a href="https://rideluxe.mx" target="_blank" rel="noopener">Ride Luxe app</a></li></ul></div>
+    </div>
+    <div class="langs"><span>English · Español</span><span>© 2026 Serendipity Travel Experiences</span></div>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": ["LocalBusiness", "TravelAgency"], "name": "Serendipity Travel Experiences", "legalName": "Servicios de Logística y Transportación Turística DSA de CV", "url": "https://serendipityexperiencesmx.com", "logo": "https://serendipityexperiencesmx.com/images/serendipity-logo.png", "telephone": "+52-984-181-4911", "email": "hello@serendipitytravelexperiences.com", "address": {"@type": "PostalAddress", "streetAddress": "Aldea Zama", "addressLocality": "Tulum", "addressRegion": "Quintana Roo", "addressCountry": "MX"}, "areaServed": ["Tulum", "Cancún", "Playa del Carmen", "Los Cabos", "Ibiza"], "foundingDate": "2020", "sameAs": ["https://www.tripadvisor.com/Attraction_Review-g150813-d24043854-Reviews-Serendipity_Travel_Experiences-Tulum_Yucatan_Peninsula.html", "https://rideluxe.mx"], "hasOfferCatalog": {"@type": "OfferCatalog", "name": "Private transfers", "itemListElement": [{"@type": "Offer", "name": "Cancún Airport to Tulum", "price": "125", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Tulum Airport to Tulum", "price": "70", "priceCurrency": "USD"}, {"@type": "Offer", "name": "Cancún Airport to Playa del Carmen", "price": "75", "priceCurrency": "USD"}]}}, {"@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "How much is a private transfer from Cancún airport to Tulum?", "acceptedAnswer": {"@type": "Answer", "text": "From $125 per vehicle in a private sedan, $230 in a Suburban or Mercedes V-Class and $320 in a Sprinter for up to 14 people."}}, {"@type": "Question", "name": "Should I fly into Tulum or Cancún?", "acceptedAnswer": {"@type": "Answer", "text": "Tulum airport (TQO) is 30 minutes from town; Cancún (CUN) is 1 h 40 min but has more flights. We pick up at both, inside arrivals."}}, {"@type": "Question", "name": "Can I book a driver for the whole day?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Book by the hour or for your whole stay. The same chauffeur and vehicle stay with you."}}]}]}</script>
+<a class="wa-float" href="https://wa.me/529841814911" target="_blank" rel="noopener"><span class="dot" style="background:#fff"></span><span class="txt">WhatsApp</span></a>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id)};
+
+  // Booking engine (white label). Shown everywhere except the Claude preview, which blocks other websites.
+  var BOOK_URL="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&c=6a15d8a91d5f0e764f840869";
+  var LIVE=!/(^|\.)(claude\.ai|claudeusercontent\.com|anthropic\.com)$/.test(location.hostname);
+  $("engineOpen").href=BOOK_URL;
+  if(LIVE){
+    var f=document.createElement("iframe");
+    f.title="Serendipity booking";f.src=BOOK_URL;f.setAttribute("allow","payment");
+    $("engineBody").appendChild(f);$("enginePreview").hidden=true;
+  }
+
+  var nav=$("nav");function onScroll(){nav.classList.toggle("solid",window.scrollY>40)}
+  window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+
+  // Language switch (EN / ES). The live site will also publish /es/ pages for Google.
+  (function(){
+    var ES={"Discover": "Descubre", "Transfers": "Traslados", "Prices": "Precios", "Artists & events": "Artistas y eventos", "Concierge": "Concierge", "Business": "Empresas", "Book now": "Reservar", "232 reviews": "232 opiniones", "· #8 of 216 in Tulum transportation": "· N.º 8 de 216 en transporte en Tulum", "Private chauffeurs": "Choferes privados", "in": "en", "We meet you inside the airport and drive you in a Suburban or Mercedes. Once you've arrived, our concierge team can plan everything else: yachts, cenotes, tables and celebrations.": "Te recibimos dentro del aeropuerto y te llevamos en Suburban o Mercedes. Una vez que llegues, nuestro equipo de concierge planea todo lo demás: yates, cenotes, mesas y celebraciones.", "Fixed price, per vehicle": "Precio fijo por vehículo", "Flight tracking": "Seguimiento de vuelo", "60 min free waiting": "60 min de espera sin costo", "Free cancellation up to 24 h": "Cancelación gratis hasta 24 h antes", "Free child seats": "Sillas para niños sin costo", "Book your ride": "Reserva tu traslado", "Airport transfers · By the hour · Tours": "Aeropuerto · Por hora · Tours", "🔒 Secure": "🔒 Seguro", "Booking engine": "Motor de reservas", "Your booking form loads here": "Aquí aparece tu formulario de reserva", "On your website, guests search and book right in this box. This preview blocks other websites, so it can't show the live form.": "En tu sitio, los clientes buscan y reservan directo en este cuadro. Esta vista previa bloquea otros sitios, por eso no muestra el formulario real.", "Open the booking form": "Abrir el formulario de reserva", "Instant confirmation · Flight tracking · Questions?": "Confirmación inmediata · Seguimiento de vuelo · ¿Dudas?", "WhatsApp us": "Escríbenos por WhatsApp", "Tripadvisor Travelers' Choice 2024 & 2025": "Tripadvisor Travelers' Choice 2024 y 2025", "4.9 stars from 232 reviews": "4.9 estrellas en 232 opiniones", "Federally licensed, SICT": "Permiso federal SICT", "Mercedes-Benz V-Class & Sprinter": "Mercedes-Benz Clase V y Sprinter", "Waiting inside arrivals at CUN & TQO": "Te esperamos dentro de llegadas en CUN y TQO", "In Tulum since 2020": "En Tulum desde 2020", "passengers since 2020": "pasajeros desde 2020", "Inside arrivals": "Dentro de llegadas", "federal SICT permits at CUN and TQO": "permisos federales SICT en CUN y TQO", "Our own fleet": "Flotilla propia", "Suburban, V-Class and Sprinter": "Suburban, Clase V y Sprinter", "4.9 · 232 reviews": "4.9 · 232 opiniones", "#8 of 216 in Tulum transportation on Tripadvisor": "N.º 8 de 216 en transporte en Tulum en Tripadvisor", "Transportation": "Transporte", "However you need to move": "Como necesites moverte", "Every ride is private and at a fixed price per vehicle, with a licensed chauffeur who works for us.": "Cada viaje es privado, con precio fijo por vehículo y un chofer certificado que trabaja con nosotros.", "Most booked": "Más reservado", "Airport transfers": "Traslados al aeropuerto", "Cancún and Tulum airports to any hotel, villa or Airbnb. We're waiting inside arrivals with your name.": "De los aeropuertos de Cancún y Tulum a cualquier hotel, villa o Airbnb. Te esperamos dentro de llegadas con tu nombre.", "From $70 per vehicle": "Desde $70 USD por vehículo", "Chauffeur by the hour": "Chofer por hora", "Beach clubs, dinners, shopping. Your driver waits while you enjoy.": "Beach clubs, cenas, compras. Tu chofer te espera mientras disfrutas.", "From $65 per hour": "Desde $65 USD por hora", "New": "Nuevo", "Transfers with a stop": "Traslados con parada", "Swim in a cenote or see the Tulum ruins on your way to the hotel.": "Nada en un cenote o visita las ruinas de Tulum camino al hotel.", "From $195 per vehicle": "Desde $195 USD por vehículo", "Groups and events": "Grupos y eventos", "Weddings, retreats and conferences. Sprinter fleet with one coordinator.": "Bodas, retiros y congresos. Flotilla de Sprinters con un solo coordinador.", "Custom quote": "Cotización a la medida", "Routes & prices": "Rutas y precios", "Fixed prices on popular routes": "Precios fijos en las rutas más populares", "Prices are per vehicle, one way, and include taxes, tolls, waiting time and a licensed chauffeur.": "Precios por vehículo, sencillo, en USD. Incluyen impuestos, casetas, tiempo de espera y chofer certificado.", "Route": "Ruta", "Drive time": "Tiempo", "Sedan": "Sedán", "Van": "Van", "Sprinter": "Sprinter", "Cancún Airport → Tulum": "Aeropuerto de Cancún → Tulum", "Aldea Zama, Region 15, town": "Aldea Zama, Región 15, centro", "Cancún Airport → Tulum Beach": "Aeropuerto de Cancún → Zona hotelera de Tulum", "Hotel zone, beachfront": "Zona hotelera, frente al mar", "Tulum Airport → Tulum": "Aeropuerto de Tulum → Tulum", "Tulum Airport → Tulum Beach": "Aeropuerto de Tulum → Zona hotelera de Tulum", "Cancún Airport → Playa del Carmen": "Aeropuerto de Cancún → Playa del Carmen", "5th Avenue, Playacar, Mayakoba": "Quinta Avenida, Playacar, Mayakoba", "Cancún Airport → Hotel Zone": "Aeropuerto de Cancún → Zona Hotelera", "Beachfront resorts": "Resorts frente al mar", "Also serving Akumal, Puerto Aventuras, Bacalar, Valladolid, Holbox and Mérida.": "También llegamos a Akumal, Puerto Aventuras, Bacalar, Valladolid, Holbox y Mérida.", "Book any address online": "Reserva cualquier dirección en línea", "Your arrival": "Tu llegada", "From the plane to your villa": "Del avión a tu villa", "1 · Book": "1 · Reserva", "Pick your ride": "Elige tu traslado", "Choose a route and vehicle and see the full price. We confirm on WhatsApp within minutes.": "Elige ruta y vehículo y ve el precio total. Confirmamos por WhatsApp en minutos.", "2 · We track": "2 · Rastreamos", "We follow your flight": "Seguimos tu vuelo", "Delayed? We adjust at no cost. You get 60 free minutes after landing.": "¿Retraso? Ajustamos sin costo. Tienes 60 minutos de espera gratis al aterrizar.", "3 · Meet": "3 · Te recibimos", "Your name inside arrivals": "Tu nombre dentro de llegadas", "Your chauffeur waits inside the terminal with a sign. Taxi drivers aren't allowed in there.": "Tu chofer te espera dentro de la terminal con un letrero. Los taxis no tienen permiso para entrar ahí.", "4 · Ride": "4 · En camino", "Cold water, Wi-Fi, go": "Agua fría, Wi-Fi y en marcha", "Grab a grocery stop on the way if you want. We'll send a live link so family can follow the ride.": "Si quieres, paramos en el súper. Te mandamos un link en vivo para que tu familia siga el viaje.", "🔈 Sound on": "🔈 Activar sonido", "The ride is part of the trip": "El traslado también es parte del viaje", "Leather seats, cold air, and the jungle passing by": "Asientos de piel, aire frío y la selva pasando por la ventana", "Captain's chairs, room for every suitcase, and a chauffeur who knows when to talk and when to let you rest after the flight.": "Asientos capitán, espacio para todas las maletas y un chofer que sabe cuándo platicar y cuándo dejarte descansar después del vuelo.", "guests in leather seats": "pasajeros en asientos de piel", "large suitcases": "maletas grandes", "zones front and rear": "zonas adelante y atrás", "Free": "Gratis", "water, chargers, Wi-Fi": "agua, cargadores, Wi-Fi", "Third row fits three adults comfortably.": "En la tercera fila caben tres adultos cómodos.", "The fleet": "La flotilla", "Choose your vehicle": "Elige tu vehículo", "Every vehicle is ours, federally plated, insured and cleaned before each ride.": "Todos los vehículos son nuestros, con placas federales, seguro y limpieza antes de cada viaje.", "Luxury · Most requested": "Lujo · El más pedido", "The classic arrival in Tulum. Up to 6 guests and 6 large suitcases, with leather captain's chairs and tinted windows.": "La llegada clásica a Tulum. Hasta 6 pasajeros y 6 maletas grandes, asientos capitán de piel y vidrios polarizados.", "Up to 6 guests": "Hasta 6 pasajeros", "6 suitcases": "6 maletas", "Leather": "Piel", "Rear A/C": "A/C trasero", "Luxury": "Lujo", "Mercedes V-Class": "Mercedes Clase V", "Up to 6 guests with luggage. Leather, quiet, private.": "Hasta 6 pasajeros con equipaje. Piel, silencio, privacidad.", "Premium": "Premium", "Mercedes Sprinter": "Mercedes Sprinter", "Up to 14 guests. Lounge seating and ambient lights.": "Hasta 14 pasajeros. Asientos tipo lounge y luz ambiental.", "Private": "Privado", "Toyota Hiace": "Toyota Hiace", "Up to 10 guests. Great for families and surf boards.": "Hasta 10 pasajeros. Ideal para familias y tablas de surf.", "Economy": "Económico", "Private sedan": "Sedán privado", "Up to 3 guests. Same chauffeurs, lower price.": "Hasta 3 pasajeros. Los mismos choferes, mejor precio.", "Artists & productions": "Artistas y producciones", "The ride behind the": "El traslado detrás de las", "world's": "más grandes", "biggest nights": "noches del mundo", "Since December 2022, we've been the trusted ride for the world's biggest electronic artists. It started in Tulum, and today we move artists, tour managers and crews wherever the show goes, timed to the minute of every set.": "Desde diciembre de 2022 somos el traslado de confianza de los artistas electrónicos más grandes del mundo. Empezó en Tulum y hoy movemos artistas, tour managers y equipos a donde vaya el show, al minuto de cada set.", "DJs and live acts driven": "DJs y actos en vivo transportados", "artist and crew transfers": "traslados de artistas y equipo", "festival seasons, since Dec 2022": "temporadas de festivales, desde dic 2022", "venues and producers": "venues y productoras", "Where we move talent": "Dónde movemos talento", "Trusted by": "Nos confían", "A selection of the 200+ artists we've driven for venues and producers since 2022.": "Una selección de los más de 200 artistas que hemos transportado para venues y productoras desde 2022.", "Headline nights we've moved": "Noches estelares que hemos movido", "2 Jan 2024": "2 ene 2024", "15 Jan 2024": "15 ene 2024", "Mar 2024": "mar 2024", "31 Dec 2024": "31 dic 2024", "5 Jan 2025": "5 ene 2025", "9 Jan 2025": "9 ene 2025", "5 Jan 2026": "5 ene 2026", "8 Jan 2026": "8 ene 2026", "LOCUS festival": "Festival LOCUS", "60 drum & bass acts, ~50 artist vehicles": "60 actos de drum & bass, ~50 vehículos de artistas", "Mayan Warrior NYE": "Mayan Warrior Año Nuevo", "Tehmplo · with Camelphat, Vintage Culture": "Tehmplo · con Camelphat, Vintage Culture", "Tehmplo · private jet departure": "Tehmplo · salida en jet privado", "01 · ARRIVALS": "01 · LLEGADAS", "Airport and FBO pickups": "Aeropuerto y FBO", "Commercial flights at CUN and TQO, and private jets at the TQO FBO. Flight tracked, name sign, straight to the villa.": "Vuelos comerciales en CUN y TQO, y jets privados en el FBO de Tulum. Vuelo rastreado, letrero con nombre y directo a la villa.", "02 · SHOW NIGHT": "02 · NOCHE DE SHOW", "Timed to the set": "Al minuto del set", "Pickups scheduled back from set times, with the next artist rolling while the current one plays. Nobody waits backstage.": "Pickups programados según el horario de cada set: el siguiente artista va en camino mientras el anterior toca. Nadie espera en backstage.", "03 · STANDBY": "03 · A DISPOSICIÓN", "Cars on call all night": "Autos disponibles toda la noche", "12 and 18 hour dispositions: a Suburban or van parked at the venue for artists, managers and VIPs.": "Servicios abiertos de 12 y 18 horas: una Suburban o van en el venue para artistas, managers y VIPs.", "04 · CREW": "04 · EQUIPO", "Crews, gear and teams": "Equipo, gear y staff", "Sprinters and vans for production crews, visual artists and tour teams, from load-in to after-party.": "Sprinters y vans para equipos de producción, artistas visuales y staff de gira, del montaje al after.", "05 · CONTROL": "05 · CONTROL", "One ops sheet, live links": "Una sola hoja de operación y links en vivo", "We work from your advance sheet. Every ride gets a live tracking link and a named driver with phone.": "Trabajamos con tu advance sheet. Cada viaje tiene link de rastreo en vivo y un chofer asignado con teléfono.", "06 · DISCRETION": "06 · DISCRECIÓN", "Low profile, always": "Siempre con bajo perfil", "Tinted Suburbans, no photos, no posts. Riders respected: water, towels, the right playlist or silence.": "Suburbans polarizadas, sin fotos ni publicaciones. Respetamos el rider: agua, toallas, la playlist correcta o silencio.", "Producing an event in Tulum, Los Cabos, Mexico City or Ibiza? Send us the advance sheet.": "¿Produces un evento en Tulum, Los Cabos, Ciudad de México o Ibiza? Mándanos tu advance sheet.", "Plan artist logistics": "Planear logística de artistas", "Beyond the ride · Concierge": "Más allá del traslado · Concierge", "You've landed. Now let us plan the rest.": "Ya llegaste. Ahora déjanos planear el resto.", "The same team that drives you can book your yacht, your table and your tours. One chat covers the whole trip.": "El mismo equipo que te maneja reserva tu yate, tu mesa y tus tours. Un solo chat para todo el viaje.", "Private yachts": "Yates privados", "Puerto Aventuras, open bar, snorkel, DJ": "Puerto Aventuras, barra libre, snorkel, DJ", "from $1,650": "desde $1,650 USD", "Private tours": "Tours privados", "from $540": "desde $540 USD", "Driver for your stay": "Chofer para toda tu estancia", "Same chauffeur every day, 10 hours a day": "El mismo chofer todos los días, 10 horas al día", "from $520 / day": "desde $520 USD / día", "Tables and reservations": "Mesas y reservaciones", "Beach clubs, dinners, spas, villas": "Beach clubs, cenas, spas, villas", "included": "incluido", "Trip host": "Anfitrión del viaje", "One planner on WhatsApp, day and night": "Un planner en WhatsApp, día y noche", "$150 / day": "$150 USD / día", "Sample plan · Sprinter · Driver: Luis": "Plan de ejemplo · Sprinter · Chofer: Luis", "Ana's bachelorette, 10 friends, Thu to Sun": "Despedida de Ana, 10 amigas, de jueves a domingo", "Thu": "Jue", "Tulum airport pickup inside arrivals": "Recogida en el aeropuerto de Tulum, dentro de llegadas", "Cooler of drinks on board": "Hielera con bebidas a bordo", "Fri": "Vie", "Private yacht from Puerto Aventuras": "Yate privado desde Puerto Aventuras", "Snorkel, lunch, open bar": "Snorkel, comida, barra libre", "Sat": "Sáb", "Cobá and cenotes with a guide": "Cobá y cenotes con guía", "Dinner at 20:30": "Cena a las 20:30", "Everything, per person": "Todo incluido, por persona", "Plan by occasion": "Planea según la ocasión", "Trips we arrange every week": "Viajes que organizamos cada semana", "Bachelorettes": "Despedidas", "Honeymoons": "Lunas de miel", "Weddings": "Bodas", "Birthdays": "Cumpleaños", "Family trips": "Viajes en familia", "Retreats": "Retiros", "Our chauffeurs": "Nuestros choferes", "Drivers guests ask for by name": "Choferes que los clientes piden por nombre", "Luis, César, Arturo and the team work for us full time, speak English and know Tulum by heart: which beach club has room at 4pm, and the back road when the highway is jammed.": "Luis, César, Arturo y el equipo trabajan con nosotros de tiempo completo, hablan inglés y se saben Tulum de memoria: qué beach club tiene lugar a las 4 pm y qué camino tomar cuando la carretera está llena.", "“We had Luis and César for all 4 days in a Sprinter for our group of 10. Always clean, best seats, and they got us back safely every night.”": "“Tuvimos a Luis y César los 4 días en una Sprinter para nuestro grupo de 10. Siempre limpia, los mejores asientos, y nos regresaron seguros cada noche.”", "· Bachelorette, 10 friends": "· Despedida, 10 amigas", "Reviews": "Opiniones", "What travelers say": "Lo que dicen los viajeros", "Rated 4.9 out of 5 from 232 Tripadvisor reviews, and number 8 of 216 transportation companies in Tulum.": "Calificación de 4.9 de 5 en 232 opiniones de Tripadvisor, y número 8 de 216 empresas de transporte en Tulum.", "“They adjusted when we missed our first flight. César was on time, fun and safe.”": "“Se ajustaron cuando perdimos nuestro primer vuelo. César fue puntual, divertido y seguro.”", "· Cancún Airport → Tulum": "· Aeropuerto de Cancún → Tulum", "“Booking through WhatsApp was so smooth, and they sent a link so we could track our driver.”": "“Reservar por WhatsApp fue facilísimo, y nos mandaron un link para seguir a nuestro chofer.”", "· Tulum Airport → Dreams Tulum": "· Aeropuerto de Tulum → Dreams Tulum", "“They met us right at the airport and made the whole arrival feel effortless.”": "“Nos recibieron en el aeropuerto e hicieron que la llegada fuera facilísima.”", "· February 2026": "· Febrero 2026", "4.9 from 232 reviews on Tripadvisor · #8 of 216 transportation companies in Tulum · Travelers' Choice 2024 and 2025": "4.9 en 232 opiniones de Tripadvisor · N.º 8 de 216 empresas de transporte en Tulum · Travelers' Choice 2024 y 2025", "Read all reviews": "Leer todas las opiniones", "For business": "Para empresas", "Ground transport for your guests": "Transporte terrestre para tus huéspedes", "Hotels, villa managers, wedding planners and travel agencies use Serendipity as their fleet in Tulum. You get partner rates, monthly invoicing and one coordinator.": "Hoteles, administradores de villas, wedding planners y agencias de viaje usan a Serendipity como su flotilla en Tulum. Tarifas preferenciales, facturación mensual y un solo coordinador.", "Become a partner": "Hazte socio", "Hotels and resorts": "Hoteles y resorts", "Villa and Airbnb hosts": "Anfitriones de villas y Airbnb", "Wedding planners": "Wedding planners", "Travel agencies and DMCs": "Agencias de viaje y DMCs", "Retreat organizers": "Organizadores de retiros", "Corporate events": "Eventos corporativos", "Where we drive": "A dónde llegamos", "Destinations": "Destinos", "Home base · 30 min from TQO": "Nuestra base · a 30 min de TQO", "Airport, Hotel Zone, Costa Mujeres": "Aeropuerto, Zona Hotelera, Costa Mujeres", "Playacar, Mayakoba, Cozumel ferry": "Playacar, Mayakoba, ferry a Cozumel", "Akumal & Puerto Aventuras": "Akumal y Puerto Aventuras", "Villas and yacht marina": "Villas y marina de yates", "Lagoon of seven colors": "Laguna de los siete colores", "Valladolid & Chichén Itzá": "Valladolid y Chichén Itzá", "Day trips with a guide": "Excursiones con guía", "Chiquilá ferry transfers": "Traslados al ferry de Chiquilá", "City-to-city rides": "Traslados entre ciudades", "Questions": "Preguntas", "Before you book": "Antes de reservar", "Still unsure? Message us on WhatsApp. A real person answers.": "¿Te quedó alguna duda? Escríbenos por WhatsApp. Te contesta una persona real.", "How much is a private transfer from Cancún airport to Tulum?": "¿Cuánto cuesta un traslado privado del aeropuerto de Cancún a Tulum?", "From $125 per vehicle in a private sedan, $230 in a Mercedes V-Class and $320 in a Sprinter for up to 14 people. The price is fixed and includes tolls and waiting time.": "Desde $125 USD por vehículo en sedán privado, $230 USD en Suburban o Mercedes Clase V y $320 USD en Sprinter para hasta 14 personas. El precio es fijo e incluye casetas y tiempo de espera.", "Should I fly into Tulum or Cancún?": "¿Me conviene volar a Tulum o a Cancún?", "Tulum airport (TQO) is 30 minutes from town; Cancún (CUN) is 1 h 40 min but has more flights. We pick up at both, inside arrivals.": "El aeropuerto de Tulum (TQO) está a 30 minutos del pueblo; Cancún (CUN) está a 1 h 40 min pero tiene más vuelos. Recogemos en los dos, dentro de llegadas.", "What if my flight is delayed?": "¿Qué pasa si mi vuelo se retrasa?", "We track your flight and adjust the pickup at no cost. You also get 60 free minutes after landing.": "Rastreamos tu vuelo y ajustamos la hora sin costo. Además tienes 60 minutos de espera gratis al aterrizar.", "Can I book a driver for the whole day?": "¿Puedo reservar un chofer todo el día?", "Yes. Book by the hour or for your whole stay. The same chauffeur and vehicle stay with you.": "Sí. Reserva por hora o para toda tu estancia. El mismo chofer y vehículo se quedan contigo.", "Do you plan tours and yachts too?": "¿También organizan tours y yates?", "Yes. Our concierge team books private yachts, tours, restaurants and beach clubs, with transport included.": "Sí. Nuestro equipo de concierge reserva yates privados, tours, restaurantes y beach clubs, con transporte incluido.", "Ready when you land": "Listos cuando aterrices", "Your chauffeur is one message away": "Tu chofer está a un mensaje de distancia", "Send your flight number and hotel. We'll reply with a fixed price in minutes.": "Mándanos tu número de vuelo y tu hotel. Te respondemos con un precio fijo en minutos.", "Book my transfer": "Reservar mi traslado", "Servicios de Logística y Transportación Turística DSA de CV · Federal SICT permits · Aldea Zama, Tulum · Since 2020": "Servicios de Logística y Transportación Turística DSA de CV · Permisos federales SICT · Aldea Zama, Tulum · Desde 2020", "Cancún → Playa del Carmen": "Cancún → Playa del Carmen", "Cancún → Hotel Zone": "Cancún → Zona Hotelera", "Services": "Servicios", "Yachts": "Yates", "Company": "Empresa", "About us": "Nosotros", "Guides": "Guías", "Ride Luxe app": "App Ride Luxe", "English · Español": "English · Español", "© 2026 Serendipity Travel Experiences": "© 2026 Serendipity Travel Experiences", "Guest stepping out of a Serendipity Mercedes van in Tulum": "Pasajera bajando de una van Mercedes de Serendipity en Tulum", "Main": "Principal", "Travelers' Choice 2025": "Travelers' Choice 2025", "Serendipity booking": "Reservas Serendipity", "Credentials": "Credenciales", "Couple walking from their van": "Pareja caminando desde su van", "Chauffeur at the wheel": "Chofer al volante", "Friends in a van at sunset": "Amigos en una van al atardecer", "Sprinter van interior at night": "Interior de una Sprinter de noche", "Inside the Suburban": "Dentro de la Suburban", "Leather captain's chairs inside the Chevrolet Suburban": "Asientos capitán de piel en la Chevrolet Suburban", "Third row of the Suburban with leather seats": "Tercera fila de la Suburban con asientos de piel", "Black Chevrolet Suburban High Country with luggage": "Chevrolet Suburban High Country negra con equipaje", "Inside a Mercedes V-Class": "Interior de una Mercedes Clase V", "Mercedes Sprinter interior": "Interior de una Mercedes Sprinter", "Toyota Hiace with chauffeur": "Toyota Hiace con chofer", "Artist and production logistics": "Logística de artistas y producciones", "Artists we have driven": "Artistas que hemos transportado", "Friends laughing in the van at night": "Amigos riendo en la van de noche", "Serendipity chauffeur beside his van": "Chofer de Serendipity junto a su van", "Artist & production logistics": "Logística de artistas y producciones", "Ground transportation for touring artists and event productions": "Transporte terrestre para artistas en gira y producciones de eventos", "Since December 2022 we have handled artist, tour team and crew transportation for leading venues and producers. We work from your advance sheet, schedule every movement around set times and keep one operations contact on call for the whole event.": "Desde diciembre de 2022 manejamos el transporte de artistas, equipos de gira y crew para venues y productoras líderes. Trabajamos con tu advance sheet, programamos cada movimiento según los horarios de los sets y mantenemos un solo contacto de operaciones disponible durante todo el evento.", "Operating in": "Operamos en", "Tulum, Cancún, Los Cabos, Mexico City and Ibiza": "Tulum, Cancún, Los Cabos, Ciudad de México e Ibiza", "artists transported": "artistas transportados", "consecutive festival seasons": "temporadas de festivales consecutivas", "venues and producers served": "venues y productoras atendidos", "Venues and producers": "Venues y productoras", "Venue, Tulum": "Venue, Tulum", "Producer": "Productora", "Production": "Producción", "Beach club, Tulum": "Beach club, Tulum", "Club, Tulum": "Club, Tulum", "Hospitality group": "Grupo de hospitalidad", "Selected engagements": "Trabajos seleccionados", "Date": "Fecha", "Event": "Evento", "Venue / producer": "Venue / productora", "Scope": "Alcance", "Jan 2026": "ene 2026", "Jan 2025": "ene 2025", "Dec 2024": "dic 2024", "Artist and team arrivals, show-night transfers, private jet departure": "Llegadas del artista y su equipo, traslados la noche del show, salida en jet privado", ", with Camelphat and Vintage Culture": ", con Camelphat y Vintage Culture", "FBO and airport arrivals, timed runs for each set": "Llegadas por FBO y aeropuerto, traslados programados para cada set", "Artist arrivals, standby vehicles for the show": "Llegadas de artistas, vehículos a disposición durante el show", "New Year's Eve": "Año Nuevo", "Full line-up arrivals and show-night transfers": "Llegadas de todo el line-up y traslados la noche del show", "festival": "festival", "Around 50 artist vehicles for 60 drum & bass acts": "Cerca de 50 vehículos para 60 actos de drum & bass", "Season residencies": "Residencias de temporada", "Weekly artist arrivals, hotel–venue runs and departures": "Llegadas semanales de artistas, traslados hotel–venue y salidas", "Selected artists transported, 2022–2026": "Artistas transportados (selección), 2022–2026", "From our transfer records. Names listed for reference only; no endorsement implied.": "Según nuestros registros de traslados. Los nombres se incluyen solo como referencia y no implican respaldo.", "Services for productions": "Servicios para producciones", "Arrivals and departures": "Llegadas y salidas", "Commercial flights at CUN and TQO, private aviation at the TQO FBO. Flight tracking and meet-and-greet on every arrival.": "Vuelos comerciales en CUN y TQO, aviación privada en el FBO de Tulum. Seguimiento de vuelo y recepción personalizada en cada llegada.", "Show-night scheduling": "Programación la noche del show", "Pickups planned back from set times, so each artist arrives on time and the next one is already on the way.": "Recogidas planeadas según el horario de cada set: cada artista llega a tiempo y el siguiente ya va en camino.", "Standby vehicles": "Vehículos a disposición", "12 and 18 hour dispositions at the venue for artists, management and VIP guests.": "Servicios abiertos de 12 y 18 horas en el venue para artistas, management e invitados VIP.", "Crew and equipment": "Crew y equipo", "Sprinters and vans for production crews and tour teams, from load-in to departure.": "Sprinters y vans para crews de producción y equipos de gira, del montaje a la salida.", "Operations and tracking": "Operación y seguimiento", "A dedicated coordinator, a shared operations sheet and live tracking links for every movement.": "Un coordinador dedicado, una hoja de operación compartida y links de rastreo en vivo para cada movimiento.", "Confidentiality": "Confidencialidad", "Tinted vehicles, discreet chauffeurs and riders followed as written.": "Vehículos polarizados, choferes discretos y riders respetados al pie de la letra.", "Planning an event or tour date?": "¿Estás planeando un evento o una fecha de gira?", "Send us your advance sheet and we'll reply with a transport plan and quote.": "Mándanos tu advance sheet y te respondemos con un plan de transporte y cotización.", "Request a proposal": "Solicitar propuesta"};
+
+    var nodes=[],attrs=[];
+    var w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);var n;
+    while(n=w.nextNode()){if(n.parentElement.closest("script,style,.wall"))continue;var k=n.nodeValue.replace(/\s+/g," ").trim();if(ES[k])nodes.push({n:n,en:n.nodeValue,es:n.nodeValue.replace(n.nodeValue.trim(),ES[k])})}
+    document.querySelectorAll("[alt],[aria-label],[title]").forEach(function(e){["alt","aria-label","title"].forEach(function(a){var v=e.getAttribute(a);if(v&&ES[v.trim()])attrs.push({e:e,a:a,en:v,es:ES[v.trim()]})})});
+    var links=[].slice.call(document.querySelectorAll("[data-href-es]")).map(function(a){return{a:a,en:a.getAttribute("href"),es:a.getAttribute("data-href-es")}});
+    function set(l){
+      nodes.forEach(function(o){o.n.nodeValue=l==="es"?o.es:o.en});
+      attrs.forEach(function(o){o.e.setAttribute(o.a,l==="es"?o.es:o.en)});
+      links.forEach(function(o){o.a.setAttribute("href",l==="es"?o.es:o.en)});
+      document.documentElement.lang=l;
+      document.querySelectorAll(".lang button").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.lang===l?"true":"false")});
+      try{localStorage.setItem("serendipity-lang",l)}catch(e){}
+    }
+    document.querySelectorAll(".lang button").forEach(function(b){b.addEventListener("click",function(){set(b.dataset.lang)})});
+    var saved=null;try{saved=localStorage.getItem("serendipity-lang")}catch(e){}
+    var start=saved||(/^es/i.test(navigator.language||"")?"es":"en");
+    if(location.hash==="#es")start="es";if(location.hash==="#en")start="en";
+    if(start==="es")set("es");
+  })();
+
+  // Load videos only if the files exist; the photo stays underneath until they can play
+  var mobile=window.matchMedia("(max-width:700px)").matches;
+  var reduce=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll("video.bgv").forEach(function(v){
+    if(reduce)return;
+    var src=(mobile&&v.dataset.srcMobile)||v.dataset.src;
+    v.addEventListener("loadeddata",function(){
+      v.classList.add("ready");
+      var slot=v.parentNode.querySelector(".video-slot");if(slot)slot.hidden=true;
+      var s=v.parentNode.querySelector(".sound");if(s)s.hidden=false;
+      v.play().catch(function(){});
+    });
+    v.addEventListener("error",function(){
+      if(mobile&&src!==v.dataset.src){src=v.dataset.src;v.src=src;v.load()}
+    },true);
+    v.src=src;v.load();
+  });
+  document.querySelectorAll(".sound").forEach(function(b){
+    b.addEventListener("click",function(){
+      var v=b.parentNode.querySelector("video");v.muted=!v.muted;
+      b.textContent=v.muted?"🔈 Sound on":"🔇 Mute";
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
