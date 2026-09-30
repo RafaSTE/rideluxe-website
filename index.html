@@ -113,11 +113,9 @@ nav .nav-cta:hover{background:var(--mint);color:var(--dark-teal)!important;borde
 @media(max-width:480px){
   .hero-grid{padding:0 16px;gap:32px}
   .hero-grid .sub{margin-bottom:26px}
-  .hero-grid .btns .btn-ghost{display:none}
   .book-panel{padding:16px 12px 12px}
   .bp-frame{height:620px}
 }
-body.booking-in-view .book-float,body.booking-in-view .wa-float{opacity:0;pointer-events:none}
 /* hero stat row (C) */
 .hero-stats{position:absolute;left:8%;right:8%;bottom:42px;z-index:5;display:flex;gap:0;padding-top:22px;opacity:0;animation:fadeUp 1s 1.1s forwards}
 .hero-stats .st{flex:1;text-align:left;padding-right:20px}
@@ -562,7 +560,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <a href="/luxury-transportation">Luxury</a>
     <a href="/app">App</a>
     <a href="/blog">Blog</a>
-    <a href="#book" class="nav-cta">Book Now</a>
+    <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="nav-cta">Book Now</a>
   </div>
   <button class="burger" aria-label="Menu" onclick="toggleMenu()">&#9776;</button>
 </nav>
@@ -580,7 +578,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       </h1>
       <p class="sub">Private chauffeur-driven transfers across Cancun, Playa del Carmen, Tulum and Los Cabos. We collect you legally inside the airport &mdash; no waiting, no informal taxis.</p>
       <div class="btns">
-        <a href="#routes" class="btn btn-solid">See routes &amp; rates</a>
+        <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book your transfer</a>
         <a href="#fleet" class="btn btn-ghost">Explore the fleet</a>
       </div>
     </div>
@@ -1066,7 +1064,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   </div>
 </footer>
 
-<a href="#book" class="book-float"><span>&#10003;</span> Book Now</a>
+<a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="book-float"><span>&#10003;</span> Book Now</a>
 
 <a href="https://wa.me/529841814911" class="wa-float">WhatsApp</a>
 </div>
@@ -1077,9 +1075,6 @@ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 function toggleMenu(){document.querySelector('.links').classList.toggle('open')}
 
-// Hide floating buttons while the booking engine is on screen
-(function(){var bp=document.getElementById('book');if(!bp||!('IntersectionObserver' in window))return;
-new IntersectionObserver(function(es){document.body.classList.toggle('booking-in-view',es[0].isIntersecting)},{threshold:.25}).observe(bp);})();
 // Animated counters for proof stats
 function formatNumber(n, decimals){
   if(decimals>0) return n.toFixed(decimals);
