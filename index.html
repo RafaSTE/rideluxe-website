@@ -90,9 +90,9 @@ nav .nav-cta:hover{background:var(--mint);color:var(--dark-teal)!important;borde
 .btn-mint:hover{background:#fff;transform:translateY(-2px)}
 /* hero booking engine */
 .hero{height:auto;min-height:100vh;padding:120px 0 70px}
-.hero-grid{position:relative;z-index:5;width:100%;max-width:1320px;margin:0 auto;padding:0 8%;display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center;text-align:left}
+.hero-grid{position:relative;z-index:5;width:100%;max-width:1320px;margin:0 auto;padding:0 min(8vw,110px);display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center;text-align:left}
 .hero-grid .hero-content{padding:0;max-width:none}
-.hero-grid h1{font-size:clamp(52px,7vw,112px)}
+.hero-grid h1{font-size:clamp(40px,4.6vw,62px);letter-spacing:-1px;line-height:1.05}
 .hero-grid .sub{margin:0 0 40px}
 .hero-grid .btns{justify-content:flex-start}
 .book-panel{background:rgba(0,39,43,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line-strong);border-radius:4px;padding:20px 18px 14px;box-shadow:0 30px 70px rgba(0,0,0,.35);scroll-margin-top:90px;opacity:0;animation:fadeUp 1s .9s forwards}
@@ -102,6 +102,7 @@ nav .nav-cta:hover{background:var(--mint);color:var(--dark-teal)!important;borde
 .bp-frame{display:block;width:100%;height:clamp(500px,calc(100vh - 240px),660px);border:0;border-radius:2px;background:#fff}
 .bp-alt{display:block;margin-top:12px;font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.66);text-align:center;transition:color .3s}
 .bp-alt:hover{color:var(--mint)}
+@media(min-width:1024px) and (max-width:1200px){.hero-grid{grid-template-columns:minmax(0,1fr) 360px;gap:40px}}
 @media(max-width:1023px){
   .hero{padding:110px 0 56px}
   .hero-grid{grid-template-columns:1fr;gap:44px;text-align:center}
@@ -570,10 +571,10 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <div class="hero-content">
       <span class="eyebrow">Official airport pickup &middot; Federal plates</span>
       <h1 class="serif">
-        <span class="ln"><i>Arrive</i></span>
-        <span class="ln"><i><em>elevated.</em></i></span>
+        <span class="ln"><i>Luxury Airport Transfers</i></span>
+        <span class="ln"><i><em>in Cancun, Tulum &amp; Los&nbsp;Cabos.</em></i></span>
       </h1>
-      <p class="sub">Luxury private transfers across the Mexican Caribbean and Los Cabos. We collect you legally inside the airport &mdash; no waiting, no informal taxis.</p>
+      <p class="sub">Private chauffeur-driven transfers across Cancun, Playa del Carmen, Tulum and Los Cabos. We collect you legally inside the airport &mdash; no waiting, no informal taxis.</p>
       <div class="btns">
         <a href="#routes" class="btn btn-solid">See routes &amp; rates</a>
         <a href="#fleet" class="btn btn-ghost">Explore the fleet</a>
