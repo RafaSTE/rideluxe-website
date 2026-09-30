@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ride Luxe Mexico | Luxury Airport Transfers Cancun & Tulum</title>
-<meta name="description" content="Luxury private airport transfers in Cancun, Tulum, Playa del Carmen and Los Cabos. Mercedes V-Class, licensed chauffeurs, pickup inside the airport.">
+<title>Ride Luxe Mexico | Luxury Airport Transportation &amp; App</title>
+<meta name="description" content="Luxury airport transportation in Cancun, Tulum, Playa del Carmen and Los Cabos. Book in one click online or in the app. Licensed pickup inside the airport.">
 <meta name="author" content="Ride Luxe Mexico — Serendipity Travel Experiences">
 <meta name="geo.region" content="MX-ROO">
 <meta name="geo.placename" content="Tulum, Quintana Roo">
@@ -88,6 +88,25 @@ nav .nav-cta:hover{background:var(--mint);color:var(--dark-teal)!important;borde
 .btn-ghost:hover{background:rgba(255,255,255,.16);border-color:var(--mint)}
 .btn-mint{background:var(--mint);color:var(--dark-teal)}
 .btn-mint:hover{background:#fff;transform:translateY(-2px)}
+/* airport chooser */
+.airports{padding:110px 0 40px}
+.airports-head{text-align:center;margin-bottom:56px}
+.airports-head .lead{margin:20px auto 0}
+.airports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ap-card{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end}
+.ap-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,0,.2,1)}
+.ap-card:hover>img{transform:scale(1.05)}
+.ap-card .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,39,43,.15) 0%,rgba(0,39,43,.55) 45%,rgba(0,39,43,.95) 100%)}
+.ap-info{position:relative;z-index:2;padding:32px 26px;width:100%}
+.ap-code{display:block;font-size:10.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--mint);margin-bottom:12px}
+.ap-info h3{font-size:clamp(32px,3vw,44px);color:#fff;margin-bottom:12px}
+.ap-info h3 a:hover{color:var(--mint)}
+.ap-times{font-size:13.5px;color:rgba(255,255,255,.78);font-weight:300;margin-bottom:6px}
+.ap-price{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;margin-bottom:22px}
+.ap-btns{display:flex;gap:10px;flex-wrap:wrap}
+.ap-btns .btn{padding:12px 16px;font-size:10.5px;letter-spacing:1.6px}
+@media(max-width:980px){.airports-grid{grid-template-columns:1fr}.ap-card{min-height:380px}}
+@media(max-width:480px){.airports{padding:80px 0 20px}.ap-info{padding:28px 22px}.ap-btns .btn{flex:1;justify-content:center}}
 /* hero booking engine */
 .hero{height:auto;min-height:100vh;padding:120px 0 70px}
 .hero-grid{position:relative;z-index:5;width:100%;max-width:1320px;margin:0 auto;padding:0 min(8vw,110px);display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center;text-align:left}
@@ -576,7 +595,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
         <span class="ln"><i>Luxury Airport Transfers</i></span>
         <span class="ln"><i><em>in Cancun, Tulum &amp; Los&nbsp;Cabos.</em></i></span>
       </h1>
-      <p class="sub">Private chauffeur-driven transfers across Cancun, Playa del Carmen, Tulum and Los Cabos. We collect you legally inside the airport &mdash; no waiting, no informal taxis.</p>
+      <p class="sub">Book in one click, online or in the app. Your licensed chauffeur meets you inside arrivals for rides across Cancun, Playa del Carmen, Tulum and Los Cabos &mdash; fixed price, no waiting.</p>
       <div class="btns">
         <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book your transfer</a>
         <a href="#fleet" class="btn btn-ghost">Explore the fleet</a>
@@ -593,6 +612,51 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   </div>
 
 </header>
+
+<section class="airports" id="airports">
+  <div class="wrap">
+    <div class="airports-head rv">
+      <span class="eyebrow-s">Where are you landing?</span>
+      <h2 class="sec-title">Your transfer, <em>one click away</em></h2>
+      <p class="lead">Choose your airport to see routes and prices, or book straight away. Airport transfers and point to point rides, 24 hours a day.</p>
+    </div>
+    <div class="airports-grid">
+      <article class="ap-card rv">
+        <img loading="lazy" src="/images/luxury-vclass.jpg" alt="Mercedes V-Class interior ready for a Cancun airport transfer">
+        <div class="ov"></div>
+        <div class="ap-info">
+          <span class="ap-code">CUN &middot; Cancun International</span>
+          <h3 class="serif"><a href="/cancun-airport-transfers">Cancun Airport</a></h3>
+          <p class="ap-times">Hotel Zone 20 min &middot; Playa 45 min &middot; Tulum 1 h 40</p>
+          <p class="ap-price">From $40 USD per vehicle</p>
+          <div class="ap-btns"><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book now</a><a href="/cancun-airport-transfers" class="btn btn-ghost">Routes &amp; prices</a></div>
+        </div>
+      </article>
+      <article class="ap-card rv">
+        <img loading="lazy" src="/images/hero.jpg" alt="Guest arriving at her Tulum hotel in a private Mercedes transfer">
+        <div class="ov"></div>
+        <div class="ap-info">
+          <span class="ap-code">TQO &middot; Tulum International</span>
+          <h3 class="serif"><a href="/tulum-airport-transfers">Tulum Airport</a></h3>
+          <p class="ap-times">Tulum town 25 min &middot; Beach hotels 35 to 45 min</p>
+          <p class="ap-price">From $70 USD per vehicle</p>
+          <div class="ap-btns"><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book now</a><a href="/tulum-airport-transfers" class="btn btn-ghost">Routes &amp; prices</a></div>
+        </div>
+      </article>
+      <article class="ap-card rv">
+        <img loading="lazy" src="/images/premium-sprinter.jpg" alt="Premium private transfer vehicle for Los Cabos airport">
+        <div class="ov"></div>
+        <div class="ap-info">
+          <span class="ap-code">SJD &middot; Los Cabos International</span>
+          <h3 class="serif"><a href="/los-cabos-transfers">Los Cabos Airport</a></h3>
+          <p class="ap-times">San Jose del Cabo &middot; Corridor &middot; Cabo San Lucas</p>
+          <p class="ap-price">Fixed quote in minutes</p>
+          <div class="ap-btns"><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book now</a><a href="/los-cabos-transfers" class="btn btn-ghost">Routes &amp; prices</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
 <section class="proof" id="proof">
   <div class="wrap">

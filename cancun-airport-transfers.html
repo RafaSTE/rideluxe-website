@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Cancun Airport Transfers from $40 | Ride Luxe Mexico</title>
-<meta name="description" content="Private transfers from Cancun airport (CUN) to the Hotel Zone, Playa del Carmen and Tulum. Chauffeur inside arrivals, fixed price per vehicle from $40 USD.">
+<title>Cancun Airport Transportation | Private Transfers from $40</title>
+<meta name="description" content="Private Cancun airport transportation to the Hotel Zone, Playa del Carmen and Tulum. Licensed chauffeur inside arrivals, fixed price from $40 USD.">
 <meta name="author" content="Ride Luxe Mexico, Serendipity Travel Experiences">
 <meta name="geo.region" content="MX-ROO">
 <meta name="geo.placename" content="Cancun, Quintana Roo">
@@ -12,8 +12,8 @@
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://rideluxe.mx/cancun-airport-transfers">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Cancun Airport Transfers from $40 | Ride Luxe Mexico">
-<meta property="og:description" content="Private transfers from Cancun airport (CUN) to the Hotel Zone, Playa del Carmen and Tulum. Chauffeur inside arrivals, fixed price per vehicle from $40 USD.">
+<meta property="og:title" content="Cancun Airport Transportation | Private Transfers from $40">
+<meta property="og:description" content="Private Cancun airport transportation to the Hotel Zone, Playa del Carmen and Tulum. Licensed chauffeur inside arrivals, fixed price from $40 USD.">
 <meta property="og:url" content="https://rideluxe.mx/cancun-airport-transfers">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://rideluxe.mx/og-image.jpg">
@@ -366,6 +366,19 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   .af-grid{grid-template-columns:1fr;gap:60px}
   .about-faq{padding:80px 0}
 }
+/* airport landing: trust line + steps */
+.hero .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:26px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.78);opacity:0;animation:fadeUp 1s 1.1s forwards}
+.hero .trust span:before{content:'\2713';color:var(--mint);margin-right:7px}
+.hero .wa-line{display:block;margin-top:16px;font-size:12px;letter-spacing:1.5px;color:rgba(255,255,255,.7);opacity:0;animation:fadeUp 1s 1s forwards}
+.hero .wa-line a{color:var(--mint-bright);border-bottom:1px solid rgba(159,225,203,.4)}
+.steps{padding:56px 0;border-bottom:1px solid var(--line)}
+.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;max-width:1100px;margin:0 auto}
+.step{display:flex;gap:16px;align-items:flex-start}
+.step .n{font-family:'Cormorant Garamond',serif;font-size:38px;line-height:1;color:var(--mint)}
+.step b{display:block;font-weight:400;color:#fff;font-size:16px;margin-bottom:4px}
+.step p{font-size:14px;color:rgba(255,255,255,.7);font-weight:300;line-height:1.55}
+.steps-cta{text-align:center;margin-top:34px}
+@media(max-width:860px){.steps-grid{grid-template-columns:1fr;gap:22px}}
 </style>
 
 <style>
@@ -406,8 +419,8 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   "@context": "https://schema.org",
   "@type": "Service",
   "serviceType": "Airport Transfer",
-  "name": "Cancun Airport Transfers",
-  "description": "Private transfers from Cancun airport (CUN) to the Hotel Zone, Playa del Carmen and Tulum. Chauffeur inside arrivals, fixed price per vehicle from $40 USD.",
+  "name": "Cancun Airport Transportation",
+  "description": "Private Cancun airport transportation to the Hotel Zone, Playa del Carmen and Tulum. Licensed chauffeur inside arrivals, fixed price from $40 USD.",
   "url": "https://rideluxe.mx/cancun-airport-transfers",
   "provider": {
     "@type": [
@@ -541,6 +554,30 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
         "@type": "Answer",
         "text": "Yes. Round trip rates are available on request and usually work out lower than two separate one way bookings. Your chauffeur confirms the pickup time the day before your departure."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Uber allowed at Cancun airport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Since 2025 Uber can serve Cancun airport through Uber Reserve and Uber Taxi. A pre-booked private transfer still gives you a fixed price per vehicle agreed before you fly, a chauffeur waiting inside arrivals with your name, and a vehicle sized for your group and luggage."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where do I meet my driver at Cancun airport?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Inside the arrivals hall of your terminal. After immigration, baggage and customs, walk past the sales desks; your chauffeur is standing in arrivals with a sign showing your name. We serve Terminals 2, 3 and 4."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is a private transfer better than the Cancun airport shuttle?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A shared shuttle stops at several hotels and waits to fill up. A private transfer leaves when you do and goes straight to your hotel, and because the price is per vehicle, families and groups often pay a similar amount per person."
+      }
     }
   ]
 }
@@ -559,7 +596,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     {
       "@type": "ListItem",
       "position": 2,
-      "name": "Cancun Airport Transfers",
+      "name": "Cancun Airport Transportation",
       "item": "https://rideluxe.mx/cancun-airport-transfers"
     }
   ]
@@ -590,17 +627,31 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   <div class="hero-bg"><img fetchpriority="high" src="/images/hero.jpg" alt="Private Mercedes transfer waiting at Cancun International Airport"></div>
   <div class="hero-veil"></div>
   <div class="hero-veil2"></div>
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Ride Luxe</a> &rsaquo; Cancun Airport Transfers</nav>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Ride Luxe</a> &rsaquo; Cancun Airport Transportation</nav>
   <div class="hero-content">
     <span class="eyebrow">CUN International &middot; Terminals 2, 3 and 4</span>
-    <h1 class="serif"><span class="ln"><i>Cancun airport</i></span><span class="ln"><i><em>transfers.</em></i></span></h1>
+    <h1 class="serif"><span class="ln"><i>Cancun airport</i></span><span class="ln"><i><em>transportation.</em></i></span></h1>
     <p class="sub">Your chauffeur meets you inside arrivals, not in the parking lot. Federal plates, flight tracking and a fixed price per vehicle.</p>
     <div class="btns">
-      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book your transfer</a>
-      <a href="https://wa.me/529841814911" class="btn btn-ghost">Ask on WhatsApp</a>
+      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book airport transfer</a>
+      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-ghost">Point-to-point ride</a>
+    </div>
+    <span class="wa-line">Questions first? <a href="https://wa.me/529841814911">Ask us on WhatsApp</a></span>
+    <div class="trust"><span>4.9 on Tripadvisor &middot; 232 reviews</span><span>Meet inside arrivals</span><span>Fixed price per vehicle</span><span>24/7</span>
     </div>
   </div>
 </header>
+
+<section class="steps">
+  <div class="wrap">
+    <div class="steps-grid">
+      <div class="step"><span class="n">1</span><div><b>Choose route &amp; vehicle</b><p>Airport transfer or point to point ride, from Economy to the Mercedes V-Class.</p></div></div>
+      <div class="step"><span class="n">2</span><div><b>See your price, pay securely</b><p>Fixed price per vehicle, confirmed in minutes online, in the app or on WhatsApp.</p></div></div>
+      <div class="step"><span class="n">3</span><div><b>Meet your chauffeur</b><p>Inside arrivals with a name sign, flight tracked, or at your door for city rides.</p></div></div>
+    </div>
+    <div class="steps-cta"><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book your Cancun ride now</a></div>
+  </div>
+</section>
 
 <section class="prose">
   <div class="wrap">
@@ -652,6 +703,12 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 
 <h2>Popular Cancun airport routes</h2>
 <p>Each of these has its own dedicated page with times, prices and local detail:</p>
+<h2>Cancun airport shuttle, without the shared stops</h2>
+<p>Many travelers search for a Cancun airport shuttle and end up in a shared van that waits to fill up and stops at several hotels on the way. With Ride Luxe the vehicle is yours: it leaves when you are ready, goes straight to your hotel, and the price is per vehicle, so for a family or group the cost per person comes close to a shared shuttle.</p>
+<h2>Point to point rides in Cancun</h2>
+<p>Your chauffeur is not only for the airport. Book a ride from your hotel to dinner in the Hotel Zone, downtown Cancun, the Isla Mujeres ferry at Puerto Juarez, Puerto Morelos or Playa del Carmen, and your departure transfer back to the airport on the day you fly home. Need more than one stop? Keep the same vehicle and chauffeur by the hour or for the full day.</p>
+<h2>Book in the Ride Luxe app</h2>
+<p>Prefer your phone? The <a href="/app">Ride Luxe app</a> books airport transfers and rides around town, lets you choose your vehicle, follow your chauffeur live and pay securely. Download it on the <a href="https://apps.apple.com/mx/app/ride-luxe/id6751626059">App Store</a> or <a href="https://play.google.com/store/apps/details?id=com.stex.pax">Google Play</a>.</p>
 <div class="linkrow">
   <a href="/cancun-airport-to-hotel-zone">Cancun airport to Hotel Zone</a>
   <a href="/luxury-transportation">Luxury transportation</a>
@@ -736,7 +793,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       <div class="af-faq rv">
         <span class="eyebrow-s">Frequently asked</span>
         <h2 class="sec-title">Common <em>questions</em></h2>
-        <div class="af-qs"><details class="af-q"><summary>How much is a private transfer from Cancun airport?</summary><p>Rates start at $40 USD per vehicle for the Cancun Hotel Zone in our Economy tier, $75 USD to Playa del Carmen and $125 USD to Tulum. All prices are per vehicle rather than per person and include a licensed chauffeur, federal plates, passenger insurance and flight tracking.</p></details><details class="af-q"><summary>Can you pick me up inside the Cancun airport terminal?</summary><p>Yes. Ride Luxe Mexico holds federal SICT permits, tourist ground transport plates and airport zone licenses, which allow our chauffeurs to meet guests inside the arrivals hall with a name sign. Informal private drivers are restricted to the parking lot.</p></details><details class="af-q"><summary>What happens if my flight is delayed or cancelled?</summary><p>We monitor your flight in real time and adjust the pickup automatically at no extra cost. If the delay is significant our team stays in contact through WhatsApp to confirm the new pickup window. If your flight is cancelled we reschedule the transfer for your new arrival.</p></details><details class="af-q"><summary>Which terminal do you serve at Cancun airport?</summary><p>All of them. We operate at Terminal 2, Terminal 3 and Terminal 4 of Cancun International Airport. Tell us your flight number when you book and we identify the terminal automatically.</p></details><details class="af-q"><summary>Do you provide child seats?</summary><p>Yes, at no additional charge, for infant, toddler and booster ages. Indicate how many and which type when booking or send us a message on WhatsApp.</p></details><details class="af-q"><summary>Can I book a return transfer to the airport?</summary><p>Yes. Round trip rates are available on request and usually work out lower than two separate one way bookings. Your chauffeur confirms the pickup time the day before your departure.</p></details></div>
+        <div class="af-qs"><details class="af-q"><summary>How much is a private transfer from Cancun airport?</summary><p>Rates start at $40 USD per vehicle for the Cancun Hotel Zone in our Economy tier, $75 USD to Playa del Carmen and $125 USD to Tulum. All prices are per vehicle rather than per person and include a licensed chauffeur, federal plates, passenger insurance and flight tracking.</p></details><details class="af-q"><summary>Can you pick me up inside the Cancun airport terminal?</summary><p>Yes. Ride Luxe Mexico holds federal SICT permits, tourist ground transport plates and airport zone licenses, which allow our chauffeurs to meet guests inside the arrivals hall with a name sign. Informal private drivers are restricted to the parking lot.</p></details><details class="af-q"><summary>What happens if my flight is delayed or cancelled?</summary><p>We monitor your flight in real time and adjust the pickup automatically at no extra cost. If the delay is significant our team stays in contact through WhatsApp to confirm the new pickup window. If your flight is cancelled we reschedule the transfer for your new arrival.</p></details><details class="af-q"><summary>Which terminal do you serve at Cancun airport?</summary><p>All of them. We operate at Terminal 2, Terminal 3 and Terminal 4 of Cancun International Airport. Tell us your flight number when you book and we identify the terminal automatically.</p></details><details class="af-q"><summary>Do you provide child seats?</summary><p>Yes, at no additional charge, for infant, toddler and booster ages. Indicate how many and which type when booking or send us a message on WhatsApp.</p></details><details class="af-q"><summary>Can I book a return transfer to the airport?</summary><p>Yes. Round trip rates are available on request and usually work out lower than two separate one way bookings. Your chauffeur confirms the pickup time the day before your departure.</p></details><details class="af-q"><summary>Is Uber allowed at Cancun airport?</summary><p>Since 2025 Uber can serve Cancun airport through Uber Reserve and Uber Taxi. A pre-booked private transfer still gives you a fixed price per vehicle agreed before you fly, a chauffeur waiting inside arrivals with your name, and a vehicle sized for your group and luggage.</p></details><details class="af-q"><summary>Where do I meet my driver at Cancun airport?</summary><p>Inside the arrivals hall of your terminal. After immigration, baggage and customs, walk past the sales desks; your chauffeur is standing in arrivals with a sign showing your name. We serve Terminals 2, 3 and 4.</p></details><details class="af-q"><summary>Is a private transfer better than the Cancun airport shuttle?</summary><p>A shared shuttle stops at several hotels and waits to fill up. A private transfer leaves when you do and goes straight to your hotel, and because the price is per vehicle, families and groups often pay a similar amount per person.</p></details></div>
       </div>
     </div>
   </div>
