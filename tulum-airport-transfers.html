@@ -379,11 +379,43 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 .step p{font-size:14px;color:rgba(255,255,255,.7);font-weight:300;line-height:1.55}
 .steps-cta{text-align:center;margin-top:34px}
 @media(max-width:860px){.steps-grid{grid-template-columns:1fr;gap:22px}}
+/* Tripadvisor badge */
+.ta-badge{display:flex;width:fit-content;align-items:center;flex-wrap:wrap;gap:4px 10px;margin:0 0 24px;padding:8px 16px;border:1px solid var(--line-strong);border-radius:40px;background:rgba(0,39,43,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:12px;letter-spacing:.5px;color:#fff;font-weight:300;line-height:1.4;opacity:0;animation:fadeUp .9s .15s forwards;transition:border-color .3s}
+.ta-badge:hover{border-color:var(--mint)}
+.ta-badge .dots{color:#34E0A1;letter-spacing:2px;font-size:11px}
+.ta-badge b{font-weight:500}
+@media(max-width:1023px){.ta-badge{margin:0 auto 22px;justify-content:center;text-align:center}}
+@media(max-width:480px){.ta-badge{flex-wrap:nowrap;font-size:11px;padding:7px 14px;gap:8px}.ta-extra{display:none}}
+/* hero with quote box */
+.hero.sub .hero-grid{position:relative;z-index:5;width:100%;max-width:1320px;margin:0 auto;padding:0 min(8vw,110px);display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center;text-align:left}
+.hero.sub .hero-grid .hero-content{padding:0;max-width:none}
+.hero.sub .hero-grid h1.serif{font-size:clamp(38px,4.6vw,66px);letter-spacing:-1px;line-height:1.05}
+.hero-grid .sub{margin:0 0 34px}
+.hero-grid .btns,.hero-grid .trust{justify-content:flex-start}
+.book-panel{background:rgba(0,39,43,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line-strong);border-radius:4px;padding:20px 18px 14px;box-shadow:0 30px 70px rgba(0,0,0,.35);scroll-margin-top:90px;opacity:0;animation:fadeUp 1s .9s forwards}
+.bp-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;padding:0 4px}
+.bp-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--mint);font-weight:400}
+.bp-meta{font-size:11px;color:rgba(255,255,255,.62);font-weight:300;text-align:right}
+.bp-frame{display:block;width:100%;height:clamp(500px,calc(100vh - 240px),660px);border:0;border-radius:2px;background:#fff}
+.bp-alt{display:block;margin-top:12px;font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.66);text-align:center;transition:color .3s}
+.bp-alt:hover{color:var(--mint)}
+@media(min-width:1024px) and (max-width:1200px){.hero.sub .hero-grid{grid-template-columns:minmax(0,1fr) 360px;gap:40px}}
+@media(max-width:1023px){
+  .hero.sub .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}
+  .hero-grid .sub{margin:0 auto 30px}
+  .hero-grid .btns,.hero-grid .trust{justify-content:center}
+  .book-panel{width:100%;max-width:440px;margin:0 auto}
+}
+@media(max-width:480px){
+  .hero.sub .hero-grid{padding:0 16px;gap:30px}
+  .book-panel{padding:16px 12px 12px}
+  .bp-frame{height:620px}
+}
 </style>
 
 <style>
 /* interior page adjustments */
-.hero.sub{height:auto;min-height:58vh;padding:165px 0 80px}
+.hero.sub{height:auto;min-height:58vh;padding:140px 0 70px}
 @media(max-width:760px){.hero.sub{padding:135px 0 60px}}
 .hero.sub .hero-content{max-width:1000px}
 .hero.sub h1.serif{font-size:clamp(38px,6.2vw,86px)}
@@ -596,16 +628,26 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   <div class="hero-veil"></div>
   <div class="hero-veil2"></div>
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Ride Luxe</a> &rsaquo; Tulum Airport Transportation</nav>
-  <div class="hero-content">
-    <span class="eyebrow">TQO Felipe Carrillo Puerto International</span>
-    <h1 class="serif"><span class="ln"><i>Tulum airport</i></span><span class="ln"><i><em>transportation.</em></i></span></h1>
-    <p class="sub">Twenty minutes from the terminal to Aldea Zama, forty to the beach. Federally plated vehicles and chauffeurs licensed to meet you inside TQO.</p>
-    <div class="btns">
-      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book airport transfer</a>
-      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-ghost">Point-to-point ride</a>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <a class="ta-badge" href="https://www.tripadvisor.com/Attraction_Review-g150813-d24043854-Reviews-Serendipity_Travel_Experiences-Tulum_Yucatan_Peninsula.html" target="_blank" rel="noopener"><span class="dots" aria-hidden="true">&#9679;&#9679;&#9679;&#9679;&#9679;</span><span><b>4.9</b> on Tripadvisor &middot; 232 reviews <span class="ta-extra"> &middot; Travelers&rsquo; Choice 2025</span></span></a>
+      <span class="eyebrow">TQO Felipe Carrillo Puerto International</span>
+      <h1 class="serif"><span class="ln"><i>Tulum airport</i></span><span class="ln"><i><em>transportation.</em></i></span></h1>
+      <p class="sub">Twenty minutes from the terminal to Aldea Zama, forty to the beach. Federally plated vehicles and chauffeurs licensed to meet you inside TQO.</p>
+      <div class="btns">
+        <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book airport transfer</a>
+        <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-ghost">Point-to-point ride</a>
+      </div>
+      <div class="trust"><span>Meet inside arrivals</span><span>Fixed price per vehicle</span><span>24/7</span>
+      </div>
     </div>
-    <span class="wa-line">Questions first? <a href="https://wa.me/529841814911">Ask us on WhatsApp</a></span>
-    <div class="trust"><span>4.9 on Tripadvisor &middot; 232 reviews</span><span>Meet inside arrivals</span><span>Fixed price per vehicle</span><span>24/7</span>
+    <div class="book-panel" id="book">
+      <div class="bp-head">
+        <span class="bp-eyebrow">Get your price</span>
+        <span class="bp-meta">Instant quote &middot; Confirmed in minutes</span>
+      </div>
+      <iframe class="bp-frame" src="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" title="Ride Luxe booking: choose pickup, destination, date and vehicle to see your price" allow="geolocation" loading="lazy"></iframe>
+      <a class="bp-alt" href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" target="_blank" rel="noopener">Open booking in a new tab &nearr;</a>
     </div>
   </div>
 </header>
@@ -694,7 +736,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       </article>
     </div>
     <p class="routes-disclaimer">Prices in USD for reference, per vehicle. Final invoicing in MXN at the exchange rate of the day, per Mexican consumer protection law.</p>
-    <div class="routes-cta"><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book this route</a> <a href="https://wa.me/529841814911" class="btn btn-ghost">Ask on WhatsApp</a></div>
+    <div class="routes-cta"><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book this route</a></div>
   </div>
 </section>
 
