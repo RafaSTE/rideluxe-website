@@ -88,6 +88,35 @@ nav .nav-cta:hover{background:var(--mint);color:var(--dark-teal)!important;borde
 .btn-ghost:hover{background:rgba(255,255,255,.16);border-color:var(--mint)}
 .btn-mint{background:var(--mint);color:var(--dark-teal)}
 .btn-mint:hover{background:#fff;transform:translateY(-2px)}
+/* hero booking engine */
+.hero{height:auto;min-height:100vh;padding:120px 0 70px}
+.hero-grid{position:relative;z-index:5;width:100%;max-width:1320px;margin:0 auto;padding:0 8%;display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center;text-align:left}
+.hero-grid .hero-content{padding:0;max-width:none}
+.hero-grid h1{font-size:clamp(52px,7vw,112px)}
+.hero-grid .sub{margin:0 0 40px}
+.hero-grid .btns{justify-content:flex-start}
+.book-panel{background:rgba(0,39,43,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line-strong);border-radius:4px;padding:20px 18px 14px;box-shadow:0 30px 70px rgba(0,0,0,.35);scroll-margin-top:90px;opacity:0;animation:fadeUp 1s .9s forwards}
+.bp-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;padding:0 4px}
+.bp-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--mint);font-weight:400}
+.bp-meta{font-size:11px;color:rgba(255,255,255,.62);font-weight:300;text-align:right}
+.bp-frame{display:block;width:100%;height:clamp(500px,calc(100vh - 240px),660px);border:0;border-radius:2px;background:#fff}
+.bp-alt{display:block;margin-top:12px;font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.66);text-align:center;transition:color .3s}
+.bp-alt:hover{color:var(--mint)}
+@media(max-width:1023px){
+  .hero{padding:110px 0 56px}
+  .hero-grid{grid-template-columns:1fr;gap:44px;text-align:center}
+  .hero-grid .sub{margin:0 auto 32px}
+  .hero-grid .btns{justify-content:center}
+  .book-panel{width:100%;max-width:440px;margin:0 auto}
+}
+@media(max-width:480px){
+  .hero-grid{padding:0 16px;gap:32px}
+  .hero-grid .sub{margin-bottom:26px}
+  .hero-grid .btns .btn-ghost{display:none}
+  .book-panel{padding:16px 12px 12px}
+  .bp-frame{height:620px}
+}
+body.booking-in-view .book-float,body.booking-in-view .wa-float{opacity:0;pointer-events:none}
 /* hero stat row (C) */
 .hero-stats{position:absolute;left:8%;right:8%;bottom:42px;z-index:5;display:flex;gap:0;padding-top:22px;opacity:0;animation:fadeUp 1s 1.1s forwards}
 .hero-stats .st{flex:1;text-align:left;padding-right:20px}
@@ -528,7 +557,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <a href="#fleet">Fleet</a>
     <a href="#ondemand">On-Demand</a>
     <a href="/blog">Blog</a>
-    <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="nav-cta">Book Now</a>
+    <a href="#book" class="nav-cta">Book Now</a>
   </div>
   <button class="burger" aria-label="Menu" onclick="toggleMenu()">&#9776;</button>
 </nav>
@@ -537,16 +566,26 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   <div class="hero-bg"><img fetchpriority="high" src="/images/hero.jpg" alt="Guest arriving in a luxury Mercedes V-Class private transfer in the Riviera Maya"></div>
   <div class="hero-veil"></div>
   <div class="hero-veil2"></div>
-  <div class="hero-content">
-    <span class="eyebrow">Official airport pickup &middot; Federal plates</span>
-    <h1 class="serif">
-      <span class="ln"><i>Arrive</i></span>
-      <span class="ln"><i><em>elevated.</em></i></span>
-    </h1>
-    <p class="sub">Luxury private transfers across the Mexican Caribbean and Los Cabos. We collect you legally inside the airport &mdash; no waiting, no informal taxis.</p>
-    <div class="btns">
-      <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="btn btn-solid">Book your transfer</a>
-      <a href="#fleet" class="btn btn-ghost">Explore the fleet</a>
+  <div class="hero-grid">
+    <div class="hero-content">
+      <span class="eyebrow">Official airport pickup &middot; Federal plates</span>
+      <h1 class="serif">
+        <span class="ln"><i>Arrive</i></span>
+        <span class="ln"><i><em>elevated.</em></i></span>
+      </h1>
+      <p class="sub">Luxury private transfers across the Mexican Caribbean and Los Cabos. We collect you legally inside the airport &mdash; no waiting, no informal taxis.</p>
+      <div class="btns">
+        <a href="#routes" class="btn btn-solid">See routes &amp; rates</a>
+        <a href="#fleet" class="btn btn-ghost">Explore the fleet</a>
+      </div>
+    </div>
+    <div class="book-panel" id="book">
+      <div class="bp-head">
+        <span class="bp-eyebrow">Book your ride</span>
+        <span class="bp-meta">Instant price &middot; Confirmed in minutes</span>
+      </div>
+      <iframe class="bp-frame" src="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" title="Ride Luxe booking: choose pickup, destination, date and vehicle" allow="geolocation" loading="lazy"></iframe>
+      <a class="bp-alt" href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" target="_blank" rel="noopener">Open booking in a new tab &nearr;</a>
     </div>
   </div>
 
@@ -735,11 +774,11 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <p class="routes-disclaimer rv">Prices in USD for reference, per vehicle. Final invoicing in MXN at the exchange rate of the day, per Mexican consumer protection law. Round-trip and group rates available on request.</p>
 
     <div class="routes-cta rv">
-      <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="btn btn-mint">Book your route</a>
+      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-mint">Book your route</a>
       <a href="/cancun-airport-to-tulum" class="btn-link">Cancun airport to Tulum, full detail &rarr;</a>
       <a href="/cancun-airport-to-playa-del-carmen" class="btn-link">Cancun airport to Playa del Carmen &rarr;</a>
       <a href="/cancun-airport-to-hotel-zone" class="btn-link">Cancun airport to Hotel Zone &rarr;</a>
-      <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="btn-link">Need Los Cabos or another route? Get a quote &rarr;</a>
+      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn-link">Need Los Cabos or another route? Get a quote &rarr;</a>
     </div>
   </div>
 </section>
@@ -850,7 +889,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
         <div class="f"><span class="n">03</span> Door-to-door, anywhere</div>
         <div class="f"><span class="n">04</span> Your driver waits for you</div>
       </div>
-      <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="btn btn-mint rv">Request an on-demand ride</a>
+      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-mint rv">Request an on-demand ride</a>
     </div>
   </div>
 </section>
@@ -921,7 +960,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <span class="eyebrow-s">Ready when you land</span>
     <h2 class="serif">Reserve your <em>luxury transfer</em></h2>
     <p>Confirmation in minutes. Book online or through the app.</p>
-    <a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="btn btn-mint">Book Now</a>
+    <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-mint">Book Now</a>
   </div>
 </section>
 
@@ -1018,7 +1057,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   </div>
 </footer>
 
-<a href="https://book.serendipityexperiencesmx.com/f7lmzlai" class="book-float"><span>&#10003;</span> Book Now</a>
+<a href="#book" class="book-float"><span>&#10003;</span> Book Now</a>
 
 <a href="https://wa.me/529841814911" class="wa-float">WhatsApp</a>
 </div>
@@ -1029,6 +1068,9 @@ const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.tar
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 function toggleMenu(){document.querySelector('.links').classList.toggle('open')}
 
+// Hide floating buttons while the booking engine is on screen
+(function(){var bp=document.getElementById('book');if(!bp||!('IntersectionObserver' in window))return;
+new IntersectionObserver(function(es){document.body.classList.toggle('booking-in-view',es[0].isIntersecting)},{threshold:.25}).observe(bp);})();
 // Animated counters for proof stats
 function formatNumber(n, decimals){
   if(decimals>0) return n.toFixed(decimals);
