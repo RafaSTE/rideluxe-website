@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://rideluxe.mx/</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -30,7 +30,7 @@
   </url>
   <url>
     <loc>https://rideluxe.mx/cancun-airport-to-tulum</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -40,7 +40,7 @@
   </url>
   <url>
     <loc>https://rideluxe.mx/cancun-airport-transfers</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -50,7 +50,7 @@
   </url>
   <url>
     <loc>https://rideluxe.mx/cancun-airport-to-hotel-zone</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -60,7 +60,7 @@
   </url>
   <url>
     <loc>https://rideluxe.mx/tulum-airport-transfers</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://rideluxe.mx/cancun-airport-to-playa-del-carmen</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -80,7 +80,7 @@
   </url>
   <url>
     <loc>https://rideluxe.mx/playa-del-carmen-transfers</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -90,7 +90,7 @@
   </url>
   <url>
     <loc>https://rideluxe.mx/los-cabos-transfers</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -99,8 +99,38 @@
     </image:image>
   </url>
   <url>
+    <loc>https://rideluxe.mx/luxury-transportation</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/chauffeur-vclass.jpg</image:loc>
+      <image:title>Ride Luxe chauffeur with a Mercedes V-Class for luxury transportation</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rideluxe.mx/tulum-airport-to-tulum-hotel-zone</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/hero.jpg</image:loc>
+      <image:title>Private transfer from Tulum airport to the Tulum hotel zone</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://rideluxe.mx/app</loc>
+    <lastmod>2026-09-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://rideluxe.mx/images/chauffeur.jpg</image:loc>
+      <image:title>Licensed Ride Luxe chauffeur, bookable in the Ride Luxe app</image:title>
+    </image:image>
+  </url>
+  <url>
     <loc>https://rideluxe.mx/blog</loc>
-    <lastmod>2026-09-25</lastmod>
+    <lastmod>2026-09-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
