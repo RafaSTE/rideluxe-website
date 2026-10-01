@@ -411,6 +411,39 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   .book-panel{padding:16px 12px 12px}
   .bp-frame{height:620px}
 }
+@media(min-width:981px) and (max-width:1180px){nav{padding-left:4%;padding-right:4%}nav .links{gap:15px}nav .links a{font-size:10px;letter-spacing:1.3px;white-space:nowrap}nav .nav-cta{padding:10px 16px}nav .brand .bt{font-size:17px;letter-spacing:4px}}
+/* final price line, from prices, promises */
+.hero .final-line{font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.92);max-width:560px;margin:-16px 0 24px;opacity:0;animation:fadeUp 1s .8s forwards}
+.hero .from-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;opacity:0;animation:fadeUp 1s .85s forwards}
+.hero .from-row span{border:1px solid var(--line-strong);background:rgba(0,39,43,.35);padding:6px 12px;font-size:12.5px;color:#fff;letter-spacing:.3px}
+.hero .from-row b{font-weight:500;color:var(--mint-bright)}
+@media(max-width:1023px){.hero .final-line{margin:-12px auto 22px}.hero .from-row{justify-content:center}}
+/* meeting points */
+.meet{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);margin:26px 0}
+.meet div{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px;background:var(--dark-teal);padding:16px 20px;align-items:baseline}
+.meet .t{color:#fff}
+.meet .t small{display:block;font-size:12px;color:rgba(255,255,255,.6);letter-spacing:.4px}
+.meet .p{font-family:'Cormorant Garamond',serif;font-size:24px;color:var(--mint-bright);line-height:1.2}
+@media(max-width:480px){.meet div{grid-template-columns:1fr;gap:2px}}
+/* vehicle cards */
+.vehicles{padding:70px 0 20px}
+.vehicles .vh{display:flex;justify-content:space-between;align-items:flex-end;gap:20px;flex-wrap:wrap;margin-bottom:28px}
+.vehicles h2{font-size:clamp(30px,3.6vw,46px);color:#fff}
+.vehicles h2 em{font-style:italic;color:var(--mint)}
+.vehicles .vh p{font-size:14px;color:rgba(255,255,255,.7);max-width:420px}
+.vgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.vcard{border:1px solid var(--line);background:rgba(159,225,203,.04);display:flex;flex-direction:column}
+.vcard img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.vcard .vb{padding:18px 18px 20px;display:flex;flex-direction:column;gap:5px;flex:1}
+.vcard .tier{font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--mint)}
+.vcard h3{font-family:'Cormorant Garamond',serif;font-weight:400;font-size:24px;color:#fff;line-height:1.1}
+.vcard .sim{font-size:12.5px;color:rgba(255,255,255,.6)}
+.vcard .cap{font-size:13.5px;color:rgba(255,255,255,.88);margin-top:4px}
+.vcard .price{font-family:'Cormorant Garamond',serif;font-size:26px;color:#fff;margin-top:auto;padding-top:12px}
+.vcard .price small{display:block;font-family:'Jost',sans-serif;font-size:11.5px;color:rgba(255,255,255,.6);margin-top:2px}
+.vcard .btn{margin-top:12px;justify-content:center;padding:12px 16px;font-size:11px}
+@media(max-width:1023px){.vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.vgrid{grid-template-columns:1fr}.vehicles{padding:56px 0 10px}}
 </style>
 
 <style>
@@ -600,7 +633,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       "name": "Where do I meet my driver at Cancun airport?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Inside the arrivals hall of your terminal. After immigration, baggage and customs, walk past the sales desks; your chauffeur is standing in arrivals with a sign showing your name. We serve Terminals 2, 3 and 4."
+        "text": "It depends on your terminal. Terminal 2 domestic flights: at the Welcome Bar. Terminal 2 international flights and Terminal 3: at Margaritaville. Terminal 4: at the Welcome Bar. Your chauffeur holds a sign with your name, and you receive a tracking link with their photo, vehicle plate and live location."
       }
     },
     {
@@ -609,6 +642,22 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       "acceptedAnswer": {
         "@type": "Answer",
         "text": "A shared shuttle stops at several hotels and waits to fill up. A private transfer leaves when you do and goes straight to your hotel, and because the price is per vehicle, families and groups often pay a similar amount per person."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long will my chauffeur wait for me?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Up to 60 minutes after your flight lands, at no charge. We track your flight, so if it is delayed the pickup time moves with it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How will I know who is picking me up?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Before pickup you receive a tracking link with your chauffeur's photo, the vehicle's license plate and its live location, so you know exactly who and what to look for."
       }
     }
   ]
@@ -643,10 +692,9 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <span class="bt">RIDE LUXE</span>
   </a>
   <div class="links">
-    <a href="/cancun-airport-transfers">Cancun</a>
-    <a href="/tulum-airport-transfers">Tulum</a>
-    <a href="/playa-del-carmen-transfers">Playa del Carmen</a>
-    <a href="/los-cabos-transfers">Los Cabos</a>
+    <a href="/cancun-airport-transfers">Cancun Airport</a>
+    <a href="/tulum-airport-transfers">Tulum Airport</a>
+    <a href="/los-cabos-transfers">Los Cabos Airport</a>
     <a href="/luxury-transportation">Luxury</a>
     <a href="/app">App</a>
     <a href="/blog">Blog</a>
@@ -666,12 +714,13 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       <span class="eyebrow">CUN International &middot; Terminals 2, 3 and 4</span>
       <h1 class="serif"><span class="ln"><i>Cancun airport</i></span><span class="ln"><i><em>transportation.</em></i></span></h1>
       <p class="sub">Your chauffeur meets you inside arrivals, not in the parking lot. Federal plates, flight tracking and a fixed price per vehicle.</p>
+      <p class="final-line">Fixed price in USD for the whole vehicle. Taxes and airport fees included, no surprises when you land.</p>
+      <div class="from-row"><span>Hotel Zone <b>from $40</b></span><span>Playa del Carmen <b>from $75</b></span><span>Tulum <b>from $125</b></span></div>
       <div class="btns">
         <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book airport transfer</a>
         <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-ghost">Point-to-point ride</a>
       </div>
-      <div class="trust"><span>Meet inside arrivals</span><span>Fixed price per vehicle</span><span>24/7</span>
-      </div>
+      <div class="trust"><span>Chauffeur inside arrivals</span><span>60 min free waiting</span><span>Live tracking link: driver photo &amp; plate</span><span>Flight tracked</span><span>24/7</span></div>
     </div>
     <div class="book-panel" id="book">
       <div class="bp-head">
@@ -695,6 +744,18 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   </div>
 </section>
 
+<section class="vehicles" id="vehicles">
+  <div class="wrap">
+    <div class="vh"><h2>Choose your <em>vehicle</em></h2><p>Every vehicle is private, federally plated and driven by a licensed chauffeur. 60 minutes of free waiting after landing on every Cancun airport pickup.</p></div>
+    <div class="vgrid">
+      <article class="vcard"><img loading="lazy" src="/images/economy-avanza.jpg" alt="Toyota Avanza private sedan with federal plates"><div class="vb"><span class="tier">Economy</span><h3>Private sedan</h3><span class="sim">Toyota Avanza or similar</span><span class="cap">Up to 4 guests</span><span class="price">from $40 <small>to Hotel Zone, per vehicle</small></span><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book Economy</a></div></article>
+      <article class="vcard"><img loading="lazy" src="/images/private-hiace.jpg" alt="Toyota Hiace van with a Ride Luxe chauffeur"><div class="vb"><span class="tier">Standard</span><h3>Toyota Hiace</h3><span class="sim">or similar</span><span class="cap">Up to 10 guests</span><span class="price">from $55 <small>to Hotel Zone, per vehicle</small></span><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book Standard</a></div></article>
+      <article class="vcard"><img loading="lazy" src="/images/luxury-vclass.jpg" alt="Mercedes V-Class leather interior"><div class="vb"><span class="tier">Luxury</span><h3>Mercedes V-Class</h3><span class="sim">or Chevrolet Suburban</span><span class="cap">Up to 6 guests</span><span class="price">from $120 <small>to Hotel Zone, per vehicle</small></span><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book Luxury</a></div></article>
+      <article class="vcard"><img loading="lazy" src="/images/premium-sprinter.jpg" alt="Mercedes Sprinter interior for group transfers"><div class="vb"><span class="tier">Premium</span><h3>Mercedes Sprinter</h3><span class="sim">or similar</span><span class="cap">Up to 16 guests</span><span class="price">from $210 <small>to Hotel Zone, per vehicle</small></span><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book Premium</a></div></article>
+    </div>
+  </div>
+</section>
+
 <section class="prose">
   <div class="wrap">
 
@@ -703,13 +764,14 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 <p><strong>Ride Luxe Mexico is a federally licensed operator.</strong> We hold SICT permits, tourist ground transport plates and airport zone licenses. That combination is what allows our chauffeurs to walk into the terminal and meet you at arrivals with a name sign, instead of waiting outside in the parking lot like informal drivers are required to do.</p>
 <div class="factbox"><div><span class="k">Airport code</span><span class="v">CUN</span></div><div><span class="k">Terminals served</span><span class="v">2, 3 and 4</span></div><div><span class="k">Meeting point</span><span class="v">Inside arrivals</span></div><div><span class="k">Rates from</span><span class="v">$40 USD per vehicle</span></div></div>
 <h2>Where we meet you at CUN</h2>
-<p>After you clear immigration and collect your luggage, you walk through customs and into the arrivals hall. Your chauffeur is standing there with a sign showing your name. No calls, no walking to a lot, no negotiating a price at the curb.</p>
-<ul>
-<li><strong>Terminal 2</strong>, domestic flights and some international carriers.</li>
-<li><strong>Terminal 3</strong>, most United States and Canadian airlines.</li>
-<li><strong>Terminal 4</strong>, the largest terminal, most international and charter traffic.</li>
-</ul>
-<p>We track your flight in real time. If you land early, we are already there. If you are delayed three hours, the pickup time moves automatically and there is no extra charge.</p>
+<p>After immigration, baggage and customs, walk straight past the sales desks in the arrivals hall. Your chauffeur is waiting at the meeting point for your terminal with a sign showing your name. Before pickup you also receive a tracking link with your chauffeur&rsquo;s photo, the vehicle plate and its live location.</p>
+<div class="meet">
+<div><span class="t">Terminal 2<small>Domestic flights</small></span><span class="p">Welcome Bar</span></div>
+<div><span class="t">Terminal 2<small>International flights</small></span><span class="p">Margaritaville</span></div>
+<div><span class="t">Terminal 3<small>All flights</small></span><span class="p">Margaritaville</span></div>
+<div><span class="t">Terminal 4<small>All flights</small></span><span class="p">Welcome Bar</span></div>
+</div>
+<p>We track your flight in real time. If you land early, we are already there. Your chauffeur waits up to 60 minutes after landing at no charge, and if your flight is delayed the pickup time moves automatically.</p>
 
 <h2>Drive times from Cancun airport</h2>
 <ul>
@@ -738,6 +800,8 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 <li>Licensed chauffeur with federal airport and zone credentials</li>
 <li>Meet and greet inside the terminal with a name sign</li>
 <li>Real time flight tracking and automatic schedule adjustment</li>
+<li>60 minutes of free waiting after landing</li>
+<li>Tracking link with your chauffeur&rsquo;s photo, vehicle plate and live location</li>
 <li>Passenger insurance on every ride</li>
 <li>Bottled water on board and child seats on request at no charge</li>
 <li>Fixed price per vehicle, not per person, confirmed before you travel</li>
@@ -835,7 +899,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       <div class="af-faq rv">
         <span class="eyebrow-s">Frequently asked</span>
         <h2 class="sec-title">Common <em>questions</em></h2>
-        <div class="af-qs"><details class="af-q"><summary>How much is a private transfer from Cancun airport?</summary><p>Rates start at $40 USD per vehicle for the Cancun Hotel Zone in our Economy tier, $75 USD to Playa del Carmen and $125 USD to Tulum. All prices are per vehicle rather than per person and include a licensed chauffeur, federal plates, passenger insurance and flight tracking.</p></details><details class="af-q"><summary>Can you pick me up inside the Cancun airport terminal?</summary><p>Yes. Ride Luxe Mexico holds federal SICT permits, tourist ground transport plates and airport zone licenses, which allow our chauffeurs to meet guests inside the arrivals hall with a name sign. Informal private drivers are restricted to the parking lot.</p></details><details class="af-q"><summary>What happens if my flight is delayed or cancelled?</summary><p>We monitor your flight in real time and adjust the pickup automatically at no extra cost. If the delay is significant our team stays in contact through WhatsApp to confirm the new pickup window. If your flight is cancelled we reschedule the transfer for your new arrival.</p></details><details class="af-q"><summary>Which terminal do you serve at Cancun airport?</summary><p>All of them. We operate at Terminal 2, Terminal 3 and Terminal 4 of Cancun International Airport. Tell us your flight number when you book and we identify the terminal automatically.</p></details><details class="af-q"><summary>Do you provide child seats?</summary><p>Yes, at no additional charge, for infant, toddler and booster ages. Indicate how many and which type when booking or send us a message on WhatsApp.</p></details><details class="af-q"><summary>Can I book a return transfer to the airport?</summary><p>Yes. Round trip rates are available on request and usually work out lower than two separate one way bookings. Your chauffeur confirms the pickup time the day before your departure.</p></details><details class="af-q"><summary>Is Uber allowed at Cancun airport?</summary><p>Since 2025 Uber can serve Cancun airport through Uber Reserve and Uber Taxi. A pre-booked private transfer still gives you a fixed price per vehicle agreed before you fly, a chauffeur waiting inside arrivals with your name, and a vehicle sized for your group and luggage.</p></details><details class="af-q"><summary>Where do I meet my driver at Cancun airport?</summary><p>Inside the arrivals hall of your terminal. After immigration, baggage and customs, walk past the sales desks; your chauffeur is standing in arrivals with a sign showing your name. We serve Terminals 2, 3 and 4.</p></details><details class="af-q"><summary>Is a private transfer better than the Cancun airport shuttle?</summary><p>A shared shuttle stops at several hotels and waits to fill up. A private transfer leaves when you do and goes straight to your hotel, and because the price is per vehicle, families and groups often pay a similar amount per person.</p></details></div>
+        <div class="af-qs"><details class="af-q"><summary>How much is a private transfer from Cancun airport?</summary><p>Rates start at $40 USD per vehicle for the Cancun Hotel Zone in our Economy tier, $75 USD to Playa del Carmen and $125 USD to Tulum. All prices are per vehicle rather than per person and include a licensed chauffeur, federal plates, passenger insurance and flight tracking.</p></details><details class="af-q"><summary>Can you pick me up inside the Cancun airport terminal?</summary><p>Yes. Ride Luxe Mexico holds federal SICT permits, tourist ground transport plates and airport zone licenses, which allow our chauffeurs to meet guests inside the arrivals hall with a name sign. Informal private drivers are restricted to the parking lot.</p></details><details class="af-q"><summary>What happens if my flight is delayed or cancelled?</summary><p>We monitor your flight in real time and adjust the pickup automatically at no extra cost. If the delay is significant our team stays in contact through WhatsApp to confirm the new pickup window. If your flight is cancelled we reschedule the transfer for your new arrival.</p></details><details class="af-q"><summary>Which terminal do you serve at Cancun airport?</summary><p>All of them. We operate at Terminal 2, Terminal 3 and Terminal 4 of Cancun International Airport. Tell us your flight number when you book and we identify the terminal automatically.</p></details><details class="af-q"><summary>Do you provide child seats?</summary><p>Yes, at no additional charge, for infant, toddler and booster ages. Indicate how many and which type when booking or send us a message on WhatsApp.</p></details><details class="af-q"><summary>Can I book a return transfer to the airport?</summary><p>Yes. Round trip rates are available on request and usually work out lower than two separate one way bookings. Your chauffeur confirms the pickup time the day before your departure.</p></details><details class="af-q"><summary>Is Uber allowed at Cancun airport?</summary><p>Since 2025 Uber can serve Cancun airport through Uber Reserve and Uber Taxi. A pre-booked private transfer still gives you a fixed price per vehicle agreed before you fly, a chauffeur waiting inside arrivals with your name, and a vehicle sized for your group and luggage.</p></details><details class="af-q"><summary>Where do I meet my driver at Cancun airport?</summary><p>It depends on your terminal. Terminal 2 domestic flights: at the Welcome Bar. Terminal 2 international flights and Terminal 3: at Margaritaville. Terminal 4: at the Welcome Bar. Your chauffeur holds a sign with your name, and you receive a tracking link with their photo, vehicle plate and live location.</p></details><details class="af-q"><summary>Is a private transfer better than the Cancun airport shuttle?</summary><p>A shared shuttle stops at several hotels and waits to fill up. A private transfer leaves when you do and goes straight to your hotel, and because the price is per vehicle, families and groups often pay a similar amount per person.</p></details><details class="af-q"><summary>How long will my chauffeur wait for me?</summary><p>Up to 60 minutes after your flight lands, at no charge. We track your flight, so if it is delayed the pickup time moves with it.</p></details><details class="af-q"><summary>How will I know who is picking me up?</summary><p>Before pickup you receive a tracking link with your chauffeur's photo, the vehicle's license plate and its live location, so you know exactly who and what to look for.</p></details></div>
       </div>
     </div>
   </div>

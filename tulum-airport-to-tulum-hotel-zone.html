@@ -398,6 +398,17 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   .book-panel{padding:16px 12px 12px}
   .bp-frame{height:620px}
 }
+@media(min-width:981px) and (max-width:1180px){nav{padding-left:4%;padding-right:4%}nav .links{gap:15px}nav .links a{font-size:10px;letter-spacing:1.3px;white-space:nowrap}nav .nav-cta{padding:10px 16px}nav .brand .bt{font-size:17px;letter-spacing:4px}}
+/* final price line, from prices, promises */
+.hero .final-line{font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.92);max-width:560px;margin:-16px 0 24px;opacity:0;animation:fadeUp 1s .8s forwards}
+.hero .from-row{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px;opacity:0;animation:fadeUp 1s .85s forwards}
+.hero .from-row span{border:1px solid var(--line-strong);background:rgba(0,39,43,.35);padding:6px 12px;font-size:12.5px;color:#fff;letter-spacing:.3px}
+.hero .from-row b{font-weight:500;color:var(--mint-bright)}
+@media(max-width:1023px){.hero .final-line{margin:-12px auto 22px}.hero .from-row{justify-content:center}}
+.hero .trust{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 22px;margin-top:26px;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:rgba(255,255,255,.78);opacity:0;animation:fadeUp 1s 1.1s forwards}
+.hero .trust span:before{content:'\2713';color:var(--mint);margin-right:7px}
+.hero-grid .trust{justify-content:flex-start}
+@media(max-width:1023px){.hero-grid .trust{justify-content:center}}
 </style>
 
 <style>
@@ -551,7 +562,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       "name": "Do you meet us inside the Tulum airport terminal?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes. Our chauffeurs are licensed to meet guests inside TQO arrivals with a name sign, and your flight is tracked so a delay costs you nothing."
+        "text": "Yes. Your chauffeur always meets you at Door #4 of the Tulum arrivals area with a name sign, and your flight is tracked so a delay costs you nothing. You also receive a tracking link with your chauffeur's photo, vehicle plate and live location."
       }
     },
     {
@@ -594,10 +605,9 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <span class="bt">RIDE LUXE</span>
   </a>
   <div class="links">
-    <a href="/cancun-airport-transfers">Cancun</a>
-    <a href="/tulum-airport-transfers">Tulum</a>
-    <a href="/playa-del-carmen-transfers">Playa del Carmen</a>
-    <a href="/los-cabos-transfers">Los Cabos</a>
+    <a href="/cancun-airport-transfers">Cancun Airport</a>
+    <a href="/tulum-airport-transfers">Tulum Airport</a>
+    <a href="/los-cabos-transfers">Los Cabos Airport</a>
     <a href="/luxury-transportation">Luxury</a>
     <a href="/app">App</a>
     <a href="/blog">Blog</a>
@@ -617,10 +627,12 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       <span class="eyebrow">TQO &rarr; Tulum beach &middot; 35 to 45 min</span>
       <h1 class="serif"><span class="ln"><i>Tulum airport</i></span><span class="ln"><i><em>to the hotel zone.</em></i></span></h1>
       <p class="sub">From the arrivals hall to your beach hotel in under an hour, at a fixed price for the whole vehicle.</p>
+      <p class="final-line">Fixed price in USD for the whole vehicle. Taxes and airport fees included, no surprises when you land.</p>
       <div class="btns">
         <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai" class="btn btn-solid">Book your ride</a>
         <a href="#rates" class="btn btn-ghost">See rates</a>
       </div>
+      <div class="trust"><span>Meeting point: Door #4</span><span>60 min free waiting</span><span>Live tracking link: driver photo &amp; plate</span><span>Flight tracked</span><span>24/7</span></div>
     </div>
     <div class="book-panel" id="book">
       <div class="bp-head">
@@ -653,9 +665,11 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 <p>If you are staying on Tulum beach, TQO is almost always the easier arrival: you save close to ninety minutes of driving each way and the terminal is compact, so you are usually on the road within minutes of collecting your bags. Cancun has more flights and more direct routes from North America and Europe. If you land in Cancun, our <a href="/cancun-airport-to-tulum">Cancun airport to Tulum</a> transfer to the beach starts at $145 USD per vehicle.</p>
 <h2>What is included</h2>
 <ul>
-<li>Chauffeur waiting inside the Tulum arrivals hall with a name sign</li>
+<li>Chauffeur waiting at Door #4 of Tulum arrivals with a name sign</li>
 <li>Federal plates, SICT permits, airport zone licensed chauffeur</li>
 <li>Real time flight tracking with free adjustment for delays</li>
+<li>60 minutes of free waiting after landing</li>
+<li>Tracking link with your chauffeur&rsquo;s photo, vehicle plate and live location</li>
 <li>Passenger insurance and bottled water on board</li>
 <li>Free child seats, infant through booster</li>
 <li>24 hour service, same rate day or night</li>
@@ -720,7 +734,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       <div class="af-faq rv">
         <span class="eyebrow-s">Frequently asked</span>
         <h2 class="sec-title">Common <em>questions</em></h2>
-        <div class="af-qs"><details class="af-q"><summary>How much is a private transfer from Tulum airport to the Tulum hotel zone?</summary><p>From $90 USD per vehicle in Economy, $130 USD in Standard, $190 USD in Luxury and $280 USD in Premium. Rates are per vehicle rather than per person and include the chauffeur, insurance, flight tracking and child seats.</p></details><details class="af-q"><summary>How long is the drive from Tulum airport to the beach hotel zone?</summary><p>Between 35 and 45 minutes, depending on where your hotel sits along the beach road. Tulum town and Aldea Zama are closer, about 25 minutes from the terminal.</p></details><details class="af-q"><summary>Should I fly into Tulum or Cancun if I am staying on Tulum beach?</summary><p>If your hotel is in Tulum, flying into Tulum (TQO) saves roughly 90 minutes of driving each way. Cancun has more flights and more direct international routes. We cover both, and Cancun airport to Tulum beach starts at $145 USD per vehicle.</p></details><details class="af-q"><summary>Do you meet us inside the Tulum airport terminal?</summary><p>Yes. Our chauffeurs are licensed to meet guests inside TQO arrivals with a name sign, and your flight is tracked so a delay costs you nothing.</p></details><details class="af-q"><summary>Do you operate at night?</summary><p>Yes, 24 hours a day at the same rate. Your chauffeur is waiting whatever time your flight lands.</p></details></div>
+        <div class="af-qs"><details class="af-q"><summary>How much is a private transfer from Tulum airport to the Tulum hotel zone?</summary><p>From $90 USD per vehicle in Economy, $130 USD in Standard, $190 USD in Luxury and $280 USD in Premium. Rates are per vehicle rather than per person and include the chauffeur, insurance, flight tracking and child seats.</p></details><details class="af-q"><summary>How long is the drive from Tulum airport to the beach hotel zone?</summary><p>Between 35 and 45 minutes, depending on where your hotel sits along the beach road. Tulum town and Aldea Zama are closer, about 25 minutes from the terminal.</p></details><details class="af-q"><summary>Should I fly into Tulum or Cancun if I am staying on Tulum beach?</summary><p>If your hotel is in Tulum, flying into Tulum (TQO) saves roughly 90 minutes of driving each way. Cancun has more flights and more direct international routes. We cover both, and Cancun airport to Tulum beach starts at $145 USD per vehicle.</p></details><details class="af-q"><summary>Do you meet us inside the Tulum airport terminal?</summary><p>Yes. Your chauffeur always meets you at Door #4 of the Tulum arrivals area with a name sign, and your flight is tracked so a delay costs you nothing. You also receive a tracking link with your chauffeur's photo, vehicle plate and live location.</p></details><details class="af-q"><summary>Do you operate at night?</summary><p>Yes, 24 hours a day at the same rate. Your chauffeur is waiting whatever time your flight lands.</p></details></div>
       </div>
     </div>
   </div>
