@@ -471,6 +471,68 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 .wa-float{position:fixed;left:24px;bottom:24px;z-index:90;display:flex;align-items:center;gap:9px;background:#04342C;border:1px solid var(--line-strong);color:#fff;padding:13px 20px;border-radius:40px;font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:all .35s}
 .wa-float:hover{background:var(--mint);color:var(--dark-teal)}
 @media(max-width:760px){.crumbs{padding:92px 6% 0;font-size:9.5px;letter-spacing:1.4px}.prose{padding:60px 0 10px}.wa-float{left:14px;bottom:78px;padding:11px 16px}}
+/* phone layout v1 */
+@media(max-width:640px){
+  /* readable text */
+  section{padding:64px 0}
+  .lead{font-size:16px;font-weight:400;color:rgba(255,255,255,.86)}
+  .prose p,.prose li{font-size:16px;font-weight:400;line-height:1.7;color:rgba(255,255,255,.88)}
+  .prose h2{font-size:28px;margin:44px 0 14px}
+  .prose h3{font-size:22px}
+  .af-lead{font-size:15.5px;font-weight:400}
+  /* hero: badge, headline, price line, one button, four promises, then the booking box */
+  .hero .eyebrow,.hero .sub,.crumbs{display:none}
+  .hero .final-line{margin:0 auto 18px;font-size:14px}
+  .hero .from-row{margin-bottom:18px;gap:6px}
+  .hero .from-row span{font-size:12px;padding:5px 10px}
+  .hero-grid .btns .btn-ghost{display:none}
+  .hero-grid .btns .btn{width:100%;justify-content:center}
+  .hero .trust{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin-top:18px;text-align:left;font-size:10px;letter-spacing:1px;line-height:1.35}
+  .hero .trust span{display:flex;gap:6px}
+  .hero .trust span:before{margin-right:0}
+  .hero .trust span:nth-child(n+5){display:none}
+  .hero.sub .hero-grid{gap:26px}
+  /* compact grids */
+  .factbox{grid-template-columns:1fr 1fr;margin:24px 0}
+  .factbox div{padding:16px 14px}
+  .factbox .v{font-size:19px}
+  .tier-row{grid-template-columns:1fr 1fr;gap:14px 18px}
+  .route-card{padding:26px 22px}
+  .steps{padding:34px 0}
+  .step p{display:none}
+  .steps-grid{gap:14px}
+  .step .n{font-size:30px}
+  /* swipe rows instead of long stacks */
+  .rv-grid,.airports-grid,.vgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:14px;padding-bottom:10px;scrollbar-width:none}
+  .rv-grid::-webkit-scrollbar,.airports-grid::-webkit-scrollbar,.vgrid::-webkit-scrollbar{display:none}
+  .rv-card{flex:0 0 86%;scroll-snap-align:start;padding:34px 24px 26px}
+  .ap-card{flex:0 0 86%;scroll-snap-align:start;min-height:330px}
+  .vcard{flex:0 0 74%;scroll-snap-align:start}
+  .swipe-hint{display:block}
+  /* shorter photo blocks */
+  .fleet-feature{height:62vh;min-height:360px}
+  .fleet-card,.fleet-eco-card{height:280px}
+  .ondemand{min-height:auto;padding:90px 0}
+  .final{min-height:auto;padding:100px 0}
+  .dest .mx-map,.dest .map-legend{display:none}
+}
+.swipe-hint{display:none;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--mint);margin:-4px 0 14px;opacity:.85}
+@media(max-width:640px){
+  /* bottom action bar: WhatsApp left, Book right */
+  body{padding-bottom:calc(52px + env(safe-area-inset-bottom,0px))}
+  .wa-float,.book-float{bottom:0;border-radius:0;justify-content:center;box-shadow:0 -6px 24px rgba(0,0,0,.25);padding:16px 10px calc(16px + env(safe-area-inset-bottom,0px));font-size:11.5px;letter-spacing:1.5px}
+  .wa-float{left:0;right:auto;width:38%;border:0;border-top:1px solid var(--line-strong)}
+  .book-float{right:0;left:auto;width:62%}
+  .book-float:hover,.wa-float:hover{transform:none}
+}
+/* phone layout v1b */
+.prose-more{display:none}
+@media(max-width:640px){
+  .tier-price{font-size:19px}
+  .prose.is-collapsed .wrap{max-height:820px;overflow:hidden;position:relative}
+  .prose.is-collapsed .wrap:after{content:'';position:absolute;left:0;right:0;bottom:0;height:170px;background:linear-gradient(to bottom,rgba(0,39,43,0),var(--dark-teal) 85%);pointer-events:none}
+  .prose-more{display:flex;justify-content:center;margin:20px auto 0;width:calc(100% - 32px);max-width:360px}
+}
 </style>
 
 <script type="application/ld+json">
@@ -816,5 +878,12 @@ document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 function toggleMenu(){document.querySelector('.links').classList.toggle('open')}
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
+<script>
+(function(){var p=document.querySelector('section.prose');if(!p||!window.matchMedia||!window.matchMedia('(max-width:640px)').matches)return;
+var w=p.querySelector('.wrap');if(!w||w.scrollHeight<1300)return;var lim=820,m=w.querySelector('.meet');if(m){var r=m.getBoundingClientRect(),t=w.getBoundingClientRect();lim=Math.round(r.bottom-t.top+90)}if(w.scrollHeight<lim+400)return;p.classList.add('is-collapsed');w.style.maxHeight=lim+'px';
+var es=document.documentElement.lang==='es',b=document.createElement('button');b.type='button';b.className='btn btn-ghost prose-more';
+b.textContent=es?'Leer más':'Read more';b.setAttribute('aria-expanded','false');
+b.addEventListener('click',function(){p.classList.remove('is-collapsed');w.style.maxHeight='';b.remove()});w.insertAdjacentElement('afterend',b);})();
+</script>
 </body>
 </html>

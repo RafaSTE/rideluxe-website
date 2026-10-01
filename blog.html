@@ -131,6 +131,64 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   .blog-hero{padding:130px 0 50px}
 }
 @media(min-width:981px) and (max-width:1180px){nav{padding-left:4%;padding-right:4%}nav .links{gap:15px}nav .links a{font-size:10px;letter-spacing:1.3px;white-space:nowrap}nav .nav-cta{padding:10px 16px}nav .brand .bt{font-size:17px;letter-spacing:4px}}
+/* phone layout v1 */
+@media(max-width:640px){
+  /* readable text */
+  section{padding:64px 0}
+  .lead{font-size:16px;font-weight:400;color:rgba(255,255,255,.86)}
+  .prose p,.prose li{font-size:16px;font-weight:400;line-height:1.7;color:rgba(255,255,255,.88)}
+  .prose h2{font-size:28px;margin:44px 0 14px}
+  .prose h3{font-size:22px}
+  .af-lead{font-size:15.5px;font-weight:400}
+  /* hero: badge, headline, price line, one button, four promises, then the booking box */
+  .hero .eyebrow,.hero .sub,.crumbs{display:none}
+  .hero .final-line{margin:0 auto 18px;font-size:14px}
+  .hero .from-row{margin-bottom:18px;gap:6px}
+  .hero .from-row span{font-size:12px;padding:5px 10px}
+  .hero-grid .btns .btn-ghost{display:none}
+  .hero-grid .btns .btn{width:100%;justify-content:center}
+  .hero .trust{display:grid;grid-template-columns:1fr 1fr;gap:10px 14px;margin-top:18px;text-align:left;font-size:10px;letter-spacing:1px;line-height:1.35}
+  .hero .trust span{display:flex;gap:6px}
+  .hero .trust span:before{margin-right:0}
+  .hero .trust span:nth-child(n+5){display:none}
+  .hero.sub .hero-grid{gap:26px}
+  /* compact grids */
+  .factbox{grid-template-columns:1fr 1fr;margin:24px 0}
+  .factbox div{padding:16px 14px}
+  .factbox .v{font-size:19px}
+  .tier-row{grid-template-columns:1fr 1fr;gap:14px 18px}
+  .route-card{padding:26px 22px}
+  .steps{padding:34px 0}
+  .step p{display:none}
+  .steps-grid{gap:14px}
+  .step .n{font-size:30px}
+  /* swipe rows instead of long stacks */
+  .rv-grid,.airports-grid,.vgrid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:14px;padding-bottom:10px;scrollbar-width:none}
+  .rv-grid::-webkit-scrollbar,.airports-grid::-webkit-scrollbar,.vgrid::-webkit-scrollbar{display:none}
+  .rv-card{flex:0 0 86%;scroll-snap-align:start;padding:34px 24px 26px}
+  .ap-card{flex:0 0 86%;scroll-snap-align:start;min-height:330px}
+  .vcard{flex:0 0 74%;scroll-snap-align:start}
+  .swipe-hint{display:block}
+  /* shorter photo blocks */
+  .fleet-feature{height:62vh;min-height:360px}
+  .fleet-card,.fleet-eco-card{height:280px}
+  .ondemand{min-height:auto;padding:90px 0}
+  .final{min-height:auto;padding:100px 0}
+  .dest .mx-map,.dest .map-legend{display:none}
+}
+.swipe-hint{display:none;font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:var(--mint);margin:-4px 0 14px;opacity:.85}
+@media(max-width:640px){
+  body{padding-bottom:calc(52px + env(safe-area-inset-bottom,0px))}
+  .book-float{bottom:0;left:0;right:0;width:100%;border-radius:0;justify-content:center;padding:16px 10px calc(16px + env(safe-area-inset-bottom,0px));font-size:12px}
+}
+/* phone layout v1b */
+.prose-more{display:none}
+@media(max-width:640px){
+  .tier-price{font-size:19px}
+  .prose.is-collapsed .wrap{max-height:820px;overflow:hidden;position:relative}
+  .prose.is-collapsed .wrap:after{content:'';position:absolute;left:0;right:0;bottom:0;height:170px;background:linear-gradient(to bottom,rgba(0,39,43,0),var(--dark-teal) 85%);pointer-events:none}
+  .prose-more{display:flex;justify-content:center;margin:20px auto 0;width:calc(100% - 32px);max-width:360px}
+}
 </style>
 </head>
 <body>
