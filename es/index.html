@@ -5,11 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ride Luxe México | Transporte privado de lujo y app</title>
 <meta name="description" content="Traslados privados de lujo desde los aeropuertos de Cancún, Tulum y Los Cabos. Reserva en un clic o en la app. Tu chofer con permiso federal te espera.">
-<meta name="author" content="Ride Luxe Mexico, Serendipity Travel Experiences">
+<meta name="author" content="Ride Luxe Mexico — Serendipity Travel Experiences">
 <meta name="geo.region" content="MX-ROO">
 <meta name="geo.placename" content="Tulum, Quintana Roo">
 <meta name="geo.position" content="20.2114;-87.4654">
-<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="ICBM" content="20.2114, -87.4654">
+<meta name="keywords" content="luxury airport transportation Cancun, private transfer Cancun Tulum, Tulum private driver, Los Cabos airport transfer, Mercedes V-Class Cancun, private chauffeur Riviera Maya, on demand transfer Cancun">
+<meta name="robots" content="index, follow">
 <link rel="canonical" href="https://rideluxe.mx/es">
 <link rel="alternate" hreflang="en" href="https://rideluxe.mx/">
 <link rel="alternate" hreflang="es" href="https://rideluxe.mx/es">
@@ -17,7 +19,6 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Ride Luxe México | Transporte privado de lujo y app">
 <meta property="og:description" content="Traslados privados de lujo desde los aeropuertos de Cancún, Tulum y Los Cabos. Reserva en un clic o en la app. Tu chofer con permiso federal te espera.">
-<meta property="og:url" content="https://rideluxe.mx/es">
 <meta property="og:locale" content="es_MX">
 <meta property="og:image" content="https://rideluxe.mx/og-image.jpg">
 <meta property="og:image:width" content="1200">
@@ -28,6 +29,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
 <style>
 :root{
   --teal:#046567;
@@ -89,6 +91,60 @@ nav .nav-cta:hover{background:var(--mint);color:var(--dark-teal)!important;borde
 .btn-ghost:hover{background:rgba(255,255,255,.16);border-color:var(--mint)}
 .btn-mint{background:var(--mint);color:var(--dark-teal)}
 .btn-mint:hover{background:#fff;transform:translateY(-2px)}
+/* airport chooser */
+.airports{padding:110px 0 40px}
+.airports-head{text-align:center;margin-bottom:56px}
+.airports-head .lead{margin:20px auto 0}
+.airports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.ap-card{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end}
+.ap-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,0,.2,1)}
+.ap-card:hover>img{transform:scale(1.05)}
+.ap-card .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,39,43,.15) 0%,rgba(0,39,43,.55) 45%,rgba(0,39,43,.95) 100%)}
+.ap-info{position:relative;z-index:2;padding:32px 26px;width:100%}
+.ap-code{display:block;font-size:10.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--mint);margin-bottom:12px}
+.ap-info h3{font-size:clamp(32px,3vw,44px);color:#fff;margin-bottom:12px}
+.ap-info h3 a:hover{color:var(--mint)}
+.ap-times{font-size:13.5px;color:rgba(255,255,255,.78);font-weight:300;margin-bottom:6px}
+.ap-price{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;margin-bottom:22px}
+.ap-btns{display:flex;gap:10px;flex-wrap:wrap}
+.ap-btns .btn{padding:12px 16px;font-size:10.5px;letter-spacing:1.6px}
+@media(max-width:980px){.airports-grid{grid-template-columns:1fr}.ap-card{min-height:380px}}
+@media(max-width:480px){.airports{padding:80px 0 20px}.ap-info{padding:28px 22px}.ap-btns .btn{flex:1;justify-content:center}}
+/* Tripadvisor badge */
+.ta-badge{display:flex;width:fit-content;align-items:center;flex-wrap:wrap;gap:4px 10px;margin:0 0 24px;padding:8px 16px;border:1px solid var(--line-strong);border-radius:40px;background:rgba(0,39,43,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:12px;letter-spacing:.5px;color:#fff;font-weight:300;line-height:1.4;opacity:0;animation:fadeUp .9s .15s forwards;transition:border-color .3s}
+.ta-badge:hover{border-color:var(--mint)}
+.ta-badge .dots{color:#34E0A1;letter-spacing:2px;font-size:11px}
+.ta-badge b{font-weight:500}
+@media(max-width:1023px){.ta-badge{margin:0 auto 22px;justify-content:center;text-align:center}}
+@media(max-width:480px){.ta-badge{flex-wrap:nowrap;font-size:11px;padding:7px 14px;gap:8px}.ta-extra{display:none}}
+/* hero booking engine */
+.hero{height:auto;min-height:100vh;padding:120px 0 70px}
+.hero-grid{position:relative;z-index:5;width:100%;max-width:1320px;margin:0 auto;padding:0 min(8vw,110px);display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center;text-align:left}
+.hero-grid .hero-content{padding:0;max-width:none}
+.hero-grid h1{font-size:clamp(40px,4.6vw,62px);letter-spacing:-1px;line-height:1.05}
+.hero-grid .sub{margin:0 0 40px}
+.hero-grid .btns{justify-content:flex-start}
+.book-panel{background:rgba(0,39,43,.72);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--line-strong);border-radius:4px;padding:20px 18px 14px;box-shadow:0 30px 70px rgba(0,0,0,.35);scroll-margin-top:90px;opacity:0;animation:fadeUp 1s .9s forwards}
+.bp-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;padding:0 4px}
+.bp-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--mint);font-weight:400}
+.bp-meta{font-size:11px;color:rgba(255,255,255,.62);font-weight:300;text-align:right}
+.bp-frame{display:block;width:100%;height:clamp(500px,calc(100vh - 240px),660px);border:0;border-radius:2px;background:#fff}
+.bp-alt{display:block;margin-top:12px;font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.66);text-align:center;transition:color .3s}
+.bp-alt:hover{color:var(--mint)}
+@media(min-width:1024px) and (max-width:1200px){.hero-grid{grid-template-columns:minmax(0,1fr) 360px;gap:40px}}
+@media(max-width:1023px){
+  .hero{padding:110px 0 56px}
+  .hero-grid{grid-template-columns:1fr;gap:44px;text-align:center}
+  .hero-grid .sub{margin:0 auto 32px}
+  .hero-grid .btns{justify-content:center}
+  .book-panel{width:100%;max-width:440px;margin:0 auto}
+}
+@media(max-width:480px){
+  .hero-grid{padding:0 16px;gap:32px}
+  .hero-grid .sub{margin-bottom:26px}
+  .book-panel{padding:16px 12px 12px}
+  .bp-frame{height:620px}
+}
 /* hero stat row (C) */
 .hero-stats{position:absolute;left:8%;right:8%;bottom:42px;z-index:5;display:flex;gap:0;padding-top:22px;opacity:0;animation:fadeUp 1s 1.1s forwards}
 .hero-stats .st{flex:1;text-align:left;padding-right:20px}
@@ -223,6 +279,10 @@ section{position:relative;padding:130px 0}
 .routes-cta{display:flex;align-items:center;justify-content:center;gap:36px;flex-wrap:wrap}
 .routes-cta .btn-link{color:var(--mint);border-bottom:1px solid rgba(159,225,203,.4)}
 .routes-cta .btn-link:hover{color:#fff;border-color:#fff}
+.more-row{margin-top:34px;text-align:center}
+.more-row .btn-link,.app-more{color:var(--mint);border-bottom:1px solid rgba(159,225,203,.4)}
+.more-row .btn-link:hover,.app-more:hover{color:#fff;border-color:#fff}
+.app-more{margin-top:22px}
 @media(max-width:960px){
   .routes-grid{grid-template-columns:1fr}
   .route-card{padding:32px 28px}
@@ -369,38 +429,11 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   .af-grid{grid-template-columns:1fr;gap:60px}
   .about-faq{padding:80px 0}
 }
-/* Tripadvisor badge */
-.ta-badge{display:flex;width:fit-content;align-items:center;flex-wrap:wrap;gap:4px 10px;margin:0 0 24px;padding:8px 16px;border:1px solid var(--line-strong);border-radius:40px;background:rgba(0,39,43,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:12px;letter-spacing:.5px;color:#fff;font-weight:300;line-height:1.4;opacity:0;animation:fadeUp .9s .15s forwards;transition:border-color .3s}
-.ta-badge:hover{border-color:var(--mint)}
-.ta-badge .dots{color:#34E0A1;letter-spacing:2px;font-size:11px}
-.ta-badge b{font-weight:500}
-@media(max-width:1023px){.ta-badge{margin:0 auto 22px;justify-content:center;text-align:center}}
-@media(max-width:480px){.ta-badge{flex-wrap:nowrap;font-size:11px;padding:7px 14px;gap:8px}.ta-extra{display:none}}
-/* hero with quote box */
-.hero.sub .hero-grid{position:relative;z-index:5;width:100%;max-width:1320px;margin:0 auto;padding:0 min(8vw,110px);display:grid;grid-template-columns:minmax(0,1fr) 400px;gap:64px;align-items:center;text-align:left}
-.hero.sub .hero-grid .hero-content{padding:0;max-width:none}
-.hero.sub .hero-grid h1.serif{font-size:clamp(38px,4.6vw,66px);letter-spacing:-1px;line-height:1.05}
-.hero-grid .sub{margin:0 0 34px}
-.hero-grid .btns,.hero-grid .trust{justify-content:flex-start}
-.book-panel{background:rgba(0,39,43,.72);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border:1px solid var(--line-strong);border-radius:4px;padding:20px 18px 14px;box-shadow:0 30px 70px rgba(0,0,0,.35);scroll-margin-top:90px;opacity:0;animation:fadeUp 1s .9s forwards}
-.bp-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:14px;padding:0 4px}
-.bp-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--mint);font-weight:400}
-.bp-meta{font-size:11px;color:rgba(255,255,255,.62);font-weight:300;text-align:right}
-.bp-frame{display:block;width:100%;height:clamp(500px,calc(100vh - 240px),660px);border:0;border-radius:2px;background:#fff}
-.bp-alt{display:block;margin-top:12px;font-size:10.5px;letter-spacing:1.8px;text-transform:uppercase;color:rgba(255,255,255,.66);text-align:center;transition:color .3s}
-.bp-alt:hover{color:var(--mint)}
-@media(min-width:1024px) and (max-width:1200px){.hero.sub .hero-grid{grid-template-columns:minmax(0,1fr) 360px;gap:40px}}
-@media(max-width:1023px){
-  .hero.sub .hero-grid{grid-template-columns:1fr;gap:40px;text-align:center}
-  .hero-grid .sub{margin:0 auto 30px}
-  .hero-grid .btns,.hero-grid .trust{justify-content:center}
-  .book-panel{width:100%;max-width:440px;margin:0 auto}
-}
-@media(max-width:480px){
-  .hero.sub .hero-grid{padding:0 16px;gap:30px}
-  .book-panel{padding:16px 12px 12px}
-  .bp-frame{height:620px}
-}
+.wa-float{position:fixed;left:24px;bottom:24px;z-index:90;display:flex;align-items:center;gap:9px;background:#04342C;border:1px solid var(--line-strong);color:#fff;padding:13px 20px;border-radius:40px;font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:all .35s}
+.wa-float:hover{background:var(--mint);color:var(--dark-teal)}
+@media(min-width:961px){nav .links{gap:22px}nav .links a{font-size:10.5px;letter-spacing:1.8px}}
+@media(max-width:760px){.wa-float{left:14px;bottom:78px;padding:11px 16px}}
+@media(max-width:480px){.app-visual .ring{width:78vw;height:78vw}.app-visual .ring:nth-child(2){width:96vw;height:96vw}}
 @media(min-width:981px) and (max-width:1180px){nav{padding-left:4%;padding-right:4%}nav .links{gap:15px}nav .links a{font-size:10px;letter-spacing:1.3px;white-space:nowrap}nav .nav-cta{padding:10px 16px}nav .brand .bt{font-size:17px;letter-spacing:4px}}
 /* final price line, from prices, promises */
 .hero .final-line{font-size:14.5px;line-height:1.55;color:rgba(255,255,255,.92);max-width:560px;margin:-16px 0 24px;opacity:0;animation:fadeUp 1s .8s forwards}
@@ -412,65 +445,6 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 .hero .trust span:before{content:'\2713';color:var(--mint);margin-right:7px}
 .hero-grid .trust{justify-content:flex-start}
 @media(max-width:1023px){.hero-grid .trust{justify-content:center}}
-/* airport chooser */
-.airports{padding:110px 0 40px}
-.airports-head{text-align:center;margin-bottom:56px}
-.airports-head .lead{margin:20px auto 0}
-.airports-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-.ap-card{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end}
-.ap-card>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,0,.2,1)}
-.ap-card:hover>img{transform:scale(1.05)}
-.ap-card .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,39,43,.15) 0%,rgba(0,39,43,.55) 45%,rgba(0,39,43,.95) 100%)}
-.ap-info{position:relative;z-index:2;padding:32px 26px;width:100%}
-.ap-code{display:block;font-size:10.5px;letter-spacing:2.6px;text-transform:uppercase;color:var(--mint);margin-bottom:12px}
-.ap-info h3{font-size:clamp(32px,3vw,44px);color:#fff;margin-bottom:12px}
-.ap-info h3 a:hover{color:var(--mint)}
-.ap-times{font-size:13.5px;color:rgba(255,255,255,.78);font-weight:300;margin-bottom:6px}
-.ap-price{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;margin-bottom:22px}
-.ap-btns{display:flex;gap:10px;flex-wrap:wrap}
-.ap-btns .btn{padding:12px 16px;font-size:10.5px;letter-spacing:1.6px}
-@media(max-width:980px){.airports-grid{grid-template-columns:1fr}.ap-card{min-height:380px}}
-@media(max-width:480px){.airports{padding:80px 0 20px}.ap-info{padding:28px 22px}.ap-btns .btn{flex:1;justify-content:center}}
-/* Tripadvisor badge */
-.ta-badge{display:flex;width:fit-content;align-items:center;flex-wrap:wrap;gap:4px 10px;margin:0 0 24px;padding:8px 16px;border:1px solid var(--line-strong);border-radius:40px;background:rgba(0,39,43,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:12px;letter-spacing:.5px;color:#fff;font-weight:300;line-height:1.4;opacity:0;animation:fadeUp .9s .15s forwards;transition:border-color .3s}
-.ta-badge:hover{border-color:var(--mint)}
-.ta-badge .dots{color:#34E0A1;letter-spacing:2px;font-size:11px}
-.ta-badge b{font-weight:500}
-@media(max-width:1023px){.ta-badge{margin:0 auto 22px;justify-content:center;text-align:center}}
-@media(max-width:480px){.ta-badge{flex-wrap:nowrap;font-size:11px;padding:7px 14px;gap:8px}.ta-extra{display:none}}
-</style>
-
-<style>
-/* interior page adjustments */
-.hero.sub{height:auto;min-height:58vh;padding:140px 0 70px}
-@media(max-width:760px){.hero.sub{padding:135px 0 60px}}
-.hero.sub .hero-content{max-width:1000px}
-.hero.sub h1.serif{font-size:clamp(38px,6.2vw,86px)}
-.crumbs{position:absolute;top:0;left:0;right:0;z-index:6;padding:110px 8% 0;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.55);text-align:left}
-@media(min-width:961px){nav .links{gap:22px}nav .links a{font-size:10.5px;letter-spacing:1.8px}}
-.crumbs a{color:rgba(159,225,203,.85)}
-.crumbs a:hover{color:#fff}
-.prose{padding:90px 0 20px}
-.prose .wrap{max-width:1000px}
-.prose h2{font-size:clamp(28px,3.4vw,46px);margin:56px 0 18px;color:#fff}
-.prose h2:first-child{margin-top:0}
-.prose h3{font-size:clamp(21px,2.2vw,28px);margin:38px 0 12px;color:var(--mint-bright)}
-.prose p{color:rgba(255,255,255,.76);font-size:16px;font-weight:300;margin-bottom:18px}
-.prose ul{margin:0 0 22px 0;padding:0;list-style:none}
-.prose ul li{color:rgba(255,255,255,.76);font-size:16px;font-weight:300;padding:9px 0 9px 26px;position:relative;border-bottom:1px solid var(--line)}
-.prose ul li:before{content:'';position:absolute;left:4px;top:19px;width:6px;height:6px;border-radius:50%;background:var(--mint)}
-.prose strong{color:#fff;font-weight:400}
-.prose a{color:var(--mint-bright);border-bottom:1px solid var(--line-strong)}
-.factbox{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:34px 0}
-.factbox div{background:var(--dark-teal);padding:26px 22px}
-.factbox .k{display:block;font-size:10px;letter-spacing:2.6px;text-transform:uppercase;color:rgba(159,225,203,.7);margin-bottom:9px}
-.factbox .v{font-family:'Cormorant Garamond',serif;font-size:26px;color:#fff;line-height:1.15}
-.linkrow{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 10px}
-.linkrow a{border:1px solid var(--line-strong);padding:12px 22px;border-radius:2px;font-size:11px;letter-spacing:2.2px;text-transform:uppercase;color:rgba(255,255,255,.85);transition:all .35s}
-.linkrow a:hover{background:var(--mint);color:var(--dark-teal);border-color:var(--mint)}
-.wa-float{position:fixed;left:24px;bottom:24px;z-index:90;display:flex;align-items:center;gap:9px;background:#04342C;border:1px solid var(--line-strong);color:#fff;padding:13px 20px;border-radius:40px;font-size:11px;letter-spacing:2px;text-transform:uppercase;transition:all .35s}
-.wa-float:hover{background:var(--mint);color:var(--dark-teal)}
-@media(max-width:760px){.crumbs{padding:92px 6% 0;font-size:9.5px;letter-spacing:1.4px}.prose{padding:60px 0 10px}.wa-float{left:14px;bottom:78px;padding:11px 16px}}
 /* phone layout v1 */
 @media(max-width:640px){
   /* readable text */
@@ -534,6 +508,30 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   .prose.is-collapsed .wrap:after{content:'';position:absolute;left:0;right:0;bottom:0;height:170px;background:linear-gradient(to bottom,rgba(0,39,43,0),var(--dark-teal) 85%);pointer-events:none}
   .prose-more{display:flex;justify-content:center;margin:20px auto 0;width:calc(100% - 32px);max-width:360px}
 }
+/* inner page hero + explore tiles */
+.page-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;padding:170px 0 80px;overflow:hidden}
+.page-hero .ph-inner{position:relative;z-index:5;width:100%}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,6.4vw,88px);font-weight:400;color:#fff;line-height:1.02;letter-spacing:-1px;text-wrap:balance}
+.page-hero h1 em{font-style:italic;color:var(--mint)}
+.page-hero p{font-size:18px;line-height:1.6;max-width:580px;color:rgba(255,255,255,.92);margin:20px 0 30px}
+.page-hero .ta-badge{margin-bottom:22px}
+.explore{padding:110px 0}
+.explore-head{text-align:center;margin-bottom:46px}
+.ex-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ex-tile{position:relative;aspect-ratio:3/4;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end;color:#fff}
+.ex-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,0,.2,1)}
+.ex-tile:hover img{transform:scale(1.05)}
+.ex-tile .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,39,43,0) 35%,rgba(0,39,43,.92) 100%)}
+.ex-t{position:relative;z-index:2;padding:24px 22px}
+.ex-t span{display:block;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--mint);margin-bottom:8px}
+.ex-t h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;line-height:1.1}
+.ex-t h3:after{content:' \2192';color:var(--mint)}
+@media(max-width:980px){.ex-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.page-hero{min-height:auto;padding:130px 0 56px}.page-hero p{font-size:16px}
+  .explore{padding:64px 0}.ex-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;scrollbar-width:none}
+  .ex-grid::-webkit-scrollbar{display:none}.ex-tile{flex:0 0 72%;scroll-snap-align:start}}
+.proof-3{grid-template-columns:repeat(3,1fr)!important}
+@media(max-width:640px){.proof-3{grid-template-columns:repeat(3,1fr)!important;gap:14px!important}.proof-3 .count{font-size:34px!important}.proof-3 .lbl{font-size:10.5px!important;letter-spacing:.8px!important}}
 /* readability v1 */
 body{font-weight:400}
 p,li,summary,td,dd,.lead,.sub,.af-lead,.af-lead-2,.rv-loc,.ap-times,.cap,.veh,.route-meta,.bp-meta,.tier-name,.lbl,.meta,footer p,footer a,.ft-bottom span{font-weight:400!important}
@@ -547,128 +545,78 @@ h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
 .proof-stat .count{font-weight:400!important}
 @media(max-width:640px){.prose p,.prose li{font-size:16px}.hero .trust,.trust{font-size:11px!important}}
 </style>
-
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "serviceType": "Traslado privado desde el aeropuerto",
-  "name": "Ride Luxe México",
-  "description": "Traslados privados de lujo desde los aeropuertos de Cancún, Tulum y Los Cabos.",
-  "url": "https://rideluxe.mx/es",
-  "inLanguage": "es",
-  "provider": {
-    "@type": [
-      "LocalBusiness",
-      "TransportationService"
-    ],
-    "name": "Ride Luxe Mexico",
-    "url": "https://rideluxe.mx",
-    "telephone": "+52-984-181-4911",
-    "image": "https://rideluxe.mx/images/chauffeur-vclass.jpg",
-    "priceRange": "$$$",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Aldea Zama",
-      "addressLocality": "Tulum",
-      "addressRegion": "Quintana Roo",
-      "postalCode": "77780",
-      "addressCountry": "MX"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "232",
-      "bestRating": "5",
-      "worstRating": "1"
-    }
+  "@type": ["LocalBusiness", "TransportationService"],
+  "name": "Ride Luxe Mexico",
+  "alternateName": "Ride Luxe",
+  "url": "https://rideluxe.mx",
+  "logo": "https://rideluxe.mx/images/logo.png",
+  "image": "https://rideluxe.mx/images/hero.jpg",
+  "description": "Premium private airport transfers and on-demand chauffeur service across Cancun, Playa del Carmen, Tulum and Los Cabos. Federal plates, licensed chauffeurs, Mercedes V-Class and Sprinter. We pick you up legally inside the airport.",
+  "telephone": "+52-984-181-4911",
+  "priceRange": "$$$",
+  "currenciesAccepted": "USD, MXN",
+  "paymentAccepted": "Credit Card, Stripe, PayPal",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Aldea Zama",
+    "addressLocality": "Tulum",
+    "addressRegion": "Quintana Roo",
+    "postalCode": "77780",
+    "addressCountry": "MX"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 20.2114,
+    "longitude": -87.4654
   },
   "areaServed": [
-    {
-      "@type": "City",
-      "name": "Cancún"
-    },
-    {
-      "@type": "City",
-      "name": "Tulum"
-    },
-    {
-      "@type": "City",
-      "name": "Playa del Carmen"
-    },
-    {
-      "@type": "City",
-      "name": "Los Cabos"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "¿Cuánto cuesta un traslado privado del aeropuerto de Cancún a Tulum?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Desde $125 USD por vehículo en Económico, $145 USD en Estándar (Toyota Hiace), $230 USD en Lujo (Mercedes V-Class o Chevrolet Suburban) y $320 USD en Premium (Mercedes Sprinter). El precio es por vehículo, no por persona."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Dónde me espera el chofer en el aeropuerto de Cancún?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Terminal 2 vuelos nacionales: en el Welcome Bar. Terminal 2 vuelos internacionales y Terminal 3: en Margaritaville. Terminal 4: en el Welcome Bar. Tu chofer te espera con un letrero con tu nombre."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cuánto tiempo me espera el chofer?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Hasta 60 minutos después de que aterriza tu vuelo, sin costo. Monitoreamos tu vuelo, así que si se retrasa, la hora de recogida se ajusta sola."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Cómo sé quién me va a recoger?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Antes de la recogida recibes un enlace de seguimiento con la foto de tu chofer, las placas del vehículo y su ubicación en vivo."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "¿Puedo pagar con tarjeta?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Sí. Aceptamos las principales tarjetas con pago seguro. Los precios se muestran en USD como referencia y la factura final se emite en pesos mexicanos al tipo de cambio del día."
-      }
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Inicio",
-      "item": "https://rideluxe.mx/es"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Inicio",
-      "item": "https://rideluxe.mx/es"
-    }
-  ]
+    {"@type": "City", "name": "Cancun"},
+    {"@type": "City", "name": "Tulum"},
+    {"@type": "City", "name": "Playa del Carmen"},
+    {"@type": "City", "name": "Los Cabos"}
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "232",
+    "bestRating": "5",
+    "worstRating": "1"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  },
+  "serviceType": ["Airport Transfer","Private Chauffeur","On-Demand Transportation","Group Transportation"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Routes & Rates",
+    "itemListElement": [
+      {"@type": "Offer", "name": "Cancun Airport to Cancun Hotel Zone", "price": "40", "priceCurrency": "USD", "description": "Economy private transfer"},
+      {"@type": "Offer", "name": "Cancun Airport to Playa del Carmen", "price": "75", "priceCurrency": "USD", "description": "Economy private transfer"},
+      {"@type": "Offer", "name": "Cancun Airport to Tulum Centro", "price": "125", "priceCurrency": "USD", "description": "Economy private transfer"},
+      {"@type": "Offer", "name": "Cancun Airport to Tulum Beach", "price": "145", "priceCurrency": "USD", "description": "Economy private transfer"},
+      {"@type": "Offer", "name": "Tulum Airport to Tulum Centro", "price": "70", "priceCurrency": "USD", "description": "Economy private transfer"},
+      {"@type": "Offer", "name": "Tulum Airport to Tulum Beach", "price": "90", "priceCurrency": "USD", "description": "Economy private transfer"}
+    ]
+  },
+  "award": ["Tripadvisor Travelers' Choice 2024", "Tripadvisor Travelers' Choice 2025"],
+  "sameAs": [
+    "https://www.tripadvisor.com/Attraction_Review-g150813-d24043854-Reviews-Serendipity_Travel_Experiences-Tulum_Yucatan_Peninsula.html",
+    "https://apps.apple.com/mx/app/ride-luxe/id6751626059",
+    "https://play.google.com/store/apps/details?id=com.stex.pax",
+    "https://serendipityexperiencesmx.com"
+  ],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "Serendipity Travel Experiences",
+    "legalName": "Servicios de Logística y Transportación Turística DSA de CV",
+    "url": "https://serendipityexperiencesmx.com"
+  }
 }
 </script>
 </head>
@@ -683,55 +631,56 @@ h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
     <a href="/es/transporte-aeropuerto-cancun">Aeropuerto Cancún</a>
     <a href="/es/transporte-aeropuerto-tulum">Aeropuerto Tulum</a>
     <a href="/es/transporte-aeropuerto-los-cabos">Aeropuerto Los Cabos</a>
-    <a href="/luxury-transportation">Lujo</a>
+    <a href="/fleet">Flota</a>
+    <a href="/rates">Tarifas</a>
     <a href="/app">App</a>
-    <a href="/blog">Blog</a>
     <a href="/" hreflang="en" lang="en">EN</a>
     <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=es" class="nav-cta">Reservar</a>
   </div>
   <button class="burger" aria-label="Menú" onclick="toggleMenu()">&#9776;</button>
 </nav>
 
-<header class="hero sub">
+<header class="hero">
   <div class="hero-bg"><img fetchpriority="high" src="/images/chauffeur-vclass.jpg" alt="Chofer de Ride Luxe abriendo la puerta de una Mercedes V-Class"></div>
   <div class="hero-veil"></div>
   <div class="hero-veil2"></div>
-  <nav class="crumbs" aria-label="Ruta"><a href="/es">Ride Luxe</a> &rsaquo; Inicio</nav>
   <div class="hero-grid">
     <div class="hero-content">
       <a class="ta-badge" href="https://www.tripadvisor.com/Attraction_Review-g150813-d24043854-Reviews-Serendipity_Travel_Experiences-Tulum_Yucatan_Peninsula.html" target="_blank" rel="noopener"><span class="dots" aria-hidden="true">&#9679;&#9679;&#9679;&#9679;&#9679;</span><span><b>4.9</b> en Tripadvisor &middot; 232 opiniones <span class="ta-extra"> &middot; Travelers&rsquo; Choice 2025</span></span></a>
-      <span class="eyebrow">Recepción oficial en el aeropuerto &middot; Placas federales</span>
-      <h1 class="serif"><span class="ln"><i>Traslados de lujo</i></span><span class="ln"><i><em>en Cancún, Tulum y Los&nbsp;Cabos.</em></i></span></h1>
-      <p class="sub">Reserva en un clic, en línea o en la app. Tu chofer con licencia te recibe en el aeropuerto, con precio fijo y sin esperas.</p>
-      <p class="final-line">Precio fijo en USD por todo el vehículo. Impuestos y cargos de aeropuerto incluidos, sin sorpresas al aterrizar.</p>
+      <h1 class="serif">
+        <span class="ln"><i>Traslados de lujo</i></span>
+        <span class="ln"><i><em>en Cancún, Tulum y Los&nbsp;Cabos.</em></i></span>
+      </h1>
+      <p class="sub">Tu chofer con licencia te espera en llegadas. Un precio fijo por todo el vehículo, reservado en un clic.</p>
       <div class="btns">
         <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=es" class="btn btn-solid">Reservar traslado</a>
-        <a href="#aeropuertos" class="btn btn-ghost">Ver aeropuertos</a>
+        <a href="#airports" class="btn btn-ghost">Elige tu aeropuerto</a>
       </div>
-      <div class="trust"><span>Chofer en llegadas</span><span>60 min de espera gratis</span><span>Enlace de seguimiento: foto del chofer y placas</span><span>Vuelo monitoreado</span><span>24/7</span></div>
+      <div class="trust"><span>60 min de espera gratis</span><span>Chofer en vivo en tu celular</span><span>Impuestos incluidos</span></div>
     </div>
     <div class="book-panel" id="book">
       <div class="bp-head">
-        <span class="bp-eyebrow">Cotiza tu viaje</span>
+        <span class="bp-eyebrow">Reserva tu viaje</span>
         <span class="bp-meta">Precio al instante &middot; Confirmación en minutos</span>
       </div>
-      <iframe class="bp-frame" src="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=es" title="Reserva Ride Luxe: elige origen, destino, fecha y vehículo para ver tu precio" allow="geolocation" loading="lazy"></iframe>
+      <iframe class="bp-frame" src="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=es" title="Reserva Ride Luxe: elige origen, destino, fecha y vehículo" allow="geolocation" loading="lazy"></iframe>
       <a class="bp-alt" href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=es" target="_blank" rel="noopener">Abrir la reserva en otra pestaña &nearr;</a>
     </div>
   </div>
+
 </header>
 
-<section class="airports" id="aeropuertos">
+<section class="airports" id="airports">
   <div class="wrap">
     <div class="airports-head rv">
       <span class="eyebrow-s">¿A dónde llegas?</span>
       <h2 class="sec-title">Tu traslado, <em>a un clic</em></h2>
-      <p class="lead">Elige tu aeropuerto para ver rutas y precios, o reserva de inmediato. Traslados desde el aeropuerto y viajes punto a punto, las 24 horas.</p>
+      <p class="lead">Elige tu aeropuerto para ver rutas y precios, o reserva de inmediato.</p>
     </div>
     <p class="swipe-hint">Desliza para elegir tu aeropuerto &rarr;</p>
     <div class="airports-grid">
       <article class="ap-card rv">
-        <img loading="lazy" src="/images/luxury-vclass.jpg" alt="Interior de Mercedes V-Class listo para un traslado desde el aeropuerto de Cancún">
+        <img loading="lazy" src="/images/luxury-vclass.jpg" alt="Interior Mercedes V-Class para traslado desde el aeropuerto de Cancún">
         <div class="ov"></div>
         <div class="ap-info">
           <span class="ap-code">CUN &middot; Internacional de Cancún</span>
@@ -753,7 +702,7 @@ h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
         </div>
       </article>
       <article class="ap-card rv">
-        <img loading="lazy" src="/images/premium-sprinter.jpg" alt="Vehículo privado premium para traslados en Los Cabos">
+        <img loading="lazy" src="/images/premium-sprinter.jpg" alt="Vehículo privado premium para el aeropuerto de Los Cabos">
         <div class="ov"></div>
         <div class="ap-info">
           <span class="ap-code">SJD &middot; Internacional de Los Cabos</span>
@@ -767,77 +716,88 @@ h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
   </div>
 </section>
 
-<section class="prose">
+<section class="proof" id="proof">
   <div class="wrap">
-<h2>Por qué viajar con Ride Luxe</h2>
-<p>Ride Luxe México es una empresa de transporte turístico con permisos federales SICT, placas de turismo y licencias de zona aeroportuaria. Por eso tu chofer puede recibirte legalmente en el aeropuerto, y no en el estacionamiento. Desde 2020 hemos transportado a más de 50,000 pasajeros, con 4.9 en Tripadvisor.</p>
-<h2>Elige tu vehículo</h2>
-<ul>
-<li><strong>Económico</strong>, sedán privado, hasta 4 pasajeros</li>
-<li><strong>Estándar</strong>, Toyota Hiace, hasta 10 pasajeros</li>
-<li><strong>Lujo</strong>, Mercedes V-Class o Chevrolet Suburban, hasta 6 pasajeros</li>
-<li><strong>Premium</strong>, Mercedes Sprinter, grupos de hasta 16</li>
-</ul>
-<p>Todos los precios son por vehículo, fijos en USD y acordados antes de viajar.</p>
-<h2>Reserva en la app</h2>
-<p>Con la app de Ride Luxe reservas traslados y viajes por la ciudad, eliges tu vehículo, sigues a tu chofer en vivo y pagas de forma segura. Descárgala en <a href="https://apps.apple.com/mx/app/ride-luxe/id6751626059">App Store</a> o <a href="https://play.google.com/store/apps/details?id=com.stex.pax">Google Play</a>.</p>
-<h2>Chofer por hora</h2>
-<p>Conserva el mismo vehículo y chofer por unas horas o todo el día: club de playa, cena en Tulum o una excursión a Cobá o Chichén Itzá. Tu chofer te espera mientras disfrutas.</p>
-<h2>Qué incluye cada traslado</h2>
-<ul>
-<li>Chofer esperándote en el punto de encuentro con un letrero con tu nombre</li>
-<li>60 minutos de espera gratis después del aterrizaje</li>
-<li>Enlace de seguimiento con foto del chofer, placas del vehículo y ubicación en vivo</li>
-<li>Monitoreo de tu vuelo en tiempo real, sin costo por retrasos</li>
-<li>Placas federales, permisos SICT y chofer con licencia de zona aeroportuaria</li>
-<li>Seguro de pasajero y agua embotellada a bordo</li>
-<li>Sillas para niños sin costo, de bebé a booster</li>
-<li>Servicio 24 horas, misma tarifa de día o de noche</li>
-</ul>
+    <div class="proof-grid proof-3 rv">
+      <div class="proof-stat"><b class="count serif" data-target="50000" data-suffix="+">50,000+</b><span class="lbl">Pasajeros desde 2020</span></div>
+      <div class="proof-stat"><b class="count serif" data-target="4.9" data-decimals="1" data-suffix="">4.9</b><span class="lbl">Tripadvisor &middot; 232 opiniones</span></div>
+      <div class="proof-stat"><b class="count serif" data-target="60" data-suffix=" min">60 min</b><span class="lbl">De espera gratis al aterrizar</span></div>
+    </div>
   </div>
 </section>
 
-<section class="routes" id="rates">
+<section class="reviews" id="reviews">
   <div class="wrap">
     <div class="sec-head rv">
       <div class="lt">
-        <span class="eyebrow-s">Tarifas</span>
-        <h2 class="sec-title">Rutas y <em>tarifas</em></h2>
-        <p class="lead">Por vehículo &middot; un sentido &middot; según capacidad. Otros destinos bajo cotización.</p>
+        <span class="eyebrow-s">En sus palabras</span>
+        <h2 class="sec-title">Lo que dicen <em>nuestros viajeros</em></h2>
+        <p class="lead">4.9 en Tripadvisor &middot; Travelers&rsquo; Choice 2025 &middot; Opiniones originales en inglés</p>
       </div>
     </div>
-    <div class="routes-grid">
-      <article class="route-card rv ">
-        <div class="route-head">
-          <h3 class="serif">Cancún &rarr; Zona Hotelera</h3>
-          <span class="route-meta">Aeropuerto CUN &middot; 20 a 30 min</span>
+
+    <p class="swipe-hint">Desliza para ver más &rarr;</p>
+    <div class="rv-grid">
+      <article class="rv-card rv">
+        <span class="quote">&ldquo;</span>
+        <p class="rv-text">They met us right at the airport in Mexico, helped us navigate through arrivals smoothly, and made the entire process feel effortless. After a long travel day, it was such a relief to have everything handled professionally.</p>
+        <div class="rv-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="rv-meta">
+          <p class="rv-name">Madeline S.</p>
+          <p class="rv-loc">Tripadvisor &middot; Feb 2026</p>
         </div>
-        <div class="tier-row"><div class="tier"><span class="tier-name">Económico</span><span class="tier-price">desde $40 USD</span></div><div class="tier"><span class="tier-name">Estándar</span><span class="tier-price">desde $55 USD</span></div><div class="tier"><span class="tier-name">Lujo</span><span class="tier-price">desde $120 USD</span></div><div class="tier"><span class="tier-name">Premium</span><span class="tier-price">desde $210 USD</span></div></div>
       </article>
-      <article class="route-card rv ">
-        <div class="route-head">
-          <h3 class="serif">Cancún &rarr; Playa del Carmen</h3>
-          <span class="route-meta">Aeropuerto CUN &middot; 45 a 55 min</span>
+
+      <article class="rv-card rv rv-d1">
+        <span class="quote">&ldquo;</span>
+        <p class="rv-text">Loved the simplicity of booking, their ability to adjust when we missed our first flight, the modern Mercedes van, and our driver C&eacute;sar who was on time, fun, safe, and friendly.</p>
+        <div class="rv-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="rv-meta">
+          <p class="rv-name">jeatherly</p>
+          <p class="rv-loc">Shanghai &middot; CUN &rarr; Tulum</p>
         </div>
-        <div class="tier-row"><div class="tier"><span class="tier-name">Económico</span><span class="tier-price">desde $75 USD</span></div><div class="tier"><span class="tier-name">Estándar</span><span class="tier-price">desde $85 USD</span></div><div class="tier"><span class="tier-name">Lujo</span><span class="tier-price">desde $145 USD</span></div><div class="tier"><span class="tier-name">Premium</span><span class="tier-price">desde $240 USD</span></div></div>
       </article>
-      <article class="route-card rv ">
-        <div class="route-head">
-          <h3 class="serif">Cancún &rarr; Tulum Centro</h3>
-          <span class="route-meta">Aeropuerto CUN &middot; 1 h 40 min</span>
+
+      <article class="rv-card rv rv-d2">
+        <span class="quote">&ldquo;</span>
+        <p class="rv-text">Both drivers were very safe, very professional, and very good. Booking through WhatsApp was very smooth and the communication was excellent. They even sent a link to track our driver so we knew where he was.</p>
+        <div class="rv-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="rv-meta">
+          <p class="rv-name">Paige S.</p>
+          <p class="rv-loc">Tripadvisor &middot; TQO &rarr; Dreams Tulum</p>
         </div>
-        <div class="tier-row"><div class="tier"><span class="tier-name">Económico</span><span class="tier-price">desde $125 USD</span></div><div class="tier"><span class="tier-name">Estándar</span><span class="tier-price">desde $145 USD</span></div><div class="tier"><span class="tier-name">Lujo</span><span class="tier-price">desde $230 USD</span></div><div class="tier"><span class="tier-name">Premium</span><span class="tier-price">desde $320 USD</span></div></div>
       </article>
-      <article class="route-card rv ">
-        <div class="route-head">
-          <h3 class="serif">Aeropuerto Tulum &rarr; Zona Hotelera</h3>
-          <span class="route-meta">Aeropuerto TQO &middot; 35 a 45 min</span>
+
+      <article class="rv-card rv rv-d3">
+        <span class="quote">&ldquo;</span>
+        <p class="rv-text">We had Luis and C&eacute;sar for all 4 days in a Sprinter van for our group of 10. Always clean, best seats, and they made sure we got back safely every night. Serendipity made our trip better.</p>
+        <div class="rv-stars">&#9733; &#9733; &#9733; &#9733; &#9733;</div>
+        <div class="rv-meta">
+          <p class="rv-name">Kayla N.</p>
+          <p class="rv-loc">Despedida de soltera &middot; Grupo de 10</p>
         </div>
-        <div class="tier-row"><div class="tier"><span class="tier-name">Económico</span><span class="tier-price">desde $90 USD</span></div><div class="tier"><span class="tier-name">Estándar</span><span class="tier-price">desde $130 USD</span></div><div class="tier"><span class="tier-name">Lujo</span><span class="tier-price">desde $190 USD</span></div><div class="tier"><span class="tier-name">Premium</span><span class="tier-price">desde $280 USD</span></div></div>
       </article>
     </div>
-    <p class="routes-disclaimer">Precios en USD como referencia, por vehículo. La factura final se emite en MXN al tipo de cambio del día, conforme a la ley de protección al consumidor.</p>
-    <div class="routes-cta"><a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=es" class="btn btn-solid">Reservar traslado</a></div>
+
+    <div class="rv-cta rv">
+      <a href="https://www.tripadvisor.com/Attraction_Review-g150813-d24043854-Reviews-Serendipity_Travel_Experiences-Tulum_Yucatan_Peninsula.html" target="_blank" rel="noopener" class="btn-link">Lee las 232 opiniones en Tripadvisor &rarr;</a>
+    </div>
+  </div>
+</section>
+
+<section class="explore" id="explore">
+  <div class="wrap">
+    <div class="explore-head rv">
+      <span class="eyebrow-s">Descubre Ride Luxe</span>
+      <h2 class="sec-title">Todo lo demás, <em>a un toque</em></h2>
+    </div>
+    <p class="swipe-hint">Desliza para explorar &rarr;</p>
+    <div class="ex-grid">
+      <a class="ex-tile" href="/fleet"><img loading="lazy" src="/images/luxury-vclass.jpg" alt="Interior de piel de Mercedes V-Class"><span class="ov"></span><span class="ex-t"><span>De sedán a Sprinter</span><h3>La flota</h3></span></a>
+      <a class="ex-tile" href="/rates"><img loading="lazy" src="/images/arrival-cta.jpg" alt="Viajeros llegando a su hotel"><span class="ov"></span><span class="ex-t"><span>Fijo por vehículo</span><h3>Tarifas</h3></span></a>
+      <a class="ex-tile" href="/private-driver"><img loading="lazy" src="/images/ondemand-experience.jpg" alt="Pasajeros en un viaje bajo demanda"><span class="ov"></span><span class="ex-t"><span>Por hora o por día</span><h3>Chofer privado</h3></span></a>
+      <a class="ex-tile" href="/app"><img loading="lazy" src="/images/chauffeur.jpg" alt="Chofer con licencia al volante"><span class="ov"></span><span class="ex-t"><span>iPhone y Android</span><h3>La app</h3></span></a>
+    </div>
   </div>
 </section>
 
@@ -847,32 +807,8 @@ h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
   <div class="inner">
     <span class="eyebrow-s">Listos cuando aterrices</span>
     <h2 class="serif">Reserva tu <em>traslado de lujo</em></h2>
-    <p>Confirmación en minutos. Reserva en línea, por WhatsApp o en la app.</p>
+    <p>Confirmación en minutos. Reserva en línea o en la app.</p>
     <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=es" class="btn btn-mint">Reservar ahora</a>
-  </div>
-</section>
-
-<section class="about-faq" id="faq">
-  <div class="wrap">
-    <div class="af-grid">
-      <div class="af-about rv">
-        <span class="eyebrow-s">Sobre Ride Luxe México</span>
-        <h2 class="sec-title">Permisos federales, <em>avalado por viajeros</em></h2>
-        <p class="af-lead">Ride Luxe México es un servicio de traslados privados de lujo con permisos federales en Cancún, Playa del Carmen, Tulum y Los Cabos. Fundado en 2020 y con sede en Tulum, Quintana Roo, ha transportado a más de 50,000 pasajeros, con calificación de 4.9 en Tripadvisor en 232 opiniones y el premio Travelers&rsquo; Choice de Tripadvisor en 2024 y 2025. Contamos con permisos federales SICT, placas de turismo y licencias de zona aeroportuaria, que nos permiten recibir a nuestros clientes de forma legal dentro de las terminales.</p>
-        <p class="af-lead-2">Un servicio de <a href="https://serendipityexperiencesmx.com" class="af-link">Serendipity Travel Experiences</a>: concierge, tours y experiencias a la medida en todo México.</p>
-        <div class="linkrow">
-          <a href="/es/transporte-aeropuerto-cancun">Traslados Cancún</a>
-          <a href="/es/transporte-aeropuerto-tulum">Traslados Tulum</a>
-          <a href="/playa-del-carmen-transfers">Playa del Carmen</a>
-          <a href="/es/transporte-aeropuerto-los-cabos">Los Cabos</a>
-        </div>
-      </div>
-      <div class="af-faq rv">
-        <span class="eyebrow-s">Preguntas frecuentes</span>
-        <h2 class="sec-title">Dudas <em>comunes</em></h2>
-        <div class="af-qs"><details class="af-q"><summary>¿Cuánto cuesta un traslado privado del aeropuerto de Cancún a Tulum?</summary><p>Desde $125 USD por vehículo en Económico, $145 USD en Estándar (Toyota Hiace), $230 USD en Lujo (Mercedes V-Class o Chevrolet Suburban) y $320 USD en Premium (Mercedes Sprinter). El precio es por vehículo, no por persona.</p></details><details class="af-q"><summary>¿Dónde me espera el chofer en el aeropuerto de Cancún?</summary><p>Terminal 2 vuelos nacionales: en el Welcome Bar. Terminal 2 vuelos internacionales y Terminal 3: en Margaritaville. Terminal 4: en el Welcome Bar. Tu chofer te espera con un letrero con tu nombre.</p></details><details class="af-q"><summary>¿Cuánto tiempo me espera el chofer?</summary><p>Hasta 60 minutos después de que aterriza tu vuelo, sin costo. Monitoreamos tu vuelo, así que si se retrasa, la hora de recogida se ajusta sola.</p></details><details class="af-q"><summary>¿Cómo sé quién me va a recoger?</summary><p>Antes de la recogida recibes un enlace de seguimiento con la foto de tu chofer, las placas del vehículo y su ubicación en vivo.</p></details><details class="af-q"><summary>¿Puedo pagar con tarjeta?</summary><p>Sí. Aceptamos las principales tarjetas con pago seguro. Los precios se muestran en USD como referencia y la factura final se emite en pesos mexicanos al tipo de cambio del día.</p></details></div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -882,10 +818,9 @@ h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
       <div>
         <div class="ft-brand"><img loading="lazy" src="/images/logo.png" alt="Logo de Ride Luxe México"><span class="bt">RIDE LUXE</span></div>
         <p>Traslados privados de lujo desde el aeropuerto y chofer bajo demanda en Cancún, Playa del Carmen, Tulum y Los Cabos. Permisos federales y seguro de pasajero.</p>
-        <p style="margin-top:14px"><a href="https://wa.me/529841814911" style="color:var(--mint-bright)">WhatsApp +52 984 181 4911</a></p>
       </div>
       <div>
-        <h4>Rutas populares</h4>
+        <h4>Servicios</h4>
         <ul>
           <li><a href="/cancun-airport-to-tulum">Aeropuerto Cancún a Tulum</a></li>
           <li><a href="/cancun-airport-to-playa-del-carmen">Aeropuerto Cancún a Playa del Carmen</a></li>
@@ -898,17 +833,22 @@ h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
       <div>
         <h4>Aeropuertos</h4>
         <ul>
-          <li><a href="/es/transporte-aeropuerto-cancun">Cancún</a></li>
-          <li><a href="/es/transporte-aeropuerto-tulum">Tulum</a></li>
-          <li><a href="/playa-del-carmen-transfers">Playa del Carmen</a></li>
-          <li><a href="/es/transporte-aeropuerto-los-cabos">Los Cabos</a></li>
+          <li><a href="/es/transporte-aeropuerto-cancun">Aeropuerto de Cancún</a></li>
+          <li><a href="/es/transporte-aeropuerto-tulum">Aeropuerto de Tulum</a></li>
+          <li><a href="/playa-del-carmen-transfers">Traslados Playa del Carmen</a></li>
+          <li><a href="/es/transporte-aeropuerto-los-cabos">Aeropuerto de Los Cabos</a></li>
+          <li><a href="/fleet">Flota y vehículos</a></li>
+          <li><a href="/rates">Tarifas</a></li>
+          <li><a href="/private-driver">Chofer privado por hora</a></li>
+          <li><a href="/about">Nosotros y preguntas</a></li>
+          <li><a href="/blog">Blog</a></li>
         </ul>
       </div>
       <div>
         <h4>Descarga la app</h4>
         <div class="ft-badges">
-          <a href="https://apps.apple.com/mx/app/ride-luxe/id6751626059" aria-label="Descargar en App Store"><svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" style="height:46px;width:auto"><rect width="120" height="40" rx="6" fill="#000"/><rect x="0.5" y="0.5" width="119" height="39" rx="5.5" fill="none" stroke="#A6A6A6" stroke-width="0.5"/><text x="12" y="16" fill="#fff" font-family="Arial" font-size="7">Descárgalo en el</text><text x="12" y="30" fill="#fff" font-family="Arial" font-size="15" font-weight="600">App Store</text></svg></a>
-          <a href="https://play.google.com/store/apps/details?id=com.stex.pax&amp;hl=es_419" aria-label="Disponible en Google Play"><svg viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg" style="height:46px;width:auto"><rect width="135" height="40" rx="6" fill="#000"/><rect x="0.5" y="0.5" width="134" height="39" rx="5.5" fill="none" stroke="#A6A6A6" stroke-width="0.5"/><text x="12" y="16" fill="#fff" font-family="Arial" font-size="7">DISPONIBLE EN</text><text x="12" y="30" fill="#fff" font-family="Arial" font-size="14" font-weight="600">Google Play</text></svg></a>
+          <a href="https://apps.apple.com/mx/app/ride-luxe/id6751626059" aria-label="Descargar en App Store"><svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" style="height:46px;width:auto"><rect width="120" height="40" rx="6" fill="#000"/><rect x="0.5" y="0.5" width="119" height="39" rx="5.5" fill="none" stroke="#A6A6A6" stroke-width="0.5"/><path d="M24.77 20.3c-.02-2.33 1.9-3.46 1.99-3.51-1.09-1.59-2.78-1.8-3.37-1.83-1.43-.15-2.8.84-3.53.84-.73 0-1.85-.83-3.04-.8-1.56.02-3 .91-3.8 2.31-1.62 2.81-.41 6.96 1.15 9.24.77 1.12 1.68 2.36 2.87 2.32 1.16-.05 1.6-.74 3-.74 1.39 0 1.79.74 3 .72 1.24-.02 2.02-1.12 2.77-2.25.88-1.29 1.24-2.55 1.26-2.62-.03-.01-2.41-.92-2.43-3.67zM22.46 12.21c.63-.77 1.06-1.83.94-2.91-.91.04-2.05.63-2.71 1.38-.58.66-1.1 1.76-.96 2.79 1.02.08 2.07-.52 2.73-1.26z" fill="#fff"/><text x="34" y="16" fill="#fff" font-family="Arial" font-size="7">Descárgalo en el</text><text x="34" y="30" fill="#fff" font-family="Arial" font-size="15" font-weight="600">App Store</text></svg></a>
+          <a href="https://play.google.com/store/apps/details?id=com.stex.pax&hl=es_419" aria-label="Disponible en Google Play"><svg viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg" style="height:46px;width:auto"><rect width="135" height="40" rx="6" fill="#000"/><rect x="0.5" y="0.5" width="134" height="39" rx="5.5" fill="none" stroke="#A6A6A6" stroke-width="0.5"/><path d="M10.44 7.54c-.21.22-.33.56-.33 1v22.92c0 .44.12.78.33 1l.08.07 12.84-12.84v-.3L10.52 7.46l-.08.08z" fill="#00A0FF"/><path d="M27.65 24.98l-4.28-4.29v-.3l4.28-4.28.1.05 5.07 2.88c1.45.82 1.45 2.17 0 3l-5.07 2.88-.1.05z" fill="#FFBC00"/><path d="M27.75 24.93l-4.38-4.38L10.44 33.46c.48.5 1.27.57 2.15.07l15.16-8.6z" fill="#FF3A44"/><path d="M27.75 16.16L12.59 7.56c-.88-.5-1.67-.44-2.15.07l12.93 12.92 4.38-4.39z" fill="#00C853"/><text x="44" y="16" fill="#fff" font-family="Arial" font-size="7">DISPONIBLE EN</text><text x="44" y="30" fill="#fff" font-family="Arial" font-size="14" font-weight="600">Google Play</text></svg></a>
         </div>
       </div>
     </div>
@@ -920,8 +860,8 @@ h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
 </footer>
 
 <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=es" class="book-float"><span>&#10003;</span> Reservar</a>
-<a href="https://wa.me/529841814911" class="wa-float">WhatsApp</a>
 
+<a href="https://wa.me/529841814911" class="wa-float">WhatsApp</a>
 </div>
 <script>
 const nav=document.getElementById('nav');
@@ -929,14 +869,38 @@ window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scr
 const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.15});
 document.querySelectorAll('.rv').forEach(el=>io.observe(el));
 function toggleMenu(){document.querySelector('.links').classList.toggle('open')}
+
+// Animated counters for proof stats
+function formatNumber(n, decimals){
+  if(decimals>0) return n.toFixed(decimals);
+  return Math.floor(n).toLocaleString('en-US');
+}
+function animateCount(el){
+  var target = parseFloat(el.dataset.target);
+  var decimals = parseInt(el.dataset.decimals||'0',10);
+  var suffix = el.dataset.suffix||'';
+  var duration = 2000;
+  var start = performance.now();
+  function tick(now){
+    var t = Math.min(1, (now-start)/duration);
+    var eased = 1 - Math.pow(1-t, 3); // ease-out cubic
+    var val = eased * target;
+    el.textContent = formatNumber(val, decimals) + suffix;
+    if(t<1) requestAnimationFrame(tick);
+    else el.textContent = formatNumber(target, decimals) + suffix;
+  }
+  requestAnimationFrame(tick);
+}
+var countIO = new IntersectionObserver(function(entries){
+  entries.forEach(function(e){
+    if(e.isIntersecting){
+      animateCount(e.target);
+      countIO.unobserve(e.target);
+    }
+  });
+},{threshold:0.4});
+document.querySelectorAll('.count').forEach(function(el){ countIO.observe(el); });
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
-<script>
-(function(){var p=document.querySelector('section.prose');if(!p||!window.matchMedia||!window.matchMedia('(max-width:640px)').matches)return;
-var w=p.querySelector('.wrap');if(!w||w.scrollHeight<1300)return;var lim=820,m=w.querySelector('.meet');if(m){var r=m.getBoundingClientRect(),t=w.getBoundingClientRect();lim=Math.round(r.bottom-t.top+90)}if(w.scrollHeight<lim+400)return;p.classList.add('is-collapsed');w.style.maxHeight=lim+'px';
-var es=document.documentElement.lang==='es',b=document.createElement('button');b.type='button';b.className='btn btn-ghost prose-more';
-b.textContent=es?'Leer más':'Read more';b.setAttribute('aria-expanded','false');
-b.addEventListener('click',function(){p.classList.remove('is-collapsed');w.style.maxHeight='';b.remove()});w.insertAdjacentElement('afterend',b);})();
-</script>
 </body>
 </html>
