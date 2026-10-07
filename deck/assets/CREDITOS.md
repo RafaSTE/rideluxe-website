@@ -2,19 +2,20 @@
 
 ## Fotografía
 Todas las fotografías del deck son fotos propias de la flota de Serendipity Travel Experiences / Ride Luxe
-(originales en `images/` del sitio). Se les aplicó un tratamiento de color ("noche americana" y "día dorado")
+(originales en `images/` del sitio y en `assets/originales/`). Se les aplicó un tratamiento de color ("noche americana" y "día dorado")
 con `deck/tools/grade.py` y se guardaron en WebP. Ningún archivo supera 400 KB.
 
 | Archivo | Original | Lámina |
 |---|---|---|
 | n01-suburban-noche.webp | images/tulum-suburban.jpg | 01 |
-| d08-chofer-dia.webp | images/chauffeur-vclass.jpg | 08 |
+| d08-chofer-cun.webp | originales/chofer-aeropuerto-cancun.jpg (foto del cliente) | 08 |
 | d09-invitada-dia.webp | images/hero.jpg | 09 |
 | n10-vclass-noche.webp | images/luxury-vclass.jpg | 10 |
 | d11-suv.webp | images/tulum-suburban.jpg | 11 |
 | d11-van.webp | images/arrival-cta.jpg | 11 |
-| n11-sprinter.webp | images/premium-sprinter.jpg | 11 |
-| n14-volante-noche.webp | images/chauffeur.jpg | 14 |
+| n11-sprinter-noche.webp | originales/sprinter-noche.jpg (foto del cliente) | 11 |
+| n12-sprinter-acceso.webp | originales/sprinter-noche.jpg (foto del cliente, desenfocada) | 12 |
+| n14-chofer-noche.webp | originales/chofer-serendipity-volante.jpg (foto del cliente) | 14 |
 | d15-cabina-dia.webp | images/suburban-interior.jpg | 15 |
 | n16-bokeh.webp | images/ondemand-experience.jpg | 16 |
 | grano.png | generado | todas |

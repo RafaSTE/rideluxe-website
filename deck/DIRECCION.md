@@ -40,7 +40,7 @@ Linter con píxeles reales: **0 errores, 0 avisos**. El contraste mínimo por l�
 
 ## Tratamiento de imagen
 Las derivadas salen de `tools/grade.py` (PIL), nunca se amplían por encima de su tamaño nativo y pesan de 61 a 221 KB:
-- **Noche** (01, 10, 14): sombras Dark Teal, luz Teal, prácticas en oro y arena. En la 01 la carrocería es negro laca con filo dorado, la placa está neutralizada, el faro encendido y la foto va a 1:1. En la 10 las ventanas pasan a noche con máscara suave, hay bokeh desenfocado, luz clave en cada rostro, retoque local en la piel de la invitada de la derecha y la foto se cierra en Dark Teal sólido antes de los créditos.
+- **Noche** (01, 10, 11 Sprinter, 12, 14): sombras Dark Teal, luz Teal, prácticas en oro y arena. En la 01 la carrocería es negro laca con filo dorado, la placa está neutralizada, el faro encendido y la foto va a 1:1. En la 10 las ventanas pasan a noche con máscara suave, hay bokeh desenfocado, luz clave en cada rostro, retoque local en la piel de la invitada de la derecha y la foto se cierra en Dark Teal sólido antes de los créditos.
 - **Día dorado** (08, 09, 11, 15): sombras Dark Teal, medios cálidos, altas luces arena. El cielo azul se vuelve bruma arena.
 - La 16 usa a los invitados reales de noche totalmente desenfocados como fondo del testimonio. Los placeholders de la 03, 06, 12 y 18 son atmósfera generada (arboleda, carta, copas, proscenio de palmas). Cada lámina tiene un comentario HTML donde iría la foto de stock.
 - No usamos `economy-avanza.jpg` ni `logo.png` (Ride Luxe).
@@ -64,13 +64,13 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 | 05 | Escena musical | Mandala como lente, haz Teal sobre el lineup en cartel 72 / 44 / 24 | Haz, iris y chit | Destello como proyector |
 | 06 | Cero curva | Campo Teal con título y carta; 4 créditos en lista | Carta de la Riviera Maya, ruta dorada | Campo Teal |
 | 07 | Nuestra propuesta | Letterbox abierto, título 120 centrado y diagrama 1 → 1 → 3 | Oro metálico | El destello entra, núcleo, tres ramas a 72 |
-| 08 | Segmento 01 | Título y lista a la izquierda, foto a sangre a la derecha | Chofer real y V-Class, día dorado | Créditos en lista |
+| 08 | Segmento 01 | Título y lista a la izquierda, foto a sangre a la derecha | Chofer de Serendipity en la zona de ascenso de CUN, día dorado | Créditos en lista |
 | 09 | Segmento 02 | Mismo layout (contraplano) | Invitada bajando de la V-Class | Créditos en lista |
 | 10 | Mesas VIP | "Mesas VIP:" 120, foto cerrada en Dark Teal, fila de 3 créditos y subtítulo | Trío en V-Class, noche | Destello a través de la cabina |
-| 11 | Flota | Tríptico de fotogramas con nombre 44 y capacidad, subtítulo | Suburban, V-Class, Sprinter | Fotogramas |
-| 12 | Operación en sitio | Título centrado, núcleo dorado que irradia a 4 columnas 01 a 04 | Copas de palma en las esquinas | Destello como centro de operación |
+| 11 | Flota | Tríptico de fotogramas con nombre 44 y capacidad, subtítulo | Suburban, V-Class y la Sprinter real de noche | Fotogramas |
+| 12 | Operación en sitio | Título centrado, núcleo dorado que irradia a 4 columnas 01 a 04 | Sprinter real en un acceso de noche, desenfocada como bokeh, con copas de palma | Destello como centro de operación |
 | 13 | Tecnología | Ruta de rastreo (recorrido sólido, pendiente punteado, punto vivo) y 4 funciones; frase en barra Teal | Gobo en la barra | Destello que avanza, campo Teal |
-| 14 | Seguridad | Título 72 en 3 líneas y 4 créditos 2 x 2; foto a la derecha | Chofer al volante, noche | Créditos |
+| 14 | Seguridad | Título 72 en 3 líneas y 4 créditos 2 x 2; foto a la derecha | Chofer de Serendipity al volante (uniforme con logo), noche | Créditos |
 | 15 | Experiencia de marca | Foto a la izquierda con placa del logo de Zamna; título y 3 créditos | Cabina Suburban, día dorado | Placa de marca a bordo |
 | 16 | Referencias | Composición simétrica: testimonio 72 itálica, firma y 3 celdas | Invitados desenfocados (bokeh) | Créditos finales |
 | 17 | Cómo trabajamos | Línea de tiempo a todo el ancho con 5 nodos, pasos y subtítulo | Gobo | Destello como línea de tiempo |

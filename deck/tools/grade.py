@@ -342,12 +342,6 @@ def crop_scale(name, box, size):
 
 
 def day_photos():
-    # 08 · chauffeur opening the V-Class door (discreet reception)
-    a = crop_scale('chauffeur-vclass.jpg', (200, 56, 1400, 1066), (960, 808))
-    o = day_grade(a)
-    h, w = o.shape[:2]
-    o = o * (0.90 + 0.10 * radial(h, w, w * 0.55, h * 0.45, w * 0.9, h * 0.9, 1.0)[..., None])
-    save(to_im(grain(o, 0.012)), 'd08-chofer-dia.jpg')
     # 09 · guest stepping out of the V-Class
     a = crop_scale('hero.jpg', (190, 188, 1322, 1141), (960, 808))
     o = day_grade(a)
@@ -369,36 +363,6 @@ def day_photos():
     save(to_im(grain(day_grade(a, 0.30), 0.012)), 'd11-suv.jpg')
     a = crop_scale('arrival-cta.jpg', (0, 150, 1056, 726), (1056, 576))
     save(to_im(grain(day_grade(a, 0.36), 0.012)), 'd11-van.jpg')
-    a = crop_scale('premium-sprinter.jpg', (0, 60, 1000, 606), (1000, 546))
-    o = tone(a, NIGHT_STOPS, keep=0.30, sat=0.5, exposure=1.9, gamma=0.9)
-    save(to_im(grain(o, 0.014)), 'n11-sprinter.jpg')
-
-
-# ------------------------------------------------------------------ 14 · chofer al volante (noche)
-def volante():
-    a = to_f(Image.open(SRC / 'chauffeur.jpg').convert('RGB'))   # 1000 x 760, native
-    h, w = a.shape[:2]
-    r, g, b = a[..., 0], a[..., 1], a[..., 2]
-    L = lum(a)
-    yy, xx = np.mgrid[0:h, 0:w]
-    yy = yy / h
-    xx = xx / w
-    zone = poly_mask(w, h, [(300, 0), (1000, 0), (1000, 150), (700, 140), (560, 150), (420, 120), (330, 60)], 6)
-    win = blur((((g > r * 1.0) & (g > b * 0.95)) | (L > 0.55)).astype(np.float32) * zone, 3)
-    win = np.clip((win - 0.3) / 0.4, 0, 1)
-    o = tone(a, NIGHT_STOPS, keep=0.40, sat=0.55, exposure=0.80, gamma=1.12)
-    night = np.ones_like(a) * (DEEP * 0.7 + NIGHT * 0.3)
-    bk = Image.new('RGB', (w, h), (0, 0, 0))
-    dr = ImageDraw.Draw(bk)
-    for (bx, by, br, col, k) in [(820, 60, 26, (201, 165, 92), .26), (905, 105, 14, (4, 101, 103), .8), (640, 70, 18, (201, 165, 92), .22)]:
-        dr.ellipse([bx - br, by - br, bx + br, by + br], fill=tuple(int(v * k) for v in col))
-    night = night + to_f(bk.filter(ImageFilter.GaussianBlur(4)))
-    o = o * (1 - win[..., None]) + night * win[..., None]
-    # instrument glow (teal) and a warm key on the hands
-    o = o + (TEAL * 0.55)[None, None, :] * gauss(h, w, 800, 300, 160, 70)[..., None]
-    o = dodge(o, [(700, 250, 70, 0.25), (860, 300, 60, 0.25)])
-    o = o * (0.62 + 0.38 * radial(h, w, w * 0.62, h * 0.42, w * 0.85, h * 0.9, 0.9)[..., None])
-    save(to_im(grain(o, 0.016)), 'n14-volante-noche.jpg')
 
 
 # ------------------------------------------------------------------ 16 · bokeh (testimonio)
@@ -425,7 +389,60 @@ def grano():
     print('grano.png', (OUT / 'grano.png').stat().st_size // 1024, 'KB')
 
 
+# ------------------------------------------------------------------ fotos nuevas del cliente (originales/)
+ORIG = OUT / 'originales'
+
+
+def patch(img, src_box, dst_xy, feather=6):
+    """copy a small patch over a distraction (soft edges)."""
+    piece = img.crop(src_box)
+    m = Image.new('L', piece.size, 0)
+    ImageDraw.Draw(m).rectangle([feather, feather, piece.width - feather, piece.height - feather], fill=255)
+    img.paste(piece, dst_xy, m.filter(ImageFilter.GaussianBlur(feather / 2)))
+    return img
+
+
+def nuevas():
+    # 08 · chofer de Serendipity en la zona de ascenso de CUN (día dorado)
+    im = Image.open(ORIG / 'chofer-aeropuerto-cancun.jpg').convert('RGB')     # 1000 x 1333
+    im = patch(im, (578, 862, 668, 912), (578, 908))                           # papel en el piso
+    a = to_f(im.crop((0, 300, 1000, 1142)).resize((960, 808), Image.LANCZOS))
+    a = np.clip(a, 0, 1) ** 0.82                                                # abre sombras antes del grade
+    o = day_grade(a, sky_top=0.22, keep=0.45)
+    h, w = o.shape[:2]
+    o = dodge(o, [(470, 230, 70, 0.14)])
+    o = o * (0.90 + 0.10 * radial(h, w, w * 0.48, h * 0.45, w * 0.9, h * 0.9, 1.0)[..., None])
+    save(to_im(grain(o, 0.012)), 'd08-chofer-cun.jpg')
+
+    # 11 · Sprinter real de noche, puerta abierta (tarjeta de flota 1056 x 576)
+    im = Image.open(ORIG / 'sprinter-noche.jpg').convert('RGB')                # 2000 x 1333
+    a = to_f(im.crop((300, 250, 1700, 1014)).resize((1056, 576), Image.LANCZOS))
+    o = tone(a, NIGHT_STOPS, keep=0.55, sat=0.8, exposure=1.85, gamma=0.80)
+    save(to_im(grain(o, 0.012)), 'n11-sprinter-noche.jpg')
+
+    # 14 · chofer de Serendipity al volante (blanco y negro -> noche americana)
+    im = Image.open(ORIG / 'chofer-serendipity-volante.jpg').convert('RGB')    # 2000 x 1126
+    a = to_f(im.crop((150, 0, 1632, 1126)).resize((1000, 760), Image.LANCZOS))
+    h, w = a.shape[:2]
+    L = lum(a)
+    zone = poly_mask(w, h, [(500, 20), (1000, 0), (1000, 470), (840, 480), (610, 430), (580, 200)], 14)
+    win = blur((L > 0.50).astype(np.float32) * zone, 10)
+    soft = blur_rgb(a, 9) * 0.38                                               # ventana desenfocada y de noche
+    a2 = a * (1 - win[..., None]) + soft * win[..., None]
+    o = tone(a2, NIGHT_STOPS, keep=0.45, sat=0.0, exposure=1.08, gamma=0.94)
+    o = dodge(o, [(400, 205, 120, 0.30), (520, 560, 90, 0.12)])                # cara y mano
+    o = o + (TEAL * 0.30)[None, None, :] * gauss(h, w, 820, 200, 240, 160)[..., None]
+    o = o * (0.74 + 0.26 * radial(h, w, w * 0.42, h * 0.40, w * 0.9, h * 0.95, 0.9)[..., None])
+    save(to_im(grain(o, 0.014)), 'n14-chofer-noche.jpg')
+
+    # 12 · la Sprinter esperando en el acceso (fondo atmosférico de "Durante el festival, estamos ahí")
+    im = Image.open(ORIG / 'sprinter-noche.jpg').convert('RGB')
+    a = to_f(im.crop((0, 230, 2000, 1072)).resize((1920, 808), Image.LANCZOS))
+    o = tone(a, NIGHT_STOPS, keep=0.45, sat=0.7, exposure=1.45, gamma=0.88)
+    o = blur_rgb(o, 7)                                                          # desenfocada: atmósfera, no detalle
+    save(to_im(grain(o, 0.012)), 'n12-sprinter-acceso.jpg')
+
 if __name__ == '__main__':
-    jobs = sys.argv[1:] or ['cover', 'mesas', 'day_photos', 'volante', 'bokeh', 'grano']
+    jobs = sys.argv[1:] or ['cover', 'mesas', 'day_photos', 'bokeh', 'grano', 'nuevas']
     for j in jobs:
         globals()[j]()
