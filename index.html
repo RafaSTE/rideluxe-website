@@ -508,6 +508,42 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   .prose.is-collapsed .wrap:after{content:'';position:absolute;left:0;right:0;bottom:0;height:170px;background:linear-gradient(to bottom,rgba(0,39,43,0),var(--dark-teal) 85%);pointer-events:none}
   .prose-more{display:flex;justify-content:center;margin:20px auto 0;width:calc(100% - 32px);max-width:360px}
 }
+/* inner page hero + explore tiles */
+.page-hero{position:relative;min-height:60vh;display:flex;align-items:flex-end;padding:170px 0 80px;overflow:hidden}
+.page-hero .ph-inner{position:relative;z-index:5;width:100%}
+.page-hero h1{font-family:'Cormorant Garamond',serif;font-size:clamp(46px,6.4vw,88px);font-weight:400;color:#fff;line-height:1.02;letter-spacing:-1px;text-wrap:balance}
+.page-hero h1 em{font-style:italic;color:var(--mint)}
+.page-hero p{font-size:18px;line-height:1.6;max-width:580px;color:rgba(255,255,255,.92);margin:20px 0 30px}
+.page-hero .ta-badge{margin-bottom:22px}
+.explore{padding:110px 0}
+.explore-head{text-align:center;margin-bottom:46px}
+.ex-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.ex-tile{position:relative;aspect-ratio:3/4;overflow:hidden;border:1px solid var(--line);display:flex;align-items:flex-end;color:#fff}
+.ex-tile img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,0,.2,1)}
+.ex-tile:hover img{transform:scale(1.05)}
+.ex-tile .ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,39,43,0) 35%,rgba(0,39,43,.92) 100%)}
+.ex-t{position:relative;z-index:2;padding:24px 22px}
+.ex-t span{display:block;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--mint);margin-bottom:8px}
+.ex-t h3{font-family:'Cormorant Garamond',serif;font-size:30px;font-weight:400;line-height:1.1}
+.ex-t h3:after{content:' \2192';color:var(--mint)}
+@media(max-width:980px){.ex-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:640px){.page-hero{min-height:auto;padding:130px 0 56px}.page-hero p{font-size:16px}
+  .explore{padding:64px 0}.ex-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding-bottom:10px;scrollbar-width:none}
+  .ex-grid::-webkit-scrollbar{display:none}.ex-tile{flex:0 0 72%;scroll-snap-align:start}}
+.proof-3{grid-template-columns:repeat(3,1fr)!important}
+@media(max-width:640px){.proof-3{grid-template-columns:repeat(3,1fr)!important;gap:14px!important}.proof-3 .count{font-size:34px!important}.proof-3 .lbl{font-size:10.5px!important;letter-spacing:.8px!important}}
+/* readability v1 */
+body{font-weight:400}
+p,li,summary,td,dd,.lead,.sub,.af-lead,.af-lead-2,.rv-loc,.ap-times,.cap,.veh,.route-meta,.bp-meta,.tier-name,.lbl,.meta,footer p,footer a,.ft-bottom span{font-weight:400!important}
+nav .links a{font-weight:400!important}
+h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
+.prose p,.prose li,.hero .sub,.page-hero p,.af-lead,section:not(.reviews) .lead{color:rgba(255,255,255,.9)!important}
+.eyebrow,.eyebrow-s,.bp-eyebrow,.ap-code,.tier,.tier-name,.lvl,.swipe-hint,.route-meta{letter-spacing:1.8px!important;font-weight:500!important}
+.eyebrow,.eyebrow-s{font-size:12px!important}
+.hero .trust,.trust{font-size:12px!important;letter-spacing:1.2px!important}
+.prose p,.prose li{font-size:17px;line-height:1.75}
+.proof-stat .count{font-weight:400!important}
+@media(max-width:640px){.prose p,.prose li{font-size:16px}.hero .trust,.trust{font-size:11px!important}}
 </style>
 <script type="application/ld+json">
 {
@@ -583,70 +619,6 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   }
 }
 </script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How much does a private transfer from Cancun airport to Tulum cost?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "A one-way private transfer from Cancun International Airport (CUN) to Tulum starts from $125 USD in our Economy tier, per vehicle. Prices vary by vehicle: Standard (Toyota Hiace) from $145 USD, Luxury (Mercedes V-Class or Chevrolet Suburban) from $230 USD, and Premium (Mercedes Sprinter) from $320 USD."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you pick up inside the Cancun airport terminal?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Ride Luxe Mexico holds federal SICT permits, tourist ground transport plates, and airport zone licenses, allowing our chauffeurs to meet guests legally inside the terminal at arrivals — unlike informal private drivers who are restricted to the parking lot."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What happens if my flight is delayed?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Your reservation includes real-time flight tracking, so we adjust the pickup time automatically at no extra charge. If your flight is significantly delayed, our team stays in contact through WhatsApp to confirm the new pickup window."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you accept credit cards? What currencies?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. We accept all major credit cards through secure Stripe payment processing. Prices are displayed in USD for reference. Final invoicing is issued in Mexican Pesos (MXN) at the exchange rate of the day, in compliance with Mexican consumer protection law."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Do you provide child seats or booster seats?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes, upon request at no additional charge. Please indicate the number and type of child seats you need when booking. Available for infant, toddler and booster."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Which routes do you serve?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "We operate airport transfers and point-to-point transportation across Cancun (CUN), Playa del Carmen, Tulum (TQO), and Los Cabos (SJD). Popular routes include Cancun airport to Tulum, Cancun airport to Playa del Carmen, and Tulum airport to Tulum hotel zone."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can I book a chauffeur by the hour or for a full day?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. Our on-demand hourly and full-day chauffeur service lets you keep the same vehicle and driver for as long as you need. Ideal for beach club transfers, restaurant hopping in Tulum, day trips to Cobá or Chichén Itzá, or a private driver during your stay."
-      }
-    }
-  ]
-}
-</script>
 </head>
 <body>
 <div class="shell">
@@ -659,9 +631,9 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <a href="/cancun-airport-transfers">Cancun Airport</a>
     <a href="/tulum-airport-transfers">Tulum Airport</a>
     <a href="/los-cabos-transfers">Los Cabos Airport</a>
-    <a href="/luxury-transportation">Luxury</a>
+    <a href="/fleet">Fleet</a>
+    <a href="/rates">Rates</a>
     <a href="/app">App</a>
-    <a href="/blog">Blog</a>
     <a href="/es" hreflang="es" lang="es">ES</a>
     <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=en" class="nav-cta">Book Now</a>
   </div>
@@ -675,18 +647,16 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   <div class="hero-grid">
     <div class="hero-content">
       <a class="ta-badge" href="https://www.tripadvisor.com/Attraction_Review-g150813-d24043854-Reviews-Serendipity_Travel_Experiences-Tulum_Yucatan_Peninsula.html" target="_blank" rel="noopener"><span class="dots" aria-hidden="true">&#9679;&#9679;&#9679;&#9679;&#9679;</span><span><b>4.9</b> on Tripadvisor &middot; 232 reviews <span class="ta-extra"> &middot; Travelers&rsquo; Choice 2025</span></span></a>
-      <span class="eyebrow">Official airport pickup &middot; Federal plates</span>
       <h1 class="serif">
         <span class="ln"><i>Luxury Airport Transfers</i></span>
         <span class="ln"><i><em>in Cancun, Tulum &amp; Los&nbsp;Cabos.</em></i></span>
       </h1>
-      <p class="sub">Book in one click, online or in the app. Your licensed chauffeur meets you inside arrivals for rides across Cancun, Playa del Carmen, Tulum and Los Cabos &mdash; fixed price, no waiting.</p>
-      <p class="final-line">Fixed price in USD for the whole vehicle. Taxes and airport fees included, no surprises when you land.</p>
+      <p class="sub">Your licensed chauffeur meets you at arrivals. One fixed price for the whole vehicle, booked in one click.</p>
       <div class="btns">
         <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=en" class="btn btn-solid">Book your transfer</a>
-        <a href="#fleet" class="btn btn-ghost">Explore the fleet</a>
+        <a href="#airports" class="btn btn-ghost">Choose your airport</a>
       </div>
-      <div class="trust"><span>Chauffeur inside arrivals</span><span>60 min free waiting</span><span>Live tracking link: driver photo &amp; plate</span><span>Flight tracked</span><span>24/7</span></div>
+      <div class="trust"><span>60 min free waiting</span><span>Live driver tracking</span><span>Taxes included</span></div>
     </div>
     <div class="book-panel" id="book">
       <div class="bp-head">
@@ -705,7 +675,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <div class="airports-head rv">
       <span class="eyebrow-s">Where are you landing?</span>
       <h2 class="sec-title">Your transfer, <em>one click away</em></h2>
-      <p class="lead">Choose your airport to see routes and prices, or book straight away. Airport transfers and point to point rides, 24 hours a day.</p>
+      <p class="lead">Pick your airport for routes and prices, or book straight away.</p>
     </div>
     <p class="swipe-hint">Swipe to choose your airport &rarr;</p>
     <div class="airports-grid">
@@ -748,31 +718,10 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
 
 <section class="proof" id="proof">
   <div class="wrap">
-    <div class="proof-head rv">
-      <span class="eyebrow-s">Trusted by travelers worldwide</span>
-      <h2 class="sec-title">Built on <em>real journeys</em></h2>
-    </div>
-    <div class="proof-grid rv">
-      <div class="proof-stat">
-        <b class="count serif" data-target="50000" data-suffix="+">50,000+</b>
-        <span class="lbl">Passengers transported</span>
-        <span class="meta">Since 2020</span>
-      </div>
-      <div class="proof-stat">
-        <b class="count serif" data-target="13793" data-suffix="">13,793</b>
-        <span class="lbl">Services completed</span>
-        <span class="meta">2020 &ndash; 2025</span>
-      </div>
-      <div class="proof-stat">
-        <b class="count serif" data-target="4.9" data-decimals="1" data-suffix="">4.9</b>
-        <span class="lbl">Tripadvisor rating</span>
-        <span class="meta">232 reviews</span>
-      </div>
-      <div class="proof-stat">
-        <b class="count serif" data-target="5" data-suffix="+">5+</b>
-        <span class="lbl">Years of service</span>
-        <span class="meta">Travelers&rsquo; Choice 2024 &amp; 2025</span>
-      </div>
+    <div class="proof-grid proof-3 rv">
+      <div class="proof-stat"><b class="count serif" data-target="50000" data-suffix="+">50,000+</b><span class="lbl">Passengers since 2020</span></div>
+      <div class="proof-stat"><b class="count serif" data-target="4.9" data-decimals="1" data-suffix="">4.9</b><span class="lbl">Tripadvisor &middot; 232 reviews</span></div>
+      <div class="proof-stat"><b class="count serif" data-target="60" data-suffix=" min">60 min</b><span class="lbl">Free waiting after landing</span></div>
     </div>
   </div>
 </section>
@@ -783,7 +732,7 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
       <div class="lt">
         <span class="eyebrow-s">In their own words</span>
         <h2 class="sec-title">What travelers <em>say</em></h2>
-        <p class="lead">4.9 on Tripadvisor &middot; 232 reviews &middot; #8 of 216 transport services in Tulum &middot; Travelers&rsquo; Choice 2025.</p>
+        <p class="lead">4.9 on Tripadvisor &middot; Travelers&rsquo; Choice 2025</p>
       </div>
     </div>
 
@@ -836,278 +785,18 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
   </div>
 </section>
 
-<section class="routes" id="routes">
+<section class="explore" id="explore">
   <div class="wrap">
-    <div class="sec-head rv">
-      <div class="lt">
-        <span class="eyebrow-s">Routes &amp; rates</span>
-        <h2 class="sec-title">Transparent <em>pricing</em><br>for popular routes</h2>
-        <p class="lead">Per vehicle &middot; one-way airport transfer &middot; up to capacity per tier. Other destinations available on request.</p>
-      </div>
-
+    <div class="explore-head rv">
+      <span class="eyebrow-s">Explore Ride Luxe</span>
+      <h2 class="sec-title">Everything else, <em>one tap away</em></h2>
     </div>
-
-    <div class="routes-grid">
-      <article class="route-card rv">
-        <div class="route-head">
-          <h3 class="serif">Cancun &rarr; Cancun Hotel Zone</h3>
-          <span class="route-meta">CUN Airport &middot; Cancun beachfront resorts</span>
-        </div>
-        <div class="tier-row">
-          <div class="tier"><span class="tier-name">Economy</span><span class="tier-price">from $40 USD</span></div>
-          <div class="tier"><span class="tier-name">Standard</span><span class="tier-price">from $55 USD</span></div>
-          <div class="tier"><span class="tier-name">Luxury</span><span class="tier-price">from $120 USD</span></div>
-          <div class="tier"><span class="tier-name">Premium</span><span class="tier-price">from $210 USD</span></div>
-        </div>
-      </article>
-
-      <article class="route-card rv rv-d1">
-        <div class="route-head">
-          <h3 class="serif">Cancun &rarr; Playa del Carmen</h3>
-          <span class="route-meta">CUN Airport &middot; Riviera Maya</span>
-        </div>
-        <div class="tier-row">
-          <div class="tier"><span class="tier-name">Economy</span><span class="tier-price">from $75 USD</span></div>
-          <div class="tier"><span class="tier-name">Standard</span><span class="tier-price">from $85 USD</span></div>
-          <div class="tier"><span class="tier-name">Luxury</span><span class="tier-price">from $145 USD</span></div>
-          <div class="tier"><span class="tier-name">Premium</span><span class="tier-price">from $240 USD</span></div>
-        </div>
-      </article>
-
-      <article class="route-card rv rv-d2">
-        <div class="route-head">
-          <h3 class="serif">Cancun &rarr; Tulum Centro</h3>
-          <span class="route-meta">CUN Airport &middot; Aldea Zama area</span>
-        </div>
-        <div class="tier-row">
-          <div class="tier"><span class="tier-name">Economy</span><span class="tier-price">from $125 USD</span></div>
-          <div class="tier"><span class="tier-name">Standard</span><span class="tier-price">from $145 USD</span></div>
-          <div class="tier"><span class="tier-name">Luxury</span><span class="tier-price">from $230 USD</span></div>
-          <div class="tier"><span class="tier-name">Premium</span><span class="tier-price">from $320 USD</span></div>
-        </div>
-      </article>
-
-      <article class="route-card rv rv-d3">
-        <div class="route-head">
-          <h3 class="serif">Cancun &rarr; Tulum Beach</h3>
-          <span class="route-meta">CUN Airport &middot; Hotel Zone &middot; Delek &amp; beachfront</span>
-        </div>
-        <div class="tier-row">
-          <div class="tier"><span class="tier-name">Economy</span><span class="tier-price">from $145 USD</span></div>
-          <div class="tier"><span class="tier-name">Standard</span><span class="tier-price">from $160 USD</span></div>
-          <div class="tier"><span class="tier-name">Luxury</span><span class="tier-price">from $270 USD</span></div>
-          <div class="tier"><span class="tier-name">Premium</span><span class="tier-price">from $360 USD</span></div>
-        </div>
-      </article>
-
-      <article class="route-card rv rv-d3">
-        <div class="route-head">
-          <h3 class="serif">Tulum Airport &rarr; Tulum Centro</h3>
-          <span class="route-meta">TQO Airport &middot; Aldea Zama area</span>
-        </div>
-        <div class="tier-row">
-          <div class="tier"><span class="tier-name">Economy</span><span class="tier-price">from $70 USD</span></div>
-          <div class="tier"><span class="tier-name">Standard</span><span class="tier-price">from $115 USD</span></div>
-          <div class="tier"><span class="tier-name">Luxury</span><span class="tier-price">from $175 USD</span></div>
-          <div class="tier"><span class="tier-name">Premium</span><span class="tier-price">from $265 USD</span></div>
-        </div>
-      </article>
-
-      <article class="route-card rv rv-d3">
-        <div class="route-head">
-          <h3 class="serif">Tulum Airport &rarr; Tulum Beach</h3>
-          <span class="route-meta">TQO Airport &middot; Hotel Zone &middot; Delek &amp; beachfront</span>
-        </div>
-        <div class="tier-row">
-          <div class="tier"><span class="tier-name">Economy</span><span class="tier-price">from $90 USD</span></div>
-          <div class="tier"><span class="tier-name">Standard</span><span class="tier-price">from $130 USD</span></div>
-          <div class="tier"><span class="tier-name">Luxury</span><span class="tier-price">from $190 USD</span></div>
-          <div class="tier"><span class="tier-name">Premium</span><span class="tier-price">from $280 USD</span></div>
-        </div>
-      </article>
-    </div>
-
-    <p class="routes-disclaimer rv">Prices in USD for reference, per vehicle. Final invoicing in MXN at the exchange rate of the day, per Mexican consumer protection law. Round-trip and group rates available on request.</p>
-
-    <div class="routes-cta rv">
-      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=en" class="btn btn-mint">Book your route</a>
-      <a href="/cancun-airport-to-tulum" class="btn-link">Cancun airport to Tulum, full detail &rarr;</a>
-      <a href="/cancun-airport-to-playa-del-carmen" class="btn-link">Cancun airport to Playa del Carmen &rarr;</a>
-      <a href="/cancun-airport-to-hotel-zone" class="btn-link">Cancun airport to Hotel Zone &rarr;</a>
-      <a href="/tulum-airport-to-tulum-hotel-zone" class="btn-link">Tulum airport to Hotel Zone &rarr;</a>
-      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=en" class="btn-link">Need Los Cabos or another route? Get a quote &rarr;</a>
-    </div>
-  </div>
-</section>
-
-<section class="why" id="why">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="lt">
-        <span class="eyebrow-s">The Ride Luxe difference</span>
-        <h2 class="sec-title">We meet you <em>inside</em><br>the airport &mdash; legally.</h2>
-      </div>
-
-    </div>
-    <div class="grid2">
-      <div class="media rv">
-        <img loading="lazy" src="/images/chauffeur.jpg" alt="Professional licensed chauffeur driving a Mercedes private transfer in Cancun">
-        <span class="cap">Licensed chauffeur &middot; Mercedes V-Class</span>
-      </div>
-      <div class="txt">
-        <p class="lead rv">Most private drivers in Mexico meet you in the parking lot &mdash; they are not allowed inside. Our vehicles carry federal plates and our chauffeurs hold federal airport and zone licenses, so we welcome you the moment you land.</p>
-        <div class="pts">
-          <div class="pt rv rv-d1"><span class="no">01</span><div><h3>Federal plates &amp; permits</h3><p>Fully registered for tourist ground transport &mdash; not an informal taxi.</p></div></div>
-          <div class="pt rv rv-d2"><span class="no">02</span><div><h3>Licensed inside the terminal</h3><p>Federal airport &amp; zone licensing lets us meet you at arrivals.</p></div></div>
-          <div class="pt rv rv-d3"><span class="no">03</span><div><h3>Insured &amp; flight-tracked</h3><p>Passenger insurance and real-time flight monitoring on every ride.</p></div></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="fleet" id="fleet">
-  <div class="wrap">
-    <div class="sec-head rv">
-      <div class="lt">
-        <span class="eyebrow-s">The fleet</span>
-        <h2 class="sec-title">Choose your <em>experience</em></h2>
-        <p class="lead">Every vehicle is federally plated and chauffeur-driven. Select the level that fits your journey.</p>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="fleet-feature rv">
-    <span class="tag">Most Popular</span>
-    <img loading="lazy" src="/images/luxury-vclass.jpg" alt="Luxury Mercedes V-Class interior with leather seats for private transfers">
-    <div class="ov"></div>
-    <div class="info">
-      <div>
-        <p class="lvl">Luxury</p>
-        <h3 class="serif">Luxury</h3>
-      </div>
-      <div class="meta">
-        <p class="veh">Mercedes V-Class &amp; Chevrolet Suburban</p>
-        <p class="cap">Up to 6 guests &middot; generous luggage</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="wrap">
-    <div class="fleet-row">
-      <div class="fleet-card rv">
-        <img loading="lazy" src="/images/premium-sprinter.jpg" alt="Mercedes Sprinter premium group transfer interior at night">
-        <div class="ov"></div>
-        <div class="info">
-          <p class="lvl">Premium</p>
-          <h3 class="serif">Premium</h3>
-          <p class="veh">Mercedes Sprinter &middot; large groups, first-class comfort</p>
-        </div>
-      </div>
-      <div class="fleet-card rv rv-d1">
-        <img loading="lazy" src="/images/private-hiace.jpg" alt="Toyota Hiace private van with Ride Luxe chauffeur at a Riviera Maya resort">
-        <div class="ov"></div>
-        <div class="info">
-          <p class="lvl">Standard</p>
-          <h3 class="serif">Standard</h3>
-          <p class="veh">Toyota Hiace &middot; families &amp; groups, door to door</p>
-        </div>
-      </div>
-    </div>
-    <div class="fleet-eco-card rv">
-      <img loading="lazy" src="/images/economy-avanza.jpg" alt="Toyota Avanza economy private transfer with federal plates in the Riviera Maya">
-      <div class="ov"></div>
-      <div class="info">
-        <div>
-          <p class="lvl">Economy</p>
-          <h3 class="serif">Private Sedan</h3>
-        </div>
-        <div class="meta">
-          <p class="veh">Toyota Avanza &amp; private sedans</p>
-          <p class="cap">Same federal plates &middot; same professional service</p>
-        </div>
-      </div>
-    </div>
-    <div class="more-row rv"><a href="/luxury-transportation" class="btn-link">Explore luxury transportation &rarr;</a></div>
-  </div>
-</section>
-
-<section class="ondemand" id="ondemand">
-  <div class="bg"><img loading="lazy" src="/images/ondemand-experience.jpg" alt="Guests enjoying an on-demand private chauffeur ride in the Riviera Maya"></div>
-  <div class="ov"></div>
-  <div class="inner wrap">
-    <div class="box">
-      <span class="eyebrow-s rv">On-demand service</span>
-      <h2 class="rv">A private chauffeur, <em>whenever</em> you need one</h2>
-      <p class="rv">Beach club at noon, dinner in Tulum, a last-minute change of plans &mdash; book by the hour, on the spot. Your driver and vehicle stay with you for as long as you like.</p>
-      <div class="feats rv">
-        <div class="f"><span class="n">01</span> Hourly &amp; full-day hire</div>
-        <div class="f"><span class="n">02</span> Request in real time</div>
-        <div class="f"><span class="n">03</span> Door-to-door, anywhere</div>
-        <div class="f"><span class="n">04</span> Your driver waits for you</div>
-      </div>
-      <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=en" class="btn btn-mint rv">Request an on-demand ride</a>
-    </div>
-  </div>
-</section>
-
-<section class="appsec" id="app">
-  <div class="wrap">
-    <div class="grid2">
-      <div>
-        <span class="eyebrow-s rv">The Ride Luxe app</span>
-        <h2 class="rv">Travel in style,<br><em>right from your phone</em></h2>
-        <p class="rv">Book airport transfers and city rides, choose your vehicle, track your chauffeur in real time and pay securely &mdash; all in one place, day or night.</p>
-        <ul class="app-feats rv">
-          <li><span class="n">01</span> Book transfers &amp; city rides instantly</li>
-          <li><span class="n">02</span> Choose sedan, van or luxury vehicle</li>
-          <li><span class="n">03</span> Track your driver live</li>
-          <li><span class="n">04</span> Secure in-app payment, clear pricing</li>
-        </ul>
-        <div class="badges rv">
-          <a href="https://apps.apple.com/mx/app/ride-luxe/id6751626059" aria-label="Download on the App Store"><svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" style="height:46px;width:auto"><rect width="120" height="40" rx="6" fill="#000"/><rect x="0.5" y="0.5" width="119" height="39" rx="5.5" fill="none" stroke="#A6A6A6" stroke-width="0.5"/><path d="M24.77 20.3c-.02-2.33 1.9-3.46 1.99-3.51-1.09-1.59-2.78-1.8-3.37-1.83-1.43-.15-2.8.84-3.53.84-.73 0-1.85-.83-3.04-.8-1.56.02-3 .91-3.8 2.31-1.62 2.81-.41 6.96 1.15 9.24.77 1.12 1.68 2.36 2.87 2.32 1.16-.05 1.6-.74 3-.74 1.39 0 1.79.74 3 .72 1.24-.02 2.02-1.12 2.77-2.25.88-1.29 1.24-2.55 1.26-2.62-.03-.01-2.41-.92-2.43-3.67zM22.46 12.21c.63-.77 1.06-1.83.94-2.91-.91.04-2.05.63-2.71 1.38-.58.66-1.1 1.76-.96 2.79 1.02.08 2.07-.52 2.73-1.26z" fill="#fff"/><text x="34" y="16" fill="#fff" font-family="Arial" font-size="7">Download on the</text><text x="34" y="30" fill="#fff" font-family="Arial" font-size="15" font-weight="600">App Store</text></svg></a>
-          <a href="https://play.google.com/store/apps/details?id=com.stex.pax&hl=es_419" aria-label="Get it on Google Play"><svg viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg" style="height:46px;width:auto"><rect width="135" height="40" rx="6" fill="#000"/><rect x="0.5" y="0.5" width="134" height="39" rx="5.5" fill="none" stroke="#A6A6A6" stroke-width="0.5"/><path d="M10.44 7.54c-.21.22-.33.56-.33 1v22.92c0 .44.12.78.33 1l.08.07 12.84-12.84v-.3L10.52 7.46l-.08.08z" fill="#00A0FF"/><path d="M27.65 24.98l-4.28-4.29v-.3l4.28-4.28.1.05 5.07 2.88c1.45.82 1.45 2.17 0 3l-5.07 2.88-.1.05z" fill="#FFBC00"/><path d="M27.75 24.93l-4.38-4.38L10.44 33.46c.48.5 1.27.57 2.15.07l15.16-8.6z" fill="#FF3A44"/><path d="M27.75 16.16L12.59 7.56c-.88-.5-1.67-.44-2.15.07l12.93 12.92 4.38-4.39z" fill="#00C853"/><text x="44" y="16" fill="#fff" font-family="Arial" font-size="7">GET IT ON</text><text x="44" y="30" fill="#fff" font-family="Arial" font-size="14" font-weight="600">Google Play</text></svg></a>
-        </div>
-        <a href="/app" class="btn-link app-more">How the Ride Luxe app works &rarr;</a>
-      </div>
-      <div class="app-visual rv">
-        <div class="ring"></div>
-        <div class="ring"></div>
-        <img loading="lazy" src="/images/logo.png" alt="Ride Luxe Mexico app icon" class="icon-badge">
-        <div class="rating">&#9733; &#9733; &#9733; &#9733; &#9733; &nbsp;5.0 on the App Store</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="dest" id="destinations">
-  <div class="wrap">
-    <div class="sec-head rv" style="justify-content:center;text-align:center;flex-direction:column;align-items:center">
-      <span class="eyebrow-s" style="justify-content:center">Where we operate</span>
-      <h2 class="sec-title">Now in Mexico&rsquo;s top destinations &mdash; <em>and growing</em></h2>
-      <p class="lead" style="margin:20px auto 0;text-align:center">Live today across the Mexican Caribbean and Los Cabos, expanding into the country&rsquo;s most iconic travel cities.</p>
-    </div>
-    <div class="map-wrap rv">
-      <svg class="mx-map" viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Map of Mexico showing Ride Luxe destinations"><title>Ride Luxe destinations across Mexico</title><path class="mx-shape" d="M126.7,20.0L62.6,25.4L56.4,29.8L62.3,41.3L66.6,46.6L67.3,50.2L68.3,57.2L79.1,69.3L83.2,79.5L86.9,90.1L87.3,92.6L91.6,94.4L95.0,103.4L97.5,111.5L105.5,120.2L118.8,127.0L130.2,140.5L139.4,149.8L143.6,153.8L145.2,163.9L133.8,176.7L115.3,174.6L121.4,182.6L128.1,186.9L134.8,197.3L140.2,198.3L148.2,204.0L153.3,205.5L162.0,211.6L167.9,211.9L187.4,224.7L194.8,227.9L201.6,240.2L196.7,272.6L201.4,275.4L202.8,280.1L204.1,279.0L205.9,275.1L210.5,280.8L205.4,282.0L215.7,287.4L226.7,290.4L246.7,307.9L259.1,319.9L267.2,334.2L272.6,330.3L280.6,324.3L281.9,315.6L279.4,311.1L271.2,301.4L269.7,295.7L264.7,292.5L256.3,286.1L255.3,291.9L247.3,289.4L244.9,282.8L244.1,276.8L243.1,266.3L239.8,263.3L237.4,258.1L235.1,251.6L231.7,248.2L229.5,243.7L226.8,241.2L226.1,237.4L225.9,233.2L227.9,229.7L225.7,230.2L224.2,223.0L222.6,216.9L211.2,205.2L211.1,211.3L213.6,216.3L210.3,210.2L209.5,206.4L207.1,201.7L208.3,199.3L201.3,194.5L196.2,184.0L184.7,174.4L181.7,161.0L178.1,155.3L169.7,142.9L164.7,139.6L158.7,132.3L152.4,123.3L137.0,111.7L135.2,106.0L129.7,101.0L128.4,87.2L124.6,73.1L123.7,58.0L130.6,52.7L145.2,59.8L156.8,59.3L158.3,65.3L174.4,74.0L172.3,80.1L180.5,94.7L182.9,104.2L185.8,110.6L194.0,124.0L196.6,129.9L199.0,131.4L193.4,131.6L191.0,140.4L194.8,146.7L199.5,146.5L201.7,140.6L211.4,151.2L224.8,165.2L235.3,173.5L240.8,174.2L246.0,178.1L246.5,190.8L254.2,198.0L266.1,203.6L274.1,213.5L284.1,217.3L280.4,233.0L281.2,246.4L293.0,253.2L311.4,262.0L320.5,273.7L349.3,298.3L365.5,319.3L379.3,335.5L390.8,361.6L403.5,378.0L402.8,383.7L402.3,391.4L394.3,401.7L400.6,402.1L402.7,407.0L390.5,411.0L394.2,423.0L408.6,443.9L419.0,452.2L429.3,456.7L447.3,470.7L476.1,487.5L496.6,490.5L509.8,501.5L513.4,504.4L548.3,521.1L566.9,531.4L591.6,535.6L608.7,546.6L634.8,555.2L651.2,562.3L665.8,564.0L691.9,553.2L702.3,547.5L728.2,552.1L771.7,587.6L783.7,599.8L785.1,596.8L785.3,593.0L785.3,589.0L786.5,584.4L784.1,576.4L836.2,549.8L836.0,549.0L836.2,547.7L836.1,545.5L836.2,544.8L836.7,543.1L837.5,542.2L836.7,541.4L838.0,541.1L836.7,540.0L834.7,538.4L833.2,538.4L831.6,538.0L830.0,537.5L829.9,536.7L830.1,534.1L829.6,533.9L827.6,529.7L823.6,527.3L821.2,525.6L820.0,524.2L817.4,524.2L815.8,521.1L812.7,517.8L811.8,515.8L809.2,516.0L806.6,513.1L838.1,495.2L873.4,490.7L874.2,490.0L876.2,489.2L877.9,490.0L879.5,490.7L880.6,492.0L882.0,492.6L883.4,490.7L884.5,489.0L886.1,487.0L887.6,485.0L888.2,483.3L889.1,482.1L889.4,479.9L891.6,476.2L893.4,473.6L894.5,473.8L896.3,474.0L897.8,473.8L899.9,472.3L902.2,468.3L904.9,463.9L906.1,466.7L905.2,471.5L905.7,474.7L909.3,477.4L909.8,483.4L911.0,483.0L911.7,483.5L912.9,478.9L915.8,467.7L920.5,455.0L923.9,447.1L920.9,446.9L916.9,450.4L919.9,445.0L923.9,442.4L923.7,437.5L920.3,437.8L917.2,439.8L917.6,436.0L921.7,433.0L924.1,429.5L922.8,424.4L928.7,411.2L938.2,401.2L942.1,393.0L944.2,389.1L942.4,386.0L942.8,381.5L941.4,381.2L940.6,385.0L939.3,380.0L936.6,375.0L930.3,375.6L924.3,377.1L929.8,377.2L932.7,377.7L930.9,379.2L929.2,379.4L922.5,378.5L908.1,373.8L903.4,373.4L897.5,375.4L888.6,376.9L880.5,380.7L853.5,385.2L845.7,388.1L836.5,397.9L835.3,404.9L834.2,412.4L834.0,419.8L835.0,426.9L829.1,432.5L827.9,437.5L827.2,444.7L815.3,456.1L802.7,464.5L794.5,468.1L793.1,468.5L782.4,467.1L767.2,472.7L748.7,474.7L716.9,483.6L710.8,476.1L699.4,467.2L683.7,464.9L674.4,454.9L670.7,450.4L665.0,444.2L661.7,432.8L648.9,414.8L633.1,387.9L635.4,376.0L624.5,363.2L620.4,350.3L622.7,332.5L624.8,281.6L639.6,243.7L639.6,235.5L638.2,235.4L637.0,235.9L635.8,235.7L635.4,236.2L634.6,236.8L634.4,236.4L633.2,237.1L633.8,237.8L633.6,238.4L633.3,239.3L632.4,239.4L632.3,239.1L631.5,239.0L630.9,238.4L630.5,237.8L629.8,238.0L628.8,236.9L628.3,236.7L627.6,236.3L627.3,235.9L626.4,235.4L625.7,234.5L626.0,234.3L625.3,233.9L625.2,233.7L624.6,233.1L624.1,233.6L623.1,233.2L621.5,233.2L620.7,232.4L619.8,232.7L617.7,232.4L616.4,232.3L614.1,232.2L612.7,232.1L610.6,232.6L608.5,231.8L607.2,230.4L605.5,230.2L604.8,229.4L603.7,229.2L602.0,227.1L600.8,227.4L599.5,226.9L598.6,226.9L597.9,226.0L596.5,226.6L594.1,225.5L593.3,225.1L593.1,223.8L590.5,222.7L587.8,221.7L586.7,221.5L583.7,221.6L582.3,217.7L579.5,211.2L577.2,206.8L575.3,204.8L574.0,202.3L573.2,199.5L573.0,197.7L572.8,195.3L572.3,193.8L571.5,193.0L570.2,192.5L571.0,191.4L571.5,189.3L571.8,186.8L570.8,184.3L569.0,182.8L567.4,182.4L565.7,181.3L562.6,178.8L561.0,177.1L559.5,174.6L558.6,171.1L555.5,167.9L550.6,164.3L548.1,161.5L546.8,156.7L545.4,154.0L543.6,151.1L541.9,149.2L540.6,144.2L539.1,141.9L537.7,140.4L534.1,133.2L533.1,130.6L528.9,127.6L523.3,123.3L520.3,120.5L518.9,120.3L517.5,117.3L515.8,115.8L514.3,114.6L511.7,112.8L509.2,114.1L506.8,114.2L503.5,112.8L500.9,113.2L498.8,112.6L496.8,113.5L492.9,112.2L491.2,111.6L490.3,111.0L488.4,111.0L487.0,114.3L483.4,114.1L481.4,114.6L479.1,115.3L477.9,116.4L476.6,118.7L475.9,120.2L474.5,121.9L473.9,125.2L473.6,127.2L472.2,129.1L472.7,130.8L471.6,131.6L470.7,132.9L468.7,134.1L466.8,135.7L466.3,136.5L465.6,138.5L462.4,138.9L460.7,139.4L459.9,137.8L459.4,137.3L457.8,137.8L455.2,136.4L453.8,134.7L452.9,133.6L450.3,133.5L447.1,131.6L446.3,130.7L445.2,130.0L438.2,128.0L434.5,125.0L433.1,123.2L430.6,121.6L428.2,120.4L423.9,116.9L423.8,115.3L421.9,112.4L420.5,109.7L419.5,107.6L419.3,106.1L419.6,104.2L419.2,100.0L417.5,97.1L414.7,94.4L413.3,88.3L410.9,85.7L409.3,84.8L408.2,84.3L405.7,82.1L404.3,81.6L401.9,80.4L400.3,79.8L396.3,76.7L393.8,74.5L392.0,71.8L389.0,69.7L384.9,65.6L383.2,64.8L381.2,62.3L377.7,61.4L374.2,57.6L371.2,52.6L368.1,50.5L365.9,49.8L233.2,64.3L124.0,25.3L124.6,23.1Z"/>
-        <g class="pin active"><circle class="pulse" cx="267.2" cy="333.4" r="15"/><circle class="dot" cx="267.2" cy="333.4" r="6"/><text class="lbl" x="267.2" y="315.4" text-anchor="middle">Los Cabos</text></g>
-        <g class="pin active"><circle class="pulse" cx="940.7" cy="388.5" r="15"/><circle class="dot" cx="940.7" cy="388.5" r="6"/><text class="lbl" x="948.7" y="382.5" text-anchor="start">Cancun</text></g>
-        <g class="pin active"><circle class="pulse" cx="934.2" cy="405.4" r="15"/><circle class="dot" cx="934.2" cy="405.4" r="6"/><text class="lbl" x="942.2" y="409.4" text-anchor="start">Playa del Carmen</text></g>
-        <g class="pin active"><circle class="pulse" cx="922.5" cy="418.8" r="15"/><circle class="dot" cx="922.5" cy="418.8" r="6"/><text class="lbl" x="930.5" y="434.8" text-anchor="start">Tulum</text></g>
-        <g class="pin soon"><circle class="dot-soon" cx="395.4" cy="400.9" r="4.5"/><text class="lbl-soon" x="387.4" y="398.9" text-anchor="end">Punta Mita</text></g>
-        <g class="pin soon"><circle class="dot-soon" cx="403.9" cy="404.8" r="4.5"/><text class="lbl-soon" x="395.9" y="416.8" text-anchor="end">Puerto Vallarta</text></g>
-        <g class="pin soon"><circle class="dot-soon" cx="401.8" cy="402.8" r="4.5"/><text class="lbl-soon" x="393.8" y="388.8" text-anchor="end">Nuevo Nayarit</text></g>
-        <g class="pin soon"><circle class="dot-soon" cx="458.8" cy="404.4" r="4.5"/><text class="lbl-soon" x="466.8" y="418.4" text-anchor="start">Guadalajara</text></g>
-        <g class="pin soon"><circle class="dot-soon" cx="547.5" cy="244.1" r="4.5"/><text class="lbl-soon" x="547.5" y="230.1" text-anchor="middle">Monterrey</text></g>
-        <g class="pin soon"><circle class="dot-soon" cx="582.0" cy="443.7" r="4.5"/><text class="lbl-soon" x="592.0" y="447.7" text-anchor="start">CDMX</text></g>
-        <g class="pin soon"><circle class="dot-soon" cx="652.1" cy="519.2" r="4.5"/><text class="lbl-soon" x="652.1" y="537.2" text-anchor="middle">Oaxaca</text></g>
-        <g class="pin soon"><circle class="dot-soon" cx="642.2" cy="557.5" r="4.5"/><text class="lbl-soon" x="642.2" y="575.5" text-anchor="middle">Puerto Escondido</text></g>
-        <g class="pin soon"><circle class="dot-soon" cx="860.6" cy="394.6" r="4.5"/><text class="lbl-soon" x="860.6" y="380.6" text-anchor="middle">M&eacute;rida</text></g>
-      </svg>
-      <div class="map-legend">
-        <div class="leg"><span class="leg-dot active"></span> Operating now</div>
-        <div class="leg"><span class="leg-dot soon"></span> Coming soon</div>
-      </div>
+    <p class="swipe-hint">Swipe to explore &rarr;</p>
+    <div class="ex-grid">
+      <a class="ex-tile" href="/fleet"><img loading="lazy" src="/images/luxury-vclass.jpg" alt="Mercedes V-Class leather interior"><span class="ov"></span><span class="ex-t"><span>Sedan to Sprinter</span><h3>The fleet</h3></span></a>
+      <a class="ex-tile" href="/rates"><img loading="lazy" src="/images/arrival-cta.jpg" alt="Travelers arriving at their hotel"><span class="ov"></span><span class="ex-t"><span>Fixed per vehicle</span><h3>Rates</h3></span></a>
+      <a class="ex-tile" href="/private-driver"><img loading="lazy" src="/images/ondemand-experience.jpg" alt="Guests on an on-demand ride"><span class="ov"></span><span class="ex-t"><span>By the hour or day</span><h3>Private driver</h3></span></a>
+      <a class="ex-tile" href="/app"><img loading="lazy" src="/images/chauffeur.jpg" alt="Licensed chauffeur at the wheel"><span class="ov"></span><span class="ex-t"><span>iPhone &amp; Android</span><h3>The app</h3></span></a>
     </div>
   </div>
 </section>
@@ -1120,58 +809,6 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
     <h2 class="serif">Reserve your <em>luxury transfer</em></h2>
     <p>Confirmation in minutes. Book online or through the app.</p>
     <a href="https://book.serendipityexperiencesmx.com/?f=f7lmzlai&amp;language=en" class="btn btn-mint">Book Now</a>
-  </div>
-</section>
-
-<section class="about-faq" id="about">
-  <div class="wrap">
-    <div class="af-grid">
-      <div class="af-about rv">
-        <span class="eyebrow-s">About Ride Luxe Mexico</span>
-        <h2 class="sec-title">Federally licensed, <em>traveler tested</em></h2>
-        <p class="af-lead">
-          Ride Luxe Mexico is a federally licensed luxury private transfer service operating across Cancun, Playa del Carmen, Tulum and Los Cabos. Founded in 2020 and headquartered in Tulum, Quintana Roo, we have transported over 50,000 passengers with a 4.9-star rating on Tripadvisor across 232 reviews. Winner of the Tripadvisor Travelers&rsquo; Choice Award in 2024 and 2025. We hold federal SICT permits, tourist ground transport plates and airport zone licenses, allowing us to meet guests legally inside airport terminals &mdash; a distinction from informal drivers and taxi operators. Our fleet includes the Mercedes V-Class, Chevrolet Suburban, Mercedes Sprinter, Toyota Hiace and private sedans, all chauffeur-driven and passenger-insured.
-        </p>
-        <p class="af-lead-2">
-          Powered by <a href="https://serendipityexperiencesmx.com" class="af-link">Serendipity Travel Experiences</a> &mdash; concierge, tours and bespoke experiences across Mexico.
-        </p>
-      </div>
-
-      <div class="af-faq rv">
-        <span class="eyebrow-s">Frequently asked</span>
-        <h2 class="sec-title">Common <em>questions</em></h2>
-        <div class="af-qs">
-          <details class="af-q">
-            <summary>How much does a private transfer from Cancun airport to Tulum cost?</summary>
-            <p>A one-way private transfer from Cancun International Airport (CUN) to Tulum starts from $125 USD in our Economy tier, per vehicle. Prices vary by vehicle: Standard (Toyota Hiace) from $145 USD, Luxury (Mercedes V-Class or Chevrolet Suburban) from $230 USD, and Premium (Mercedes Sprinter) from $320 USD. All prices are per vehicle, not per person, and include a licensed chauffeur, federal plates and passenger insurance.</p>
-          </details>
-          <details class="af-q">
-            <summary>Do you pick up inside the Cancun airport terminal?</summary>
-            <p>Yes. Ride Luxe Mexico holds federal SICT permits, tourist ground transport plates, and airport zone licenses. This is what allows our chauffeurs to meet guests legally inside the terminal at arrivals &mdash; unlike informal private drivers who are restricted to the parking lot. We monitor your flight in real time and adjust automatically for delays.</p>
-          </details>
-          <details class="af-q">
-            <summary>What happens if my flight is delayed?</summary>
-            <p>Nothing. Your reservation includes real-time flight tracking, so we adjust the pickup time automatically at no extra charge. If your flight is significantly delayed, our team stays in contact through WhatsApp to confirm the new pickup window.</p>
-          </details>
-          <details class="af-q">
-            <summary>Do you accept credit cards? What currencies?</summary>
-            <p>Yes. We accept all major credit cards through secure Stripe payment processing. Prices are displayed in USD for reference. Final invoicing is issued in Mexican Pesos (MXN) at the exchange rate of the day, in compliance with Mexican consumer protection law.</p>
-          </details>
-          <details class="af-q">
-            <summary>Do you provide child seats or booster seats?</summary>
-            <p>Yes, upon request at no additional charge. Please indicate the number and type of child seats you need when booking, or contact us through WhatsApp. Available for infant, toddler and booster.</p>
-          </details>
-          <details class="af-q">
-            <summary>Which routes do you serve?</summary>
-            <p>We operate airport transfers and point-to-point transportation across Cancun (CUN), Playa del Carmen, Tulum (TQO), and Los Cabos (SJD). Popular routes include Cancun airport to Tulum, Cancun airport to Playa del Carmen, and Tulum airport to Tulum hotel zone. Custom routes and multi-day services are available on request.</p>
-          </details>
-          <details class="af-q">
-            <summary>Can I book a chauffeur by the hour or for a full day?</summary>
-            <p>Yes. Our on-demand hourly and full-day chauffeur service lets you keep the same vehicle and driver for as long as you need. Ideal for beach club transfers, restaurant hopping in Tulum, day trips to Cobá or Chichén Itzá, or a private driver during your stay. Book through the Ride Luxe app or request a quote.</p>
-          </details>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1200,6 +837,11 @@ footer .ft-bottom{padding-top:28px;font-size:12px;font-weight:300;color:rgba(255
           <li><a href="/tulum-airport-transfers">Tulum Airport Transfers</a></li>
           <li><a href="/playa-del-carmen-transfers">Playa del Carmen Transfers</a></li>
           <li><a href="/los-cabos-transfers">Los Cabos Transfers</a></li>
+          <li><a href="/fleet">Fleet &amp; vehicles</a></li>
+          <li><a href="/rates">Rates</a></li>
+          <li><a href="/private-driver">Private driver by the hour</a></li>
+          <li><a href="/about">About &amp; FAQ</a></li>
+          <li><a href="/blog">Blog</a></li>
         </ul>
       </div>
       <div>
