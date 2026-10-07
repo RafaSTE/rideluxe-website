@@ -363,6 +363,8 @@ def day_photos():
     save(to_im(grain(day_grade(a, 0.30), 0.012)), 'd11-suv.jpg')
     a = crop_scale('arrival-cta.jpg', (0, 150, 1056, 726), (1056, 576))
     save(to_im(grain(day_grade(a, 0.36), 0.012)), 'd11-van.jpg')
+    a = crop_scale('private-hiace.jpg', (0, 120, 1100, 721), (1056, 577))
+    save(to_im(grain(day_grade(a, 0.30), 0.012)), 'd11-estandar.jpg')
 
 
 # ------------------------------------------------------------------ 16 · bokeh (testimonio)

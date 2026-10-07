@@ -67,7 +67,7 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 | 08 | Segmento 01 | Título y lista a la izquierda, foto a sangre a la derecha | Chofer de Serendipity en la zona de ascenso de CUN, día dorado | Créditos en lista |
 | 09 | Segmento 02 | Mismo layout (contraplano) | Invitada bajando de la V-Class | Créditos en lista |
 | 10 | Mesas VIP | "Mesas VIP:" 120, foto cerrada en Dark Teal, fila de 3 créditos y subtítulo | Trío en V-Class, noche | Destello a través de la cabina |
-| 11 | Flota | Tríptico de fotogramas con nombre 44 y capacidad, subtítulo | Suburban, V-Class y la Sprinter real de noche | Fotogramas |
+| 11 | Flota | Cuatro fotogramas con nombre 44, capacidad y uso, subtítulo: SUV ejecutiva 6, Van de lujo 5, Sprinter 13 a 18, Van estándar 11 (servicios internos) | Suburban, V-Class, la Sprinter real de noche y la van estándar | Fotogramas |
 | 12 | Operación en sitio | Título centrado, núcleo dorado que irradia a 4 columnas 01 a 04 | Sprinter real en un acceso de noche, desenfocada como bokeh, con copas de palma | Destello como centro de operación |
 | 13 | Tecnología | Ruta de rastreo (recorrido sólido, pendiente punteado, punto vivo) y 4 funciones; frase en barra Teal | Gobo en la barra | Destello que avanza, campo Teal |
 | 14 | Seguridad | Título 72 en 3 líneas y 4 créditos 2 x 2; foto a la derecha | Chofer de Serendipity al volante (uniforme con logo), noche | Créditos |
@@ -80,7 +80,7 @@ Alternancia: noche 01 03 05 10 12 14 16 18 · día 02 04 06 08 09 11 13 15 17 ·
 
 ## Lo que necesitamos del cliente
 1. **Logos en vector o PNG transparente (monocromo blanco o arena):** Serendipity (blanco), Zamna (oficial, con autorización de uso en co-branding), Grupo Mandala y el sello Travelers' Choice 2025 (horizontal, a color).
-2. **Capacidades** para los tres `[__]` de la flota: SUV ejecutiva, Van de lujo y Sprinter.
+2. ~~Capacidades de la flota~~ (recibidas: SUV 6, Van de lujo 5, Sprinter 13 a 18, Van estándar 11).
 3. **Validar el billing del lineup** de la 05 con Grupo Mandala: 6 nombres en el primer nivel (72) y 10 en el segundo (44), en el orden del brief. Si no se valida, pasamos todo a un solo nivel.
 4. **Testimonio y referencias** (16): texto del testimonio, nombre, cargo y empresa; dos clientes corporativos u hoteleros (logo o nombre) y una reseña de Tripadvisor.
 5. **Número de WhatsApp** (18).

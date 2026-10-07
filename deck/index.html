@@ -329,13 +329,15 @@ p{text-wrap:pretty}
 /* =========================== 11 · FLOTA =========================== */
 #s11 .sun{position:absolute;inset:0;background:radial-gradient(ellipse 1200px 400px at 960px 0,rgba(201,165,92,.12),transparent 70%)}
 #s11 h2{left:128px;top:216px;width:1664px}
-#s11 .unit{top:344px;width:528px}
-#s11 .unit .shot{position:relative;width:528px;height:288px;overflow:hidden;background:var(--night)}
-#s11 .unit .shot img{width:528px;height:288px;object-fit:cover}
+#s11 .unit{top:344px;width:386px}
+#s11 .unit .shot{position:relative;width:386px;height:216px;overflow:hidden;background:var(--night)}
+#s11 .unit .shot img{width:386px;height:216px;object-fit:cover}
 #s11 .unit .shot::after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 0 1px rgba(0,39,43,.18)}
 #s11 .unit h3{margin-top:24px;font:500 44px/56px var(--serif);color:var(--night)}
 #s11 .unit p{margin-top:4px;color:var(--slate)}
-#s11 .u1{left:128px}#s11 .u2{left:696px}#s11 .u3{left:1264px}
+#s11 .unit .cap{display:block;color:var(--night);font-weight:500}
+#s11 .unit .use{display:block}
+#s11 .u1{left:128px}#s11 .u2{left:554px}#s11 .u3{left:980px}#s11 .u4{left:1406px}
 #s11 .close{left:128px;width:1664px;top:808px;text-align:center;color:var(--night)}
 
 /* =========================== 12 · OPERACIÓN EN SITIO =========================== */
@@ -733,9 +735,10 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
   <div class="foot"><span>Serendipity Travel Experiences x Zamna Tulum 2027</span><span class="n">11</span></div>
   <div class="content">
     <h2 class="t72 rv" style="--i:0">Una unidad para cada <em>tamaño de grupo.</em></h2>
-    <div class="unit u1 rv" style="--i:2"><div class="shot"><img src="assets/d11-suv.webp" alt=""></div><h3>SUV ejecutiva</h3><p class="t24">Hasta [__] pasajeros · artistas y VIP</p></div>
-    <div class="unit u2 rv" style="--i:3"><div class="shot"><img src="assets/d11-van.webp" alt=""></div><h3>Van de lujo</h3><p class="t24">Hasta [__] pasajeros · equipos y mesas VIP</p></div>
-    <div class="unit u3 rv" style="--i:4"><div class="shot"><img src="assets/n11-sprinter-noche.webp" alt=""></div><h3>Sprinter</h3><p class="t24">Hasta [__] pasajeros · grupos grandes</p></div>
+    <div class="unit u1 rv" style="--i:2"><div class="shot"><img src="assets/d11-suv.webp" alt=""></div><h3>SUV ejecutiva</h3><p class="t24"><span class="cap">Hasta 6 pasajeros</span><span class="use">Artistas y VIP</span></p></div>
+    <div class="unit u2 rv" style="--i:3"><div class="shot"><img src="assets/d11-van.webp" alt=""></div><h3>Van de lujo</h3><p class="t24"><span class="cap">Hasta 5 pasajeros</span><span class="use">Equipos y mesas VIP</span></p></div>
+    <div class="unit u3 rv" style="--i:4"><div class="shot"><img src="assets/n11-sprinter-noche.webp" alt=""></div><h3>Sprinter</h3><p class="t24"><span class="cap">De 13 a 18 pasajeros</span><span class="use">Grupos grandes</span></p></div>
+    <div class="unit u4 rv" style="--i:5"><div class="shot"><img src="assets/d11-estandar.webp" alt=""></div><h3>Van estándar</h3><p class="t24"><span class="cap">Hasta 11 pasajeros</span><span class="use">Servicios internos</span></p></div>
     <p class="close sub44 rv" style="--i:6">Unidades limpias, climatizadas y presentadas con estándar premium antes de cada servicio.</p>
   </div>
 </section>
