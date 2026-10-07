@@ -342,12 +342,6 @@ def crop_scale(name, box, size):
 
 
 def day_photos():
-    # 09 · guest stepping out of the V-Class
-    a = crop_scale('hero.jpg', (190, 188, 1322, 1141), (960, 808))
-    o = day_grade(a)
-    h, w = o.shape[:2]
-    o = o * (0.90 + 0.10 * radial(h, w, w * 0.5, h * 0.45, w * 0.9, h * 0.9, 1.0)[..., None])
-    save(to_im(grain(o, 0.012)), 'd09-invitada-dia.jpg')
     # 15 · Suburban cabin, symmetrical, warm
     a = crop_scale('suburban-interior.jpg', (76, 0, 1324, 1050), (960, 808))
     o = tone(a, DAY_STOPS, keep=0.42, sat=0.5, exposure=1.10, gamma=1.0)
@@ -363,8 +357,6 @@ def day_photos():
     save(to_im(grain(day_grade(a, 0.30), 0.012)), 'd11-suv.jpg')
     a = crop_scale('arrival-cta.jpg', (0, 150, 1056, 726), (1056, 576))
     save(to_im(grain(day_grade(a, 0.36), 0.012)), 'd11-van.jpg')
-    a = crop_scale('private-hiace.jpg', (0, 120, 1100, 721), (1056, 577))
-    save(to_im(grain(day_grade(a, 0.30), 0.012)), 'd11-estandar.jpg')
 
 
 # ------------------------------------------------------------------ 16 · bokeh (testimonio)
@@ -436,6 +428,21 @@ def nuevas():
     o = o + (TEAL * 0.30)[None, None, :] * gauss(h, w, 820, 200, 240, 160)[..., None]
     o = o * (0.74 + 0.26 * radial(h, w, w * 0.42, h * 0.40, w * 0.9, h * 0.95, 0.9)[..., None])
     save(to_im(grain(o, 0.014)), 'n14-chofer-noche.jpg')
+
+    # 09 · invitada a bordo de la Suburban, puerta abierta (día dorado)
+    im = Image.open(ORIG / 'suburban-invitada.jpg').convert('RGB')             # 2000 x 1333
+    a = to_f(im.crop((370, 0, 1954, 1333)).resize((960, 808), Image.LANCZOS))
+    a = np.clip(a, 0, 1) ** 0.78                                                # abre el interior antes del grade
+    o = day_grade(a, sky_top=0.30, keep=0.45)
+    h, w = o.shape[:2]
+    o = dodge(o, [(450, 400, 120, 0.30)])                                      # la invitada
+    o = o * (0.90 + 0.10 * radial(h, w, w * 0.45, h * 0.50, w * 0.9, h * 0.9, 1.0)[..., None])
+    save(to_im(grain(o, 0.012)), 'd09-suburban-invitada.jpg')
+
+    # 11 · van estándar con chofer de Serendipity (tarjeta de flota)
+    im = Image.open(ORIG / 'van-estandar-chofer.jpg').convert('RGB')           # 2000 x 1405
+    a = to_f(im.crop((0, 150, 2000, 1241)).resize((1056, 576), Image.LANCZOS))
+    save(to_im(grain(day_grade(a, 0.28), 0.012)), 'd11-estandar.jpg')
 
     # 12 · la Sprinter esperando en el acceso (fondo atmosférico de "Durante el festival, estamos ahí")
     im = Image.open(ORIG / 'sprinter-noche.jpg').convert('RGB')

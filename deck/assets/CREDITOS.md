@@ -9,11 +9,11 @@ con `deck/tools/grade.py` y se guardaron en WebP. Ningún archivo supera 400 KB.
 |---|---|---|
 | n01-suburban-noche.webp | images/tulum-suburban.jpg | 01 |
 | d08-chofer-cun.webp | originales/chofer-aeropuerto-cancun.jpg (foto del cliente) | 08 |
-| d09-invitada-dia.webp | images/hero.jpg | 09 |
+| d09-suburban-invitada.webp | originales/suburban-invitada.jpg (foto del cliente) | 09 |
 | n10-vclass-noche.webp | images/luxury-vclass.jpg | 10 |
 | d11-suv.webp | images/tulum-suburban.jpg | 11 |
 | d11-van.webp | images/arrival-cta.jpg | 11 |
-| d11-estandar.webp | images/private-hiace.jpg | 11 |
+| d11-estandar.webp | originales/van-estandar-chofer.jpg (foto del cliente) | 11 |
 | n11-sprinter-noche.webp | originales/sprinter-noche.jpg (foto del cliente) | 11 |
 | n12-sprinter-acceso.webp | originales/sprinter-noche.jpg (foto del cliente, desenfocada) | 12 |
 | n14-chofer-noche.webp | originales/chofer-serendipity-volante.jpg (foto del cliente) | 14 |

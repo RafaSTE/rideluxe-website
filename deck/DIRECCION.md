@@ -65,9 +65,9 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 | 06 | Cero curva | Campo Teal con título y carta; 4 créditos en lista | Carta de la Riviera Maya, ruta dorada | Campo Teal |
 | 07 | Nuestra propuesta | Letterbox abierto, título 120 centrado y diagrama 1 → 1 → 3 | Oro metálico | El destello entra, núcleo, tres ramas a 72 |
 | 08 | Segmento 01 | Título y lista a la izquierda, foto a sangre a la derecha | Chofer de Serendipity en la zona de ascenso de CUN, día dorado | Créditos en lista |
-| 09 | Segmento 02 | Mismo layout (contraplano) | Invitada bajando de la V-Class | Créditos en lista |
+| 09 | Segmento 02 | Mismo layout (contraplano) | Invitada a bordo de la Suburban, puerta abierta (foto del cliente) | Créditos en lista |
 | 10 | Mesas VIP | "Mesas VIP:" 120, foto cerrada en Dark Teal, fila de 3 créditos y subtítulo | Trío en V-Class, noche | Destello a través de la cabina |
-| 11 | Flota | Cuatro fotogramas con nombre 44, capacidad y uso, subtítulo: SUV ejecutiva 6, Van de lujo 5, Sprinter 13 a 18, Van estándar 11 (servicios internos) | Suburban, V-Class, la Sprinter real de noche y la van estándar | Fotogramas |
+| 11 | Flota | Cuatro fotogramas con nombre 44, capacidad y uso, subtítulo: SUV ejecutiva 6, Van de lujo 5, Sprinter 13 a 18, Van estándar 11 (servicios internos) | Suburban, V-Class, la Sprinter real de noche y la van estándar con chofer de Serendipity | Fotogramas |
 | 12 | Operación en sitio | Título centrado, núcleo dorado que irradia a 4 columnas 01 a 04 | Sprinter real en un acceso de noche, desenfocada como bokeh, con copas de palma | Destello como centro de operación |
 | 13 | Tecnología | Ruta de rastreo (recorrido sólido, pendiente punteado, punto vivo) y 4 funciones; frase en barra Teal | Gobo en la barra | Destello que avanza, campo Teal |
 | 14 | Seguridad | Título 72 en 3 líneas y 4 créditos 2 x 2; foto a la derecha | Chofer de Serendipity al volante (uniforme con logo), noche | Créditos |
