@@ -99,10 +99,12 @@ def desat(a, s):
     return L + (a - L) * s
 
 
-def save(img, name, q=88, max_kb=380):
+def save(img, name, q=82, max_kb=380):
+    # the deck uses WebP: the .jpg names below are kept only as labels
+    name = name.rsplit('.', 1)[0] + '.webp'
     p = OUT / name
     while True:
-        img.save(p, quality=q, optimize=True, progressive=True, subsampling='4:2:0')
+        img.save(p, 'WEBP', quality=q, method=6)
         kb = p.stat().st_size / 1024
         if kb <= max_kb or q <= 60:
             break

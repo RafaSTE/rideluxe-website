@@ -49,7 +49,8 @@ Las derivadas salen de `tools/grade.py` (PIL), nunca se amplían por encima de s
 Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, ramas, línea de tiempo) se dibujan en 0.9 s y el punto de rastreo de la 13 late. Las bandas se cierran en la 01 y se abren en la 18. Se respeta `prefers-reduced-motion`. El visor tiene canvas fijo escalado, flechas, espacio, clic (mitad izquierda retrocede), F para pantalla completa, `#n` en la URL y contador discreto. El modo `?render` muestra el estado final.
 
 ## Co-branding con Zamna
-- **Lockup único**: un solo marco de 818 x 96 con tres celdas, [LOGO SERENDIPITY] | x | [LOGO ZAMNA], con esquinas doradas tipo "frame line". Las dos celdas miden igual (360 x 96, para wordmark horizontal). La **x es la misma Cormorant itálica dorada del título**: hay una sola grafía de co-branding.
+- El logo de Zamna ya está integrado (`assets/logo-zamna.png`, recortado de la imagen que envió el cliente) en la portada, la 15 y el cierre. Falta solo el logo de Serendipity.
+- **Lockup único**: un solo marco de 818 x 96 con tres celdas, [LOGO SERENDIPITY] | x | ZAMNA, con esquinas doradas tipo "frame line". Las dos celdas miden igual (360 x 96, para wordmark horizontal). La **x es la misma Cormorant itálica dorada del título**: hay una sola grafía de co-branding.
 - Aparece en la portada (arriba a la izquierda, en el cuadro) y en el cierre (centrado). Los logos entran en monocromo arena con 24 px de aire. Si el wordmark de Zamna es muy fino, se ajusta el ancho de celda por peso óptico.
 - Zamna también aparece "a bordo" en la 15 (placa sobre la cabina). Mandala va en un marco de 528 x 220 como fuente del haz de la 05. El sello Travelers' Choice va en un marco horizontal de 386 x 208. No se dibuja ni se imita ningún logo.
 
@@ -70,7 +71,7 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 | 12 | Operación en sitio | Título centrado, núcleo dorado que irradia a 4 columnas 01 a 04 | Copas de palma en las esquinas | Destello como centro de operación |
 | 13 | Tecnología | Ruta de rastreo (recorrido sólido, pendiente punteado, punto vivo) y 4 funciones; frase en barra Teal | Gobo en la barra | Destello que avanza, campo Teal |
 | 14 | Seguridad | Título 72 en 3 líneas y 4 créditos 2 x 2; foto a la derecha | Chofer al volante, noche | Créditos |
-| 15 | Experiencia de marca | Foto a la izquierda con placa LOGO ZAMNA; título y 3 créditos | Cabina Suburban, día dorado | Placa de marca a bordo |
+| 15 | Experiencia de marca | Foto a la izquierda con placa del logo de Zamna; título y 3 créditos | Cabina Suburban, día dorado | Placa de marca a bordo |
 | 16 | Referencias | Composición simétrica: testimonio 72 itálica, firma y 3 celdas | Invitados desenfocados (bokeh) | Créditos finales |
 | 17 | Cómo trabajamos | Línea de tiempo a todo el ancho con 5 nodos, pasos y subtítulo | Gobo | Destello como línea de tiempo |
 | 18 | Siguiente paso | Letterbox abierto y composición simétrica: título, contacto como créditos, lockup | Proscenio de palmas generado | Bandas que se abren, horizonte de luz |

@@ -174,6 +174,7 @@ p{text-wrap:pretty}
 .lockup{display:grid;grid-template-columns:360px 96px 360px;height:96px;width:818px}
 .lockup > div{display:flex;align-items:center;justify-content:center}
 .lockup > div + div{border-left:1px solid var(--arena-line)}
+.logo-zamna{height:44px;width:auto}
 .lockup .x{font:italic 500 72px/72px var(--serif);color:var(--gold);transform:translateY(-6px);text-transform:none;letter-spacing:0}
 
 /* botanical silhouettes */
@@ -382,7 +383,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 /* =========================== 15 · EXPERIENCIA DE MARCA =========================== */
 #s15 .plate{position:absolute;left:0;top:0;width:940px;height:808px;object-fit:cover}
 #s15 .sun{position:absolute;inset:0;background:radial-gradient(ellipse 900px 500px at 1500px 0,rgba(201,165,92,.14),transparent 70%)}
-#s15 .badge{left:290px;top:760px;width:360px;height:96px;background-color:rgba(0,39,43,.72);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+#s15 .badge{left:290px;top:760px;width:360px;height:96px;background-color:rgba(0,39,43,.82)}
 #s15 .badge{--c:var(--gold);border-color:var(--arena-line)}
 #s15 .badge span{color:var(--arena)}
 #s15 h2{left:1000px;top:216px;width:792px}
@@ -451,7 +452,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 <section class="slide night" id="s01" data-title="Portada">
   <div class="frame">
     <!-- foto de stock futura: carretera en la selva de noche con faros (mismo grading). Hoy: Suburban real en noche americana, 1:1 sin ampliar -->
-    <img class="plate rv-fade" style="--i:0" src="assets/n01-suburban-noche.jpg" alt="">
+    <img class="plate rv-fade" style="--i:0" src="assets/n01-suburban-noche.webp" alt="">
     <div class="shade"></div>
     <div class="grain"></div>
   </div>
@@ -460,7 +461,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
   <p class="pie rv" style="--i:7">Serendipity Travel Experiences | Tulum, Quintana Roo · Enero 2027</p>
   <div class="content">
     <div class="flare rv-fade" style="--i:5"><i class="ghost2"></i><i class="halo"></i><i class="streak"></i><i class="ghost"></i><i class="core"></i></div>
-    <div class="lockup rv" style="--i:1"><div><span>Logo Serendipity</span></div><div><span class="x" aria-hidden="true">x</span></div><div><span>Logo Zamna</span></div></div>
+    <div class="lockup rv" style="--i:1"><div><span>Logo Serendipity</span></div><div><span class="x" aria-hidden="true">x</span></div><div><img class="logo-zamna" src="assets/logo-zamna.png" alt="Zamna"></div></div>
     <h1 class="t120 rv" style="--i:3">Serendipity <span class="x">x</span> Zamna<br>Tulum 2027</h1>
     <p class="sub t32 rv" style="--i:4">Transportación para Artistas, VIP Guests y Mesas VIP</p>
   </div>
@@ -661,7 +662,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
   <div class="frame">
     <div class="sun"></div>
     <!-- foto de stock futura: recepción en FBO junto a jet privado. Hoy: chofer real abriendo la V-Class, grading día dorado -->
-    <img class="plate rv-fade" style="--i:0" src="assets/d08-chofer-dia.jpg" alt="">
+    <img class="plate rv-fade" style="--i:0" src="assets/d08-chofer-dia.webp" alt="">
     <div class="grain"></div>
   </div>
   <div class="band top"><p class="slate">Segmento 01</p></div>
@@ -683,7 +684,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 <section class="slide day seg" id="s09" data-title="Segmento 02">
   <div class="frame">
     <div class="sun"></div>
-    <img class="plate rv-fade" style="--i:0" src="assets/d09-invitada-dia.jpg" alt="">
+    <img class="plate rv-fade" style="--i:0" src="assets/d09-invitada-dia.webp" alt="">
     <div class="grain"></div>
   </div>
   <div class="band top"><p class="slate">Segmento 02</p></div>
@@ -703,7 +704,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 <!-- ======================= 10 SEGMENTO 03 · MESAS VIP ======================= -->
 <section class="slide night" id="s10" data-title="Segmento 03">
   <div class="frame">
-    <img class="plate rv-fade" style="--i:0" src="assets/n10-vclass-noche.jpg" alt="">
+    <img class="plate rv-fade" style="--i:0" src="assets/n10-vclass-noche.webp" alt="">
     <div class="grain"></div>
   </div>
   <div class="band top"><p class="slate">Segmento 03</p></div>
@@ -730,9 +731,9 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
   <div class="foot"><span>Serendipity Travel Experiences x Zamna Tulum 2027</span><span class="n">11</span></div>
   <div class="content">
     <h2 class="t72 rv" style="--i:0">Una unidad para cada <em>tamaño de grupo.</em></h2>
-    <div class="unit u1 rv" style="--i:2"><div class="shot"><img src="assets/d11-suv.jpg" alt=""></div><h3>SUV ejecutiva</h3><p class="t24">Hasta [__] pasajeros · artistas y VIP</p></div>
-    <div class="unit u2 rv" style="--i:3"><div class="shot"><img src="assets/d11-van.jpg" alt=""></div><h3>Van de lujo</h3><p class="t24">Hasta [__] pasajeros · equipos y mesas VIP</p></div>
-    <div class="unit u3 rv" style="--i:4"><div class="shot"><img src="assets/n11-sprinter.jpg" alt=""></div><h3>Sprinter</h3><p class="t24">Hasta [__] pasajeros · grupos grandes</p></div>
+    <div class="unit u1 rv" style="--i:2"><div class="shot"><img src="assets/d11-suv.webp" alt=""></div><h3>SUV ejecutiva</h3><p class="t24">Hasta [__] pasajeros · artistas y VIP</p></div>
+    <div class="unit u2 rv" style="--i:3"><div class="shot"><img src="assets/d11-van.webp" alt=""></div><h3>Van de lujo</h3><p class="t24">Hasta [__] pasajeros · equipos y mesas VIP</p></div>
+    <div class="unit u3 rv" style="--i:4"><div class="shot"><img src="assets/n11-sprinter.webp" alt=""></div><h3>Sprinter</h3><p class="t24">Hasta [__] pasajeros · grupos grandes</p></div>
     <p class="close sub44 rv" style="--i:6">Unidades limpias, climatizadas y presentadas con estándar premium antes de cada servicio.</p>
   </div>
 </section>
@@ -815,7 +816,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 <!-- ======================= 14 SEGURIDAD Y PROTOCOLOS ======================= -->
 <section class="slide night" id="s14" data-title="Seguridad y protocolos">
   <div class="frame">
-    <img class="plate rv-fade" style="--i:0" src="assets/n14-volante-noche.jpg" alt="">
+    <img class="plate rv-fade" style="--i:0" src="assets/n14-volante-noche.webp" alt="">
     <div class="grain"></div>
   </div>
   <div class="band top"><p class="slate">Seguridad y protocolos</p></div>
@@ -835,14 +836,14 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
   <div class="frame">
     <div class="sun"></div>
     <!-- foto de stock futura: detalle de interior con luz cálida y amenidades -->
-    <img class="plate rv-fade" style="--i:0" src="assets/d15-cabina-dia.jpg" alt="">
+    <img class="plate rv-fade" style="--i:0" src="assets/d15-cabina-dia.webp" alt="">
     <div class="grain"></div>
   </div>
   <div class="band top"><p class="slate">Experiencia de marca</p></div>
   <div class="band bot"></div>
   <div class="foot"><span>Serendipity Travel Experiences x Zamna Tulum 2027</span><span class="n">15</span></div>
   <div class="content">
-    <div class="badge ph night-ph rv" style="--i:5"><span>Logo Zamna</span></div>
+    <div class="badge ph night-ph rv" style="--i:5"><img class="logo-zamna" src="assets/logo-zamna.png" alt="Zamna"></div>
     <h2 class="t72 rv" style="--i:1">La experiencia Zamna<br>empieza <em>al subir<br>a la camioneta.</em></h2>
     <div class="list">
       <div class="item rv" style="--i:2"><span class="role">Branding Zamna</span><p class="t24">Unidades con detalles de marca del festival, de forma opcional.</p></div>
@@ -856,7 +857,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 <section class="slide night" id="s16" data-title="Referencias">
   <div class="frame">
     <!-- foto de stock futura: cenote o playa de Tulum a la hora azul. Hoy: invitados reales de noche, desenfocados -->
-    <img class="bokeh rv-fade" style="--i:0" src="assets/n16-bokeh.jpg" alt="">
+    <img class="bokeh rv-fade" style="--i:0" src="assets/n16-bokeh.webp" alt="">
     <div class="veil"></div>
     <div class="grain"></div>
   </div>
@@ -938,7 +939,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
       <p class="t32">rafael@serendipitytravelexperiences.com · [WhatsApp]</p>
       <p class="t32">serendipityexperiencesmx.com</p>
     </div>
-    <div class="lockup rv" style="--i:6"><div><span>Logo Serendipity</span></div><div><span class="x" aria-hidden="true">x</span></div><div><span>Logo Zamna</span></div></div>
+    <div class="lockup rv" style="--i:6"><div><span>Logo Serendipity</span></div><div><span class="x" aria-hidden="true">x</span></div><div><img class="logo-zamna" src="assets/logo-zamna.png" alt="Zamna"></div></div>
   </div>
 </section>
 
