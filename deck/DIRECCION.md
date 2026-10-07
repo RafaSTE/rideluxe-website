@@ -49,8 +49,8 @@ Las derivadas salen de `tools/grade.py` (PIL), nunca se amplían por encima de s
 Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, ramas, línea de tiempo) se dibujan en 0.9 s y el punto de rastreo de la 13 late. Las bandas se cierran en la 01 y se abren en la 18. Se respeta `prefers-reduced-motion`. El visor tiene canvas fijo escalado, flechas, espacio, clic (mitad izquierda retrocede), F para pantalla completa, `#n` en la URL y contador discreto. El modo `?render` muestra el estado final.
 
 ## Co-branding con Zamna
-- El logo de Zamna ya está integrado (`assets/logo-zamna.png`, recortado de la imagen que envió el cliente) en la portada, la 15 y el cierre. Falta solo el logo de Serendipity.
-- **Lockup único**: un solo marco de 818 x 96 con tres celdas, [LOGO SERENDIPITY] | x | ZAMNA, con esquinas doradas tipo "frame line". Las dos celdas miden igual (360 x 96, para wordmark horizontal). La **x es la misma Cormorant itálica dorada del título**: hay una sola grafía de co-branding.
+- Los logos de Serendipity y Zamna ya están integrados en la portada, la 15 (Zamna) y el cierre. El sello Travelers' Choice 2025 está en la 04. Falta solo el logo de Grupo Mandala (05).
+- **Lockup único**: un solo marco de 818 x 96 con tres celdas, Serendipity | x | ZAMNA, con esquinas doradas tipo "frame line". Las dos celdas miden igual (360 x 96, para wordmark horizontal). La **x es la misma Cormorant itálica dorada del título**: hay una sola grafía de co-branding.
 - Aparece en la portada (arriba a la izquierda, en el cuadro) y en el cierre (centrado). Los logos entran en monocromo arena con 24 px de aire. Si el wordmark de Zamna es muy fino, se ajusta el ancho de celda por peso óptico.
 - Zamna también aparece "a bordo" en la 15 (placa sobre la cabina). Mandala va en un marco de 528 x 220 como fuente del haz de la 05. El sello Travelers' Choice va en un marco horizontal de 386 x 208. No se dibuja ni se imita ningún logo.
 

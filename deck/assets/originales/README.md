@@ -1,9 +1,9 @@
-# Archivos originales pendientes
+# Archivos originales
 
-Sube aquí (PNG transparente o SVG):
-- LOGO-SERENDIPITY-White.png (logo blanco de Serendipity: portada y cierre)
+Pendiente (PNG transparente o SVG):
 - Logo de Grupo Mandala (lámina 05)
-- LOGO-SERENDIPITY-TRAVELERS-CHOICE-2025-HORIZONTAL.png (sello Tripadvisor: lámina 04)
 
 Recibido:
-- zamna-tulum-original.jpg (imagen de Zamna enviada por el cliente; de aquí se recortó assets/logo-zamna.png)
+- zamna-tulum-original.jpg: imagen de Zamna enviada por el cliente; de aquí se recortó assets/logo-zamna.png
+- LOGO_SERENDIPITY.eps (7.4 MB, no se sube al repo por peso): de aquí salen assets/logo-serendipity.png,
+  assets/logo-serendipity-completo.png y assets/sello-travelers-choice-2025.png
