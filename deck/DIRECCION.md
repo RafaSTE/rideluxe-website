@@ -40,7 +40,7 @@ Linter con píxeles reales: **0 errores, 0 avisos**. El contraste mínimo por l�
 
 ## Tratamiento de imagen
 Las derivadas salen de `tools/grade.py` (PIL), nunca se amplían por encima de su tamaño nativo y pesan de 61 a 221 KB:
-- **Noche** (01, 10, 11 Sprinter, 12, 14): sombras Dark Teal, luz Teal, prácticas en oro y arena. En la 01 la carrocería es negro laca con filo dorado, la placa está neutralizada, el faro encendido y la foto va a 1:1. En la 10 las ventanas pasan a noche con máscara suave, hay bokeh desenfocado, luz clave en cada rostro, retoque local en la piel de la invitada de la derecha y la foto se cierra en Dark Teal sólido antes de los créditos.
+- **Noche** (01, 10, 11 Sprinter, 12, 14): sombras Dark Teal, luz Teal, prácticas en oro y arena. En la 01 (Suburban High Country del cliente) la carrocería es negro laca con filo dorado, la placa está neutralizada y el faro encendido alinea el destello. En la 10 las ventanas pasan a noche con máscara suave, hay bokeh desenfocado, luz clave en cada rostro, retoque local en la piel de la invitada de la derecha y la foto se cierra en Dark Teal sólido antes de los créditos.
 - **Día dorado** (08, 09, 11, 15): sombras Dark Teal, medios cálidos, altas luces arena. El cielo azul se vuelve bruma arena.
 - La 16 usa a los invitados reales de noche totalmente desenfocados como fondo del testimonio. Los placeholders de la 03, 06, 12 y 18 son atmósfera generada (arboleda, carta, copas, proscenio de palmas). Cada lámina tiene un comentario HTML donde iría la foto de stock.
 - No usamos `economy-avanza.jpg` ni `logo.png` (Ride Luxe).
@@ -57,7 +57,7 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 ## Las 18 láminas
 | # | Lámina | Layout | Imagen | Recurso |
 |---|---|---|---|---|
-| 01 | Portada | Lockup, título 120 y subtítulo a la izquierda; la camioneta a la derecha | Suburban noche, 1:1 | Bandas que cierran, destello desde el faro |
+| 01 | Portada | Lockup, título 120 y subtítulo a la izquierda; la camioneta a la derecha | Suburban High Country del cliente en noche americana | Bandas que cierran, destello desde el faro |
 | 02 | La oportunidad | Título 72 en 3 líneas, tabla de créditos sobre eje y campo Teal a la derecha con el cierre | Gobo de palma en el campo | Destello claro, campo Teal |
 | 03 | Quiénes somos | Título 120, párrafo y fila de 3 cifras a 120 | Arboleda nocturna generada | Créditos (cifras) |
 | 04 | Credenciales | Tabla de 4 créditos sobre eje y marco del sello | Gobo de palma | Destello claro |

@@ -9,3 +9,4 @@ Recibido:
   assets/logo-serendipity-completo.png y assets/sello-travelers-choice-2025.png
 - chofer-aeropuerto-cancun.jpg, chofer-serendipity-volante.jpg y sprinter-noche.jpg: fotos reales enviadas por el cliente
 - suburban-invitada.jpg y van-estandar-chofer.jpg: fotos reales enviadas por el cliente
+- suburban-high-country.jpg: Suburban High Country del cliente, usada en la portada
