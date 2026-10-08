@@ -163,90 +163,79 @@ def dodge(a, spots):
 
 
 # ------------------------------------------------------------------ 01 portada (Suburban High Country del cliente)
+def smooth(x, lo, hi):
+    x = np.clip((x - lo) / (hi - lo), 0, 1)
+    return x * x * (3 - 2 * x)
+
+
 def cover_hc():
-    """Client's 2576 px Suburban High Country, 3/4 front, daylight -> noche americana.
-    Car lower right on the 1920x808 plate; prints the DRL position for the CSS flare."""
+    """Client's 2576 px Suburban High Country, daylight -> real day-for-night.
+    One global grade over the whole photo (no cut-out): the car keeps its own reflections,
+    its shadow on the pavers and the trees behind it. Only soft gradients, no hard masks."""
     src = Image.open(ORIG / 'suburban-high-country.jpg').convert('RGB')      # 2576 x 1448
     a = to_f(src)
     h, w = a.shape[:2]
-    K = w / 2000.0                                                           # polygon drawn on a 2000 px preview
-    P = lambda pts: [(x * K, y * K) for x, y in pts]
+    K = w / 2000.0                                                           # coords measured on a 2000 px preview
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    yn, xn = yy / h, xx / w
     r, g, b = a[..., 0], a[..., 1], a[..., 2]
     L = lum(a)
-    yy = np.mgrid[0:h, 0:w][0] / h
-    truck = poly_mask(w, h, P([(395, 318), (430, 298), (600, 276), (770, 262), (900, 268), (1110, 272), (1200, 330),
-                               (1330, 402), (1480, 425), (1600, 450), (1660, 478), (1690, 525), (1692, 700), (1680, 790),
-                               (1640, 840), (1560, 860), (1490, 880), (1180, 890), (1125, 972), (980, 982), (905, 945),
-                               (880, 832), (560, 776), (522, 780), (502, 842), (430, 848), (392, 800), (346, 700),
-                               (326, 600), (322, 500), (338, 430)]), 2.0)
-    treeish = ((g > r * 1.10) & (g > b * 1.05) & (L > 0.18)).astype(np.float32)
-    paver = ((L > 0.50) & ((a.max(-1) - a.min(-1)) < 0.16) & (r > b + 0.03) & (yy > 0.50)).astype(np.float32)  # sunlit pavers
-    glass = np.maximum(poly_mask(w, h, P([(352, 440), (372, 345), (470, 318), (700, 290), (860, 282), (868, 330),
-                                          (842, 380), (720, 382), (700, 450), (480, 455)]), 3),
-                       poly_mask(w, h, P([(872, 282), (1110, 276), (1330, 405), (1150, 420), (905, 420)]), 3))
-    truck = blur(np.clip(truck - blur(treeish, 1.0) * 1.2 * (1 - glass) - blur(paver, 1.5) * 1.3, 0, 1), 1.2)
-    truck = np.maximum(truck, glass * blur(poly_mask(w, h, P([(352, 300), (1330, 300), (1330, 460), (352, 460)]), 1), 1))
+    chroma = a.max(-1) - a.min(-1)
 
-    # 1 · body: black lacquer, speculars to sand/gold
-    sharp = unsharp(a, 1.6, 70, 2)
-    body = tone(sharp, LACQUER_STOPS, keep=0.10, sat=0.25, exposure=0.96, gamma=1.55)
-    body = body * (1 - glass[..., None]) + (blur_rgb(body, 3) * 0.30) * glass[..., None]
-    # 2 · jungle and pavers: soft night mass
-    env = tone(a, NIGHT_STOPS, keep=0.05, sat=0.2, exposure=0.70, gamma=1.5)
-    env = blur_rgb(env, 14) * 0.74
-    gnd = np.clip((yy - 0.52) / 0.10, 0, 1)
-    env = env * (1 - 0.72 * gnd[..., None])
-    env *= (1 - 0.45 * np.clip(1 - yy / 0.45, 0, 1))[..., None]
-    # 3 · teal backlight haze behind the roof line
-    env = env + (TEAL * 0.60)[None, None, :] * gauss(h, w, 1060 * K, 300 * K, 760 * K, 150 * K)[..., None]
-    out = env * (1 - truck[..., None]) + body * truck[..., None]
-    rim = gauss(h, w, 760 * K, 268 * K, 420 * K, 9 * K) * truck
-    out = out + (TEAL * 0.45)[None, None, :] * rim[..., None]
+    # 1 · day-for-night: about two stops under, cool (teal) balance, greens pulled down
+    o = desat(a, 0.50)
+    green = smooth(g - np.maximum(r, b), 0.02, 0.12)[..., None]
+    o = o * (1 - 0.35 * green)                                               # foliage reads dark, not lush
+    o = o * np.array([0.78, 0.96, 1.00], np.float32)                         # moonlight balance
+    o = np.clip(o * 0.62, 0, 1) ** 1.22
+    o = o * 0.62 + tone(a, NIGHT_STOPS, keep=0.0, sat=0.0, exposure=0.66, gamma=1.25) * 0.38
 
-    # 4 · plate neutralised
-    plate = poly_mask(w, h, P([(1514, 686), (1608, 686), (1608, 768), (1514, 768)]), 3)
-    pl = blur_rgb(out, 8) * 0.25 + DEEP * 0.4
-    out = out * (1 - plate[..., None]) + pl * plate[..., None]
-    # 5 · practicals: DRL strip, lamp glow, bloom, light pool, chrome spill
-    dx, dy = 1215 * K, 525 * K
-    drl = gauss(h, w, dx, dy, 95 * K, 4 * K)
-    lamp = gauss(h, w, dx, dy, 90 * K, 22 * K)
-    bloom = gauss(h, w, dx + 20 * K, dy, 240 * K, 60 * K)
-    out = out + ARENA[None, None, :] * np.clip(drl, 0, 1)[..., None] * 0.95 \
-        + (GOLD * 0.9)[None, None, :] * lamp[..., None] * 0.55 \
-        + (GOLD * 0.8)[None, None, :] * bloom[..., None] * 0.22
-    pool = gauss(h, w, 1780 * K, 930 * K, 420 * K, 70 * K) * (1 - blur(truck, 12) * 0.9)
-    out = out + (GOLD * 0.55)[None, None, :] * pool[..., None] * 0.50
-    spill = gauss(h, w, 1450 * K, 600 * K, 260 * K, 110 * K) * truck
-    out = out * (1 + 0.28 * spill[..., None])
+    # 2 · the sunlit pavers are the giveaway: compress them (soft mask, warm + bright + low chroma, lower half)
+    pav = smooth(L, 0.42, 0.78) * smooth(yn, 0.50, 0.60) * smooth(r - b, 0.0, 0.06) * (1 - smooth(chroma, 0.18, 0.30))
+    o = o * (1 - 0.55 * pav[..., None])
+    # 3 · graduated darkening: tree canopy at the top, ground at the bottom, vignette around the car
+    o = o * (1 - 0.55 * smooth(1 - yn, 0.55, 1.0))[..., None]
+    o = o * (1 - 0.35 * smooth(yn, 0.80, 1.0))[..., None]
+    v = radial(h, w, 1080 * K, 640 * K, 1150 * K, 700 * K, 0.8)
+    o = o * (0.55 + 0.45 * v[..., None])
 
-    # 6 · composite on the 2.39 plate, car lower right
+    # 4 · plate neutralised (no characters)
+    plate = poly_mask(w, h, [(x * K, y * K) for x, y in [(1514, 686), (1608, 686), (1608, 768), (1514, 768)]], 3)
+    o = o * (1 - plate[..., None]) + (blur_rgb(o, 8) * 0.55) * plate[..., None]
+    # 5 · practicals, kept small: the LED strip lit, a faint glow, a faint warm pool ahead of the bumper
+    hx, hy = 1215 * K, 525 * K
+    zone = gauss(h, w, hx, hy, 110 * K, 22 * K)
+    led = smooth(L, 0.55, 0.85) * zone
+    o = o + ARENA[None, None, :] * led[..., None] * 0.55
+    o = o + (GOLD * 0.85)[None, None, :] * gauss(h, w, hx, hy, 70 * K, 16 * K)[..., None] * 0.30
+    o = o + (GOLD * 0.6)[None, None, :] * gauss(h, w, 1820 * K, 940 * K, 380 * K, 60 * K)[..., None] * 0.10
+    o = unsharp(np.clip(o, 0, 1), 1.2, 40, 2)
+
+    # 6 · composite: car lower right; the scenery falls off into darkness like light does at night
     s = 0.508
-    im = to_im(out).resize((round(w * s), round(h * s)), Image.LANCZOS)
-    o = to_f(im)
-    oh, ow = o.shape[:2]
+    p = to_f(to_im(o).resize((round(w * s), round(h * s)), Image.LANCZOS))
+    ph, pw = p.shape[:2]
     FW, FH = 1920, 808
-    frame = np.zeros((FH, FW, 3), np.float32)
+    ox, oy = round(1866 - 1690 * K * s), round(798 - 975 * K * s)
     fy = np.linspace(0, 1, FH)[:, None, None]
-    fx = np.linspace(0, 1, FW)[None, :, None]
-    frame[:] = DEEP * (1 - fy) * 0.9 + NIGHT * fy * 0.95
-    frame = frame * (0.92 + 0.08 * fx)
-    car_r, car_b = 1690 * K * s, 975 * K * s
-    ox, oy = round(1866 - car_r), round(798 - car_b)
-    x0, y0 = max(ox, 0), max(oy, 0)
-    x1, y1 = min(ox + ow, FW), min(oy + oh, FH)
-    crop = o[y0 - oy:y1 - oy, x0 - ox:x1 - ox]
+    frame = np.zeros((FH, FW, 3), np.float32)
+    frame[:] = DEEP * (0.45 + 0.20 * fy)                                     # deep shadow, a touch lighter low
+    x0, x1 = max(ox, 0), min(ox + pw, FW)
+    y0, y1 = max(oy, 0), min(oy + ph, FH)
+    crop = p[y0 - oy:y1 - oy, x0 - ox:x1 - ox]
     ch, cw = crop.shape[:2]
-    ramp = np.clip(np.arange(cw) / 420, 0, 1) ** 1.6
-    top = np.clip(np.arange(ch) / 120, 0, 1) ** 1.2
-    alpha = (ramp[None, :] * top[:, None])[..., None]
-    frame[y0:y1, x0:x1] = crop * alpha + frame[y0:y1, x0:x1] * (1 - alpha)
-    v = radial(FH, FW, FW * 0.72, FH * 0.62, FW * 0.75, FH * 1.0, 0.9)
-    frame = frame * (0.70 + 0.30 * v[..., None])
-    frame = grain(frame, 0.016)
-    fdx, fdy = ox + dx * s, oy + dy * s
-    print(f'cover_hc: DRL at frame ({fdx:.0f}, {fdy:.0f}) -> slide y {136 + fdy:.0f}, --p {100 * fdx / FW:.2f}%')
+    car_l = 315 * K * s                                                      # the car starts here inside the photo
+    fl = smooth(np.arange(cw, dtype=np.float32), 0, car_l + 14)[None, :]
+    ft = smooth(np.arange(ch, dtype=np.float32), 0, 150)[:, None]
+    al = (fl * ft)[..., None]
+    frame[y0:y1, x0:x1] = crop * al + frame[y0:y1, x0:x1] * (1 - al)
+    fv = radial(FH, FW, FW * 0.72, FH * 0.60, FW * 0.80, FH * 1.05, 0.8)
+    frame = frame * (0.72 + 0.28 * fv[..., None])
+    frame = grain(frame, 0.014)
+    fdx, fdy = ox + hx * s, oy + hy * s
+    print(f'cover_hc: headlamp at frame ({fdx:.0f}, {fdy:.0f}) -> slide y {136 + fdy:.0f}, --p {100 * fdx / FW:.2f}%')
     save(to_im(frame), 'n01-suburban-hc.jpg', q=88)
+
 
 # ------------------------------------------------------------------ 10 mesas vip
 def mesas():
