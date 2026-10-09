@@ -72,20 +72,26 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 | 13 | Tecnología | Ruta de rastreo (recorrido sólido, pendiente punteado, punto vivo) y 4 funciones; frase en barra Teal | Gobo en la barra | Destello que avanza, campo Teal |
 | 14 | Seguridad | Título 72 en 3 líneas y 4 créditos 2 x 2; foto a la derecha | Chofer de Serendipity al volante (uniforme con logo), noche | Créditos |
 | 15 | Experiencia de marca | Foto a la izquierda con placa del logo de Zamna; título y 3 créditos | Cabina Suburban, día dorado | Placa de marca a bordo |
-| 16 | Referencias | Composición simétrica: testimonio 72 itálica, firma y 3 celdas | Invitados desenfocados (bokeh) | Créditos finales |
+| 16 | Referencias | Composición simétrica: testimonio de Grupo Mandala en 72 itálica, firma, dos clientes y la reseña de Maceo P en Tripadvisor | Invitados desenfocados (bokeh) | Créditos finales |
 | 17 | Cómo trabajamos | Línea de tiempo a todo el ancho con 5 nodos, pasos y subtítulo | Gobo | Destello como línea de tiempo |
 | 18 | Siguiente paso | Letterbox abierto y composición simétrica: título, contacto como créditos, lockup | Proscenio de palmas generado | Bandas que se abren, horizonte de luz |
 
 Alternancia: noche 01 03 05 10 12 14 16 18 · día 02 04 06 08 09 11 13 15 17 · oro 07.
 
 ## Lo que necesitamos del cliente
-1. **Logos en vector o PNG transparente (monocromo blanco o arena):** Serendipity (blanco), Zamna (oficial, con autorización de uso en co-branding), Grupo Mandala y el sello Travelers' Choice 2025 (horizontal, a color).
+1. **Logos:** ~~Serendipity, Zamna y sello Travelers' Choice 2025~~ (recibidos). Falta el logo de Grupo Mandala (05).
 2. ~~Capacidades de la flota~~ (recibidas: SUV 6, Van de lujo 5, Sprinter 13 a 18, Van estándar 11).
 3. **Validar el billing del lineup** de la 05 con Grupo Mandala: 6 nombres en el primer nivel (72) y 10 en el segundo (44), en el orden del brief. Si no se valida, pasamos todo a un solo nivel.
-4. **Testimonio y referencias** (16): texto del testimonio, nombre, cargo y empresa; dos clientes corporativos u hoteleros (logo o nombre) y una reseña de Tripadvisor.
+4. **Testimonio y referencias** (16): el texto de Grupo Mandala ya está (confirmar que Grupo Mandala aprueba la redacción) y faltan nombre y cargo de quien firma; la reseña de Tripadvisor es la de Maceo P (enero 2026); faltan los dos clientes corporativos u hoteleros.
 5. **Número de WhatsApp** (18).
 6. **Fotos de stock** (si se habilitan Unsplash o Pexels): carretera en la selva de noche con faros (01 y 18), vista aérea de la selva de Tulum (03), escenario entre árboles sin artistas reconocibles (05), jet privado en FBO (06 y 08), zona de ascenso de un venue de noche (12), cenote o playa a la hora azul (16). Todas pasarán por el mismo grading. Idealmente también una toma nocturna real de la Suburban.
 7. Opcional: una captura real de la app Ride Luxe con rastreo en vivo para la 13.
 
 ## Notas técnicas
 `index.html` es la única fuente editable: no hay build, las rutas SVG van en línea y las imágenes son relativas a `assets/`. La exportación de prueba a PDF con Playwright salió de 13.8 MB en 18 páginas y el grano, los degradados y el haz coinciden con la pantalla (el grano es PNG con alfa, sin blend mode). Las imágenes se regeneran con `python3 tools/grade.py`.
+
+## Cambios de contenido pedidos por el cliente
+- 06: camionetas en disposición de 12 y 24 horas (antes 18).
+- 09: servicio por hora solo para afters (sin cenas ni beach clubs).
+- 11: capacidades reales y Van estándar para servicios internos.
+- 12 y 17: sin coordinador en el venue; en su lugar, equipo de operaciones en turno.

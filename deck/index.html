@@ -403,12 +403,16 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 /* =========================== 16 · REFERENCIAS =========================== */
 #s16 .bokeh{position:absolute;left:0;top:0;width:1920px;height:808px}
 #s16 .veil{position:absolute;inset:0;background:radial-gradient(ellipse 1100px 520px at 960px 360px,rgba(0,32,36,.82),rgba(0,32,36,.55) 70%,rgba(0,32,36,.35))}
-#s16 .quote{left:320px;top:280px;width:1280px;text-align:center;font:italic 500 72px/80px var(--serif);color:var(--arena);text-wrap:balance}
-#s16 .sig{left:128px;width:1664px;top:464px;text-align:center;text-transform:none;letter-spacing:.06em;font-weight:500}
-#s16 .rule{left:932px;top:560px;width:56px;height:1px;background:var(--gold)}
-#s16 .also{left:128px;width:1664px;top:624px;text-align:center;color:var(--mist)}
-#s16 .cells{left:128px;top:696px;width:1664px;display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-#s16 .cells .ph{height:112px;background-color:rgba(0,32,36,.55)}
+#s16 .quote{left:200px;top:200px;width:1520px;text-align:center;font:italic 500 72px/80px var(--serif);color:var(--arena);text-wrap:balance}
+#s16 .sig{left:128px;width:1664px;top:552px;text-align:center;text-transform:none;letter-spacing:.06em;font-weight:500}
+#s16 .rule{left:932px;top:608px;width:56px;height:1px;background:var(--gold)}
+#s16 .also{left:128px;width:1664px;top:632px;text-align:center;color:var(--mist)}
+#s16 .cells{left:128px;top:688px;width:1664px;display:grid;grid-template-columns:1fr 1fr 2fr;gap:40px}
+#s16 .cells .ph{height:168px;background-color:rgba(0,32,36,.55);padding:0 24px}
+#s16 .review{flex-direction:column;padding:0 40px}
+#s16 .review .rq{font:italic 500 32px/40px var(--serif);color:var(--arena);text-wrap:balance}
+#s16 .review .ra{margin-top:12px;font:400 24px/32px var(--sans);color:var(--mist)}
+#s16 .cells .review .dots{color:var(--gold);letter-spacing:.12em;margin-right:14px}
 #s16 .cells .ph span{text-transform:none;letter-spacing:.02em;font-weight:400;color:var(--arena)}
 
 /* =========================== 17 · CÓMO TRABAJAMOS =========================== */
@@ -779,7 +783,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
     <h2 class="t72 rv" style="--i:0">Durante el festival, <em>estamos ahí.</em></h2>
     <div class="flare rv-fade" style="--i:2"><i class="ghost2"></i><i class="halo"></i><i class="streak"></i><i class="ghost"></i><i class="core"></i></div>
     <div class="step p1 rv" style="--i:4"><b>01</b><span class="role">Despacho dedicado 24/7</span><p class="t24 mist">Un centro de operación exclusivo durante todas las fechas.</p></div>
-    <div class="step p2 rv" style="--i:5"><b>02</b><span class="role">Coordinador en el venue</span><p class="t24 mist">Con radio y línea directa con producción de Zamna.</p></div>
+    <div class="step p2 rv" style="--i:5"><b>02</b><span class="role">Equipo de operaciones en turno</span><p class="t24 mist">Con radio y línea directa con producción de Zamna.</p></div>
     <div class="step p3 rv" style="--i:6"><b>03</b><span class="role">Zona de ascenso y descenso</span><p class="t24 mist">Un punto designado para que los accesos fluyan sin caos.</p></div>
     <div class="step p4 rv" style="--i:7"><b>04</b><span class="role">Rastreo en tiempo real</span><p class="t24 mist">Ubicación de cada unidad y tiempos de llegada al momento.</p></div>
   </div>
@@ -874,14 +878,14 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
   <div class="band bot"></div>
   <div class="foot"><span>Serendipity Travel Experiences x Zamna Tulum 2027</span><span class="n">16</span></div>
   <div class="content">
-    <p class="quote rv" style="--i:1">“[Testimonio de Grupo Mandala o Lost Nights, dos líneas]”</p>
-    <p class="sig role rv" style="--i:2">[Nombre], [Cargo], [Empresa]</p>
+    <p class="quote rv" style="--i:1">“Hemos trabajado por varios años con Serendipity y siempre su profesionalismo y disponibilidad nos ayudaron en toda la logística para mover al talento que viene a nuestro destino.”</p>
+    <p class="sig role rv" style="--i:2">[Nombre], [Cargo], Grupo Mandala</p>
     <div class="rule rv-fade" style="--i:3"></div>
     <p class="also role rv" style="--i:4">También confían en nosotros</p>
     <div class="cells">
       <div class="ph rv" style="--i:5"><span>[Cliente corporativo u hotelero 1]</span></div>
       <div class="ph rv" style="--i:6"><span>[Cliente corporativo u hotelero 2]</span></div>
-      <div class="ph rv" style="--i:7"><span>[Reseña destacada de Tripadvisor]</span></div>
+      <div class="ph review rv" style="--i:7"><p class="rq">“Cesar nos dio muy buen servicio, rápido y atento…<br>No hay mucho más que decir: es el mejor servicio posible.”</p><p class="ra"><span class="dots" aria-hidden="true">●●●●●</span>Maceo P · Reseña en Tripadvisor · Enero 2026</p></div>
     </div>
   </div>
 </section>
@@ -913,7 +917,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
     <div class="st s1 rv" style="--i:4"><b>01</b><span class="role">Firma</span><p class="t24">Definimos alcance, fechas y volumen de servicios.</p></div>
     <div class="st s2 rv" style="--i:5"><b>02</b><span class="role">Riders y listas</span><p class="t24">Recibimos riders, vuelos, rooming y listas de mesas VIP.</p></div>
     <div class="st s3 rv" style="--i:6"><b>03</b><span class="role">Ensayo de rutas</span><p class="t24">Validamos tiempos reales entre aeropuertos, hoteles y venue.</p></div>
-    <div class="st s4 rv" style="--i:7"><b>04</b><span class="role">Operación</span><p class="t24">Despacho, coordinador y host en sitio durante el festival.</p></div>
+    <div class="st s4 rv" style="--i:7"><b>04</b><span class="role">Operación</span><p class="t24">Despacho, equipo de operaciones en turno y host en sitio durante el festival.</p></div>
     <div class="st s5 rv" style="--i:8"><b>05</b><span class="role">Reporte final</span><p class="t24">Cierre con el detalle de todos los servicios realizados.</p></div>
     <p class="close sub44 rv" style="--i:9">Un contacto ejecutivo de Serendipity, disponible de principio a fin.</p>
   </div>
