@@ -50,7 +50,7 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 
 ## Co-branding con Zamna
 - Los logos de Serendipity y Zamna ya están integrados en la portada, la 15 (Zamna) y el cierre. El sello Travelers' Choice 2025 está en la 04. Falta solo el logo de Grupo Mandala (05).
-- **Lockup único**: un solo marco de 818 x 96 con tres celdas, Serendipity | x | ZAMNA, con esquinas doradas tipo "frame line". Las dos celdas miden igual (360 x 96, para wordmark horizontal). La **x es la misma Cormorant itálica dorada del título**: hay una sola grafía de co-branding.
+- **Lockup**: sin marco ni esquinas: logo de Serendipity, la x dorada y el logo de ZAMNA, separados por 40 px. La **x es la misma Cormorant itálica dorada del título**: hay una sola grafía de co-branding. En todo el deck no hay esquinas decorativas; los marcos que quedan (Mandala, placa de Zamna, reseñas) llevan solo un filete fino.
 - Aparece en la portada (arriba a la izquierda, en el cuadro) y en el cierre (centrado). Los logos entran en monocromo arena con 24 px de aire. Si el wordmark de Zamna es muy fino, se ajusta el ancho de celda por peso óptico.
 - Zamna también aparece "a bordo" en la 15 (placa sobre la cabina). Mandala va en un marco de 528 x 220 como fuente del haz de la 05. El sello Travelers' Choice va en un marco horizontal de 386 x 208. No se dibuja ni se imita ningún logo.
 

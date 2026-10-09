@@ -155,25 +155,15 @@ p{text-wrap:pretty}
 .flare.on-gold .streak{background:linear-gradient(90deg,rgba(255,250,236,0) 0%,rgba(255,250,236,.6) calc(var(--p) - 26%),#FFFBF0 var(--p),rgba(255,250,236,.6) calc(var(--p) + 26%),rgba(255,250,236,0) 100%)}
 .flare.on-gold .core{background:radial-gradient(closest-side,#FFFBF0,rgba(255,246,222,.65) 40%,rgba(255,246,222,0))}
 
-/* ---------------- logo placeholders: camera frame-lines ---------------- */
-.ph,.lockup{--c:var(--gold);border:1px solid var(--arena-line);
-  background:
-   linear-gradient(var(--c),var(--c)) left top/20px 2px no-repeat,
-   linear-gradient(var(--c),var(--c)) left top/2px 20px no-repeat,
-   linear-gradient(var(--c),var(--c)) right top/20px 2px no-repeat,
-   linear-gradient(var(--c),var(--c)) right top/2px 20px no-repeat,
-   linear-gradient(var(--c),var(--c)) left bottom/20px 2px no-repeat,
-   linear-gradient(var(--c),var(--c)) left bottom/2px 20px no-repeat,
-   linear-gradient(var(--c),var(--c)) right bottom/20px 2px no-repeat,
-   linear-gradient(var(--c),var(--c)) right bottom/2px 20px no-repeat}
+/* ---------------- frames: a single hairline, no corner marks ---------------- */
+.ph{border:1px solid var(--arena-line)}
 .ph{display:flex;align-items:center;justify-content:center;text-align:center}
 .ph span,.lockup span{font:500 24px/32px var(--sans);letter-spacing:.14em;text-transform:uppercase;color:var(--mist)}
-.day .ph{--c:var(--teal);border-color:rgba(4,101,103,.38)}
+.day .ph{border-color:rgba(4,101,103,.38)}
 .day .ph span{color:var(--teal)}
-/* co-branding lockup: one frame, three cells · the x is the same Cormorant italic as the title */
-.lockup{display:grid;grid-template-columns:360px 96px 360px;height:96px;width:818px}
-.lockup > div{display:flex;align-items:center;justify-content:center}
-.lockup > div + div{border-left:1px solid var(--arena-line)}
+/* co-branding lockup: the two logos and the gold italic x, no frame */
+.lockup{display:flex;align-items:center;gap:40px;height:96px}
+.lockup > div{display:flex;align-items:center}
 .logo-zamna{height:44px;width:auto}
 .logo-serendipity{height:80px;width:auto;transform:translateY(-2px)}
 .lockup .x{font:italic 500 72px/72px var(--serif);color:var(--gold);transform:translateY(-6px);text-transform:none;letter-spacing:0}
@@ -284,16 +274,6 @@ p{text-wrap:pretty}
   radial-gradient(ellipse 1300px 820px at 50% 40%,var(--gold-hi) 0%,var(--gold) 52%,var(--gold-lo) 100%)}
 #s07 .grain{opacity:.30}
 #s07 .slate{color:var(--night)}
-#s07 .marks{position:absolute;inset:0;z-index:2;pointer-events:none;--c:rgba(0,39,43,.5);
-  background:
-   linear-gradient(var(--c),var(--c)) 128px 136px/32px 1px no-repeat,
-   linear-gradient(var(--c),var(--c)) 128px 136px/1px 32px no-repeat,
-   linear-gradient(var(--c),var(--c)) 1760px 136px/32px 1px no-repeat,
-   linear-gradient(var(--c),var(--c)) 1791px 136px/1px 32px no-repeat,
-   linear-gradient(var(--c),var(--c)) 128px 943px/32px 1px no-repeat,
-   linear-gradient(var(--c),var(--c)) 128px 912px/1px 32px no-repeat,
-   linear-gradient(var(--c),var(--c)) 1760px 943px/32px 1px no-repeat,
-   linear-gradient(var(--c),var(--c)) 1791px 912px/1px 32px no-repeat}
 #s07 h2{left:128px;top:168px;width:1664px;text-align:center;color:var(--night)}
 #s07 h2 span{display:block}
 #s07 h2 em{color:var(--night)}
@@ -392,7 +372,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 #s15 .plate{position:absolute;left:0;top:0;width:940px;height:808px;object-fit:cover}
 #s15 .sun{position:absolute;inset:0;background:radial-gradient(ellipse 900px 500px at 1500px 0,rgba(201,165,92,.14),transparent 70%)}
 #s15 .badge{left:290px;top:760px;width:360px;height:96px;background-color:rgba(0,39,43,.82)}
-#s15 .badge{--c:var(--gold);border-color:var(--arena-line)}
+#s15 .badge{border-color:var(--arena-line)}
 #s15 .badge span{color:var(--arena)}
 #s15 h2{left:1000px;top:216px;width:792px}
 #s15 .list{left:1000px;top:536px;width:792px}
@@ -444,7 +424,7 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 #s18 .who .role{margin-top:16px}
 #s18 .who .t32{margin-top:24px}
 #s18 .who .t32 + .t32{margin-top:8px}
-#s18 .lockup{left:551px;top:856px}
+#s18 .lockup{left:0;width:1920px;justify-content:center;top:856px}
 </style>
 </head>
 <body>
@@ -636,7 +616,6 @@ html:not(.render) #s13 .pulse{animation:pulse 2.4s ease-out infinite}
 <!-- ======================= 07 NUESTRA PROPUESTA ======================= -->
 <section class="slide gold" id="s07" data-title="Nuestra propuesta">
   <div class="grain"></div>
-  <div class="marks"></div>
   <p class="slate">Nuestra propuesta</p>
   <div class="foot"><span>Serendipity Travel Experiences x Zamna Tulum 2027</span><span class="n">07</span></div>
   <div class="content">
