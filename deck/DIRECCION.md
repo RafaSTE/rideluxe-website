@@ -52,7 +52,7 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 - Los logos de Serendipity y Zamna ya están integrados en la portada, la 15 (Zamna) y el cierre. El sello Travelers' Choice 2025 está en la 04. Falta solo el logo de Grupo Mandala (05).
 - **Lockup**: sin marco ni esquinas: logo de Serendipity, la x dorada y el logo de ZAMNA, separados por 40 px. La **x es la misma Cormorant itálica dorada del título**: hay una sola grafía de co-branding. En todo el deck no hay esquinas decorativas; los marcos que quedan (Mandala, placa de Zamna, reseñas) llevan solo un filete fino.
 - Aparece en la portada (arriba a la izquierda, en el cuadro) y en el cierre (centrado). Los logos entran en monocromo arena con 24 px de aire. Si el wordmark de Zamna es muy fino, se ajusta el ancho de celda por peso óptico.
-- Zamna también aparece "a bordo" en la 15 (placa sobre la cabina). Mandala va en un marco de 528 x 220 como fuente del haz de la 05. El sello Travelers' Choice va en un marco horizontal de 386 x 208. No se dibuja ni se imita ningún logo.
+- Zamna también aparece "a bordo" en la 15 (placa sobre la cabina). El logo de Mandala Group (en el dorado del deck) es la fuente del haz de la 05. El sello Travelers' Choice va en un marco horizontal de 386 x 208. No se dibuja ni se imita ningún logo.
 
 ## Las 18 láminas
 | # | Lámina | Layout | Imagen | Recurso |
@@ -79,7 +79,7 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 Alternancia: noche 01 03 05 10 12 14 16 18 · día 02 04 06 08 09 11 13 15 17 · oro 07.
 
 ## Lo que necesitamos del cliente
-1. **Logos:** ~~Serendipity, Zamna y sello Travelers' Choice 2025~~ (recibidos). Falta el logo de Grupo Mandala (05).
+1. **Logos:** ~~Serendipity, Zamna, sello Travelers' Choice 2025 y Mandala Group~~ (recibidos todos).
 2. ~~Capacidades de la flota~~ (recibidas: SUV 6, Van de lujo 5, Sprinter 13 a 18, Van estándar 11).
 3. **Validar el billing del lineup** de la 05 con Grupo Mandala: 6 nombres en el primer nivel (72) y 10 en el segundo (44), en el orden del brief. Si no se valida, pasamos todo a un solo nivel.
 4. **Testimonio y referencias** (16): Grupo Mandala (confirmar aprobación de la redacción; faltan nombre y cargo de quien firma), Sam Gordon de Kan Hotel (extracto traducido al español) y la reseña de Maceo P en Tripadvisor (enero 2026).
@@ -95,3 +95,4 @@ Alternancia: noche 01 03 05 10 12 14 16 18 · día 02 04 06 08 09 11 13 15 17 ·
 - 09: servicio por hora solo para afters (sin cenas ni beach clubs).
 - 11: capacidades reales y Van estándar para servicios internos.
 - 12 y 17: sin coordinador en el venue; en su lugar, equipo de operaciones en turno.
+- 05: sin Day Zero en eventos y marcas.

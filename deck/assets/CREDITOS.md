@@ -32,6 +32,7 @@ Cuando se agregue alguna, registrar aquí autor y URL.
 | logo-serendipity.png | Logo blanco de Serendipity (script y palma, sin la línea TRAVEL EXPERIENCES para que se lea en tamaño chico), del archivo de marca LOGO_SERENDIPITY.eps, en color arena. |
 | logo-serendipity-completo.png | Mismo logo con la línea TRAVEL EXPERIENCES, para usos grandes. |
 | sello-travelers-choice-2025.png | Sello circular Tripadvisor Travelers' Choice Awards 2025, del mismo archivo EPS. |
+| logo-mandala-group.png | Logo de Mandala Group Hospitality enviado por el cliente (`originales/logo-mandala-group.jpg`), recortado sobre fondo transparente en el dorado del deck (#C9A55C). |
 
 ## Tipografías
 Cormorant Garamond y DM Sans, de Google Fonts (licencia SIL Open Font License). Copia local en `assets/fonts/`
