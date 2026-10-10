@@ -7,7 +7,7 @@ con `deck/tools/grade.py` y se guardaron en WebP. Ningún archivo supera 400 KB.
 
 | Archivo | Original | Lámina |
 |---|---|---|
-| n01-suburban-hc.webp | originales/suburban-high-country.jpg (foto del cliente) | 01 |
+| n01-flota-noche.webp | originales/flota-choferes.jpg (foto del cliente) | 01 |
 | d08-chofer-cun.webp | originales/chofer-aeropuerto-cancun.jpg (foto del cliente) | 08 |
 | d09-suburban-invitada.webp | originales/suburban-invitada.jpg (foto del cliente) | 09 |
 | n10-vclass-noche.webp | images/luxury-vclass.jpg | 10 |

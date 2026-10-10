@@ -237,6 +237,62 @@ def cover_hc():
     save(to_im(frame), 'n01-suburban-hc.jpg', q=88)
 
 
+# ------------------------------------------------------------------ 01 portada (flota alineada con choferes del cliente)
+def cover_fleet():
+    """Client's fleet line-up with uniformed drivers (1125 x 1500, daylight) -> real day-for-night.
+    Same method as cover_hc: one global grade, no cut-outs. Photo sits on the right, slightly
+    reduced so the whole convoy clears the title; it falls off into darkness toward the left."""
+    src = Image.open(ORIG / 'flota-choferes.jpg').convert('RGB')             # 1125 x 1500
+    a = to_f(src)
+    h, w = a.shape[:2]
+    yy, xx = np.mgrid[0:h, 0:w].astype(np.float32)
+    yn, xn = yy / h, xx / w
+    r, g, b = a[..., 0], a[..., 1], a[..., 2]
+    L = lum(a)
+    chroma = a.max(-1) - a.min(-1)
+
+    # 1 · day-for-night
+    o = desat(a, 0.50)
+    green = smooth(g - np.maximum(r, b), 0.02, 0.12)[..., None]
+    o = o * (1 - 0.38 * green)
+    o = o * np.array([0.78, 0.96, 1.00], np.float32)
+    o = np.clip(o * 0.80, 0, 1) ** 1.12
+    o = o * 0.62 + tone(a, NIGHT_STOPS, keep=0.0, sat=0.0, exposure=0.80, gamma=1.15) * 0.38
+    # 2 · blue sky -> night sky (soft mask)
+    sky = blur((smooth(b - r, 0.10, 0.25) * smooth(L, 0.35, 0.60) * (1 - smooth(yn, 0.42, 0.50))).astype(np.float32), 6)
+    o = o * (1 - 0.80 * sky[..., None]) + (DEEP * 0.9)[None, None, :] * 0.80 * sky[..., None]
+    # 3 · sunlit pavers and roof glints compressed
+    pav = smooth(L, 0.40, 0.80) * smooth(yn, 0.50, 0.58) * (1 - smooth(chroma, 0.18, 0.30))
+    o = o * (1 - 0.55 * pav[..., None])
+    glint = smooth(L, 0.80, 0.97) * (1 - sky)
+    o = o * (1 - 0.35 * glint[..., None])
+    # 4 · graduated darkening (canopy, foreground) and a vignette centred on the convoy
+    o = o * (1 - 0.55 * smooth(1 - yn, 0.55, 0.85))[..., None]
+    o = o * (1 - 0.40 * smooth(yn, 0.82, 1.0))[..., None]
+    v = radial(h, w, 640, 860, 760, 460, 0.8)
+    o = o * (0.62 + 0.38 * v[..., None])
+    # 5 · keep the drivers readable (faces), lightly
+    o = dodge(o, [(735, 760, 40, 0.35), (320, 760, 22, 0.25), (248, 752, 16, 0.2)])
+    o = unsharp(np.clip(o, 0, 1), 1.0, 40, 2)
+
+    # 6 · composite on the 1920 x 808 plate
+    s = 0.86
+    p = to_f(to_im(o).resize((round(w * s), round(h * s)), Image.LANCZOS))
+    ph, pw = p.shape[:2]
+    FW, FH = 1920, 808
+    wy = 300                                                                 # window top inside the scaled photo
+    win = p[wy:wy + FH]
+    ox = FW - pw
+    fy = np.linspace(0, 1, FH)[:, None, None]
+    frame = np.zeros((FH, FW, 3), np.float32)
+    frame[:] = DEEP * (0.45 + 0.20 * fy)
+    fl = smooth(np.arange(pw, dtype=np.float32), 0, 200)[None, :, None]
+    frame[:, ox:] = win * fl + frame[:, ox:] * (1 - fl)
+    fv = radial(FH, FW, FW * 0.74, FH * 0.62, FW * 0.75, FH * 1.05, 0.8)
+    frame = frame * (0.80 + 0.20 * fv[..., None])
+    frame = grain(frame, 0.014)
+    save(to_im(frame), 'n01-flota-noche.jpg', q=88)
+
 # ------------------------------------------------------------------ 10 mesas vip
 def mesas():
     """Trio in the V-Class -> night ride. Windows go to night (luminance-derived soft mask, no polygons),
@@ -443,6 +499,6 @@ def nuevas():
     save(to_im(grain(o, 0.012)), 'n12-sprinter-acceso.jpg')
 
 if __name__ == '__main__':
-    jobs = sys.argv[1:] or ['cover_hc', 'mesas', 'day_photos', 'bokeh', 'grano', 'nuevas']
+    jobs = sys.argv[1:] or ['cover_fleet', 'mesas', 'day_photos', 'bokeh', 'grano', 'nuevas']
     for j in jobs:
         globals()[j]()

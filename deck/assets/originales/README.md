@@ -8,3 +8,4 @@ Recibido:
 - suburban-invitada.jpg y van-estandar-chofer.jpg: fotos reales enviadas por el cliente
 - suburban-high-country.jpg: Suburban High Country del cliente, usada en la portada
 - logo-mandala-group.jpg: logo de Mandala Group enviado por el cliente (de aquí sale assets/logo-mandala-group.png)
+- flota-choferes.jpg: flota alineada con choferes, usada en la portada

@@ -40,7 +40,7 @@ Linter con píxeles reales: **0 errores, 0 avisos**. El contraste mínimo por l�
 
 ## Tratamiento de imagen
 Las derivadas salen de `tools/grade.py` (PIL), nunca se amplían por encima de su tamaño nativo y pesan de 61 a 221 KB:
-- **Noche** (01, 10, 11 Sprinter, 12, 14): sombras Dark Teal, luz Teal, prácticas en oro y arena. En la 01 (Suburban High Country del cliente) se hace una noche americana real: un solo grading sobre toda la foto, sin recortar la camioneta, para conservar sus reflejos, su sombra en el piso y los árboles detrás. La escena cae a la oscuridad hacia la izquierda, la placa está neutralizada y el destello nace en el faro. En la 10 las ventanas pasan a noche con máscara suave, hay bokeh desenfocado, luz clave en cada rostro, retoque local en la piel de la invitada de la derecha y la foto se cierra en Dark Teal sólido antes de los créditos.
+- **Noche** (01, 10, 11 Sprinter, 12, 14): sombras Dark Teal, luz Teal, prácticas en oro y arena. En la 01 (flota alineada con choferes, foto del cliente) se hace una noche americana real: un solo grading sobre toda la foto, sin recortar la camioneta, para conservar reflejos, sombras y la selva real. La escena cae a la oscuridad hacia el título y la portada ya no lleva destello. En la 10 las ventanas pasan a noche con máscara suave, hay bokeh desenfocado, luz clave en cada rostro, retoque local en la piel de la invitada de la derecha y la foto se cierra en Dark Teal sólido antes de los créditos.
 - **Día dorado** (08, 09, 11, 15): sombras Dark Teal, medios cálidos, altas luces arena. El cielo azul se vuelve bruma arena.
 - La 16 usa a los invitados reales de noche totalmente desenfocados como fondo del testimonio. Los placeholders de la 03, 06, 12 y 18 son atmósfera generada (arboleda, carta, copas, proscenio de palmas). Cada lámina tiene un comentario HTML donde iría la foto de stock.
 - No usamos `economy-avanza.jpg` ni `logo.png` (Ride Luxe).
@@ -57,7 +57,7 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 ## Las 18 láminas
 | # | Lámina | Layout | Imagen | Recurso |
 |---|---|---|---|---|
-| 01 | Portada | Lockup, título 120 y subtítulo a la izquierda; la camioneta a la derecha | Suburban High Country del cliente en noche americana | Bandas que cierran, destello desde el faro |
+| 01 | Portada | Lockup, título 120 y subtítulo a la izquierda; la camioneta a la derecha | Flota alineada con choferes uniformados (foto del cliente) en noche americana, sin destello | Bandas que cierran, destello desde el faro |
 | 02 | La oportunidad | Título 72 en 3 líneas, tabla de créditos sobre eje y campo Teal a la derecha con el cierre | Gobo de palma en el campo | Destello claro, campo Teal |
 | 03 | Quiénes somos | Título 120, párrafo y fila de 3 cifras a 120 | Arboleda nocturna generada | Créditos (cifras) |
 | 04 | Credenciales | Tabla de 4 créditos sobre eje y marco del sello | Gobo de palma | Destello claro |
@@ -72,7 +72,7 @@ Fade + 12 px de subida en 520 ms, escalonado cada 80 ms. Las líneas (ruta, rama
 | 13 | Tecnología | Ruta de rastreo (recorrido sólido, pendiente punteado, punto vivo) y 4 funciones; frase en barra Teal | Gobo en la barra | Destello que avanza, campo Teal |
 | 14 | Seguridad | Título 72 en 3 líneas y 4 créditos 2 x 2; foto a la derecha | Chofer de Serendipity al volante (uniforme con logo), noche | Créditos |
 | 15 | Experiencia de marca | Foto a la izquierda con placa del logo de Zamna; título y 3 créditos | Cabina Suburban, día dorado | Placa de marca a bordo |
-| 16 | Referencias | Composición simétrica: testimonio de Grupo Mandala en 72 itálica y firma; abajo dos tarjetas: Sam Gordon (Kan Hotel) y Maceo P (Tripadvisor) | Invitados desenfocados (bokeh) | Créditos finales |
+| 16 | Referencias | Composición simétrica: testimonio de Grupo Mandala en 72 itálica y firma; abajo dos tarjetas: Sam Gordon (Kan Hotel) y Maceo Plex (Tripadvisor) | Invitados desenfocados (bokeh) | Créditos finales |
 | 17 | Cómo trabajamos | Línea de tiempo a todo el ancho con 5 nodos, pasos y subtítulo | Gobo | Destello como línea de tiempo |
 | 18 | Siguiente paso | Letterbox abierto y composición simétrica: título, contacto como créditos, lockup | Proscenio de palmas generado | Bandas que se abren, horizonte de luz |
 
@@ -82,7 +82,7 @@ Alternancia: noche 01 03 05 10 12 14 16 18 · día 02 04 06 08 09 11 13 15 17 ·
 1. **Logos:** ~~Serendipity, Zamna, sello Travelers' Choice 2025 y Mandala Group~~ (recibidos todos).
 2. ~~Capacidades de la flota~~ (recibidas: SUV 6, Van de lujo 5, Sprinter 13 a 18, Van estándar 11).
 3. **Validar el billing del lineup** de la 05 con Grupo Mandala: 6 nombres en el primer nivel (72) y 10 en el segundo (44), en el orden del brief. Si no se valida, pasamos todo a un solo nivel.
-4. **Testimonio y referencias** (16): Grupo Mandala (confirmar aprobación de la redacción; faltan nombre y cargo de quien firma), Sam Gordon de Kan Hotel (extracto traducido al español) y la reseña de Maceo P en Tripadvisor (enero 2026).
+4. **Testimonio y referencias** (16): Grupo Mandala (confirmar aprobación de la redacción; faltan nombre y cargo de quien firma), Sam Gordon de Kan Hotel (extracto traducido al español) y la reseña de Maceo Plex en Tripadvisor (enero 2026).
 5. **Número de WhatsApp** (18).
 6. **Fotos de stock** (si se habilitan Unsplash o Pexels): carretera en la selva de noche con faros (01 y 18), vista aérea de la selva de Tulum (03), escenario entre árboles sin artistas reconocibles (05), jet privado en FBO (06 y 08), zona de ascenso de un venue de noche (12), cenote o playa a la hora azul (16). Todas pasarán por el mismo grading. Idealmente también una toma nocturna real de la Suburban.
 7. Opcional: una captura real de la app Ride Luxe con rastreo en vivo para la 13.
