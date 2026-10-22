@@ -671,6 +671,58 @@ h1,h2,.sec-title,.serif:not(.count){font-weight:400!important}
   ]
 }
 </script>
+<style>
+/* readability v2 */
+body{-webkit-font-smoothing:auto;-moz-osx-font-smoothing:auto}
+/* headings: the serif needs more weight on dark backgrounds */
+h1,h2,h3,.sec-title,.serif:not(.count),.vcard h3,.vcard .price,.meet .p{font-weight:500!important}
+.hero-content{text-shadow:0 1px 16px rgba(0,20,23,.5)}
+.hero-content .btn,.hero-content .ta-badge{text-shadow:none}
+/* body copy: bigger and brighter */
+.prose p,.prose li{font-size:18px!important;line-height:1.75!important;color:#EEF4F2!important}
+.af-lead,section:not(.reviews) .lead,.vh p,.hero .sub{color:#EEF4F2!important}
+.af-lead{font-size:17px!important}
+.vh p{font-size:16.5px!important;line-height:1.6!important}
+.af-q summary{font-size:16.5px!important}
+.af-q p{font-size:16px!important;color:#E6EEEC!important}
+.prose .spot p,.prose .know p{font-size:16.5px!important;line-height:1.65!important}
+/* secondary text: no more faint grey */
+.vcard .sim,.vcard .price small,.meet .t small,.bp-meta,.routes-disclaimer,.ap-times,.ft-bottom span,footer p{color:rgba(255,255,255,.84)!important}
+.vcard .sim,.meet .t small,.routes-disclaimer{font-size:14px!important}
+.vcard .price small{font-size:13px!important}
+.vcard .cap{font-size:15px!important}
+.ap-times{font-size:14.5px!important}
+.ta-badge,.ta-badge span{font-weight:400!important}
+.hero .from-row span{font-size:14px!important}
+/* labels in capitals: larger, calmer spacing */
+.eyebrow,.eyebrow-s,.ap-code,.tier,.tier-name,.lvl,.route-meta,.swipe-hint,.crumbs,.crumbs a,footer h4,.lbl,.tag,.spot .dt,.know .k,.factbox .k,.ex-t span{font-size:13px!important;letter-spacing:1.3px!important;font-weight:500!important}
+.factbox .k,.spot .dt{color:var(--mint)!important}
+/* buttons and links */
+.btn,.btn-link,.nav-cta,.linkrow a,.bp-alt,.wa-float,.book-float{font-size:13px!important;letter-spacing:1.4px!important;font-weight:500!important}
+.ap-btns .btn,.vcard .btn{font-size:12.5px!important;letter-spacing:1.1px!important}
+/* hero promises in plain sentence case */
+.hero .trust,.trust{text-transform:none!important;letter-spacing:.2px!important;font-size:15px!important;color:#fff!important}
+/* menu */
+@media(min-width:981px){nav .links a{white-space:nowrap;font-size:11.5px!important;letter-spacing:.9px!important;font-weight:500!important;color:#fff!important}}
+@media(min-width:1320px){nav .links a{font-size:12.5px!important;letter-spacing:1.4px!important}}
+/* booking box header */
+.bp-head{flex-wrap:wrap;gap:4px 12px}
+.bp-eyebrow{white-space:nowrap;font-size:12px!important;letter-spacing:1.2px!important}
+.bp-meta{font-size:13px!important}
+/* reviews: upright, easy-to-read quotes */
+.rv-text{font-family:'Jost',sans-serif!important;font-style:normal!important;font-weight:400!important;font-size:17.5px!important;line-height:1.65!important;color:#0F2F33!important}
+.reviews .swipe-hint{color:var(--teal)!important}
+.final p{font-size:18px!important;font-weight:400!important;color:rgba(255,255,255,.9)!important}
+/* footer */
+footer p,footer ul a{font-size:15px!important}
+footer ul a{color:rgba(255,255,255,.85)!important}
+.ft-bottom span{font-size:13px!important}
+@media(max-width:640px){
+  .prose p,.prose li{font-size:17px!important}
+  .hero .trust,.trust{font-size:13.5px!important}
+  .eyebrow-s,.ap-code,.tier,.tier-name,.swipe-hint,.spot .dt,.know .k,.factbox .k,footer h4,.lbl{font-size:12.5px!important}
+}
+</style>
 </head>
 <body>
 <div class="shell">
