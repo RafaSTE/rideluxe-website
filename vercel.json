@@ -9,7 +9,9 @@
       "permanent": true
     },
     { "source": "/cancun-transfers", "destination": "/cancun-airport-transfers", "permanent": true },
-    { "source": "/tulum-transfers", "destination": "/tulum-airport-transfers", "permanent": true }
+    { "source": "/tulum-transfers", "destination": "/tulum-airport-transfers", "permanent": true },
+    { "source": "/monterrey", "destination": "/monterrey-airport-transfers", "permanent": true },
+    { "source": "/monterrey-transfers", "destination": "/monterrey-airport-transfers", "permanent": true }
   ],
   "headers": [
     {
