@@ -224,8 +224,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://rideluxe.mx/images/monterrey-sunset.jpg</image:loc>
-      <image:title>Sunset over the mountains of Monterrey</image:title>
+      <image:loc>https://rideluxe.mx/images/monterrey-city.jpg</image:loc>
+      <image:title>Downtown Monterrey and the Sierra Madre at dusk</image:title>
     </image:image>
   </url>
   <url>
@@ -234,8 +234,8 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://rideluxe.mx/images/monterrey-sunset.jpg</image:loc>
-      <image:title>Atardecer sobre las montañas de Monterrey</image:title>
+      <image:loc>https://rideluxe.mx/images/monterrey-city.jpg</image:loc>
+      <image:title>El centro de Monterrey y la Sierra Madre al atardecer</image:title>
     </image:image>
   </url>
 </urlset>
