@@ -238,4 +238,16 @@
       <image:title>El centro de Monterrey y la Sierra Madre al atardecer</image:title>
     </image:image>
   </url>
+  <url>
+    <loc>https://rideluxe.mx/ibiza-airport-transfers</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://rideluxe.mx/es/traslados-aeropuerto-ibiza</loc>
+    <lastmod>2026-11-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>
